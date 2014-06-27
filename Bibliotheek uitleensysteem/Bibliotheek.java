@@ -44,7 +44,7 @@ public class Bibliotheek
      * @param id Het ID van het lid.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkLidID(int id)
+    protected boolean checkLidID(int id)
     {
         if(id >= 0 && id <= (leden.size() - 1))
         {
@@ -62,7 +62,7 @@ public class Bibliotheek
      * @param id Het ID van het reservering.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkReserveringID(int id)
+    protected boolean checkReserveringID(int id)
     {
         if(id >= 0 && id <= (reserveringen.size() - 1))
         {
@@ -80,7 +80,7 @@ public class Bibliotheek
      * @param id Het ID van het uitlening.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkUitleningID(int id)
+    protected boolean checkUitleningID(int id)
     {
         if(id >= 0 && id <= (uitleningen.size() - 1))
         {
@@ -98,7 +98,7 @@ public class Bibliotheek
      * @param id Het ID van het artikel.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkArtikelID(int id)
+    protected boolean checkArtikelID(int id)
     {
         if(id >= 0 && id <= (artikelen.size() - 1))
         {
@@ -116,7 +116,7 @@ public class Bibliotheek
      * @param id Het ID van het exemplaar.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkExemplaarID(int id)
+    protected boolean checkExemplaarID(int id)
     {
         if(id >= 0 && id <= (exemplaren.size() - 1))
         {
@@ -134,7 +134,7 @@ public class Bibliotheek
      * @param id Het ID van de boete.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkBoeteID(int id)
+    protected boolean checkBoeteID(int id)
     {
         if(id >= 0 && id <= (boetes.size() - 1))
         {
