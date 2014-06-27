@@ -18,7 +18,7 @@ public class Bibliotheek
     protected static final int DREMPEL_TWEEDE_BRIEF = 10000; // in centen
 
     protected ArrayList<Lid> leden;   // Leden
-    protected ArrayList<Reservering> reserveringen; // Reserveringen
+    private ArrayList<Reservering> reserveringen; // Reserveringen
     private ArrayList<Uitlening> uitleningen; // Uitleningen
     protected ArrayList<Artikel> artikelen; // Artikelen
     private ArrayList<Exemplaar> exemplaren; // Exemplaren

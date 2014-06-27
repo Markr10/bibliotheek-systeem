@@ -35,4 +35,33 @@ public class Cd extends Artikel
     {
         return releasedatum;
     }
+    
+    // Berekenen van korting op basis van leeftijd
+    public int leeftijdCd(int kosten) 
+    {
+        int difference = SpecialDate.yearsDifference(releasedatum);
+
+        // Groter dan 1 en kleiner dan 5
+        if(difference < 1)
+        {
+            System.out.println("Geen korting! Years difference: " + difference + " Datum vandaag: " + SpecialDate.getDateToday());
+
+        }
+
+        if(difference >= 1 && difference < 5)
+        {
+            System.out.println("10% korting! Years difference: " + difference + " Datum vandaag: " + SpecialDate.getDateToday());
+            kostenNaKorting = kosten - (kosten / 100 * 10);
+            return kostenNaKorting;
+            // Korting 10%
+        } 
+
+        if(difference >= 5)
+        {
+            System.out.println("50% korting! Years difference: " + difference + " Datum vandaag: " + SpecialDate.getDateToday());
+            kostenNaKorting = kosten - (kosten / 100 * 50);
+            return kostenNaKorting;
+        }
+        return kostenNaKorting;
+    }
 }

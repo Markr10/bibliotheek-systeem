@@ -23,7 +23,7 @@ public class BibliotheekCLI extends Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het uitlenen van het exemplaar gelukt is, anders false
      */
-    public void printAndAddUitlening(int lidID, int exemplaarID)
+    public void printAddUitlening(int lidID, int exemplaarID)
     {
         if(super.addUitlening(lidID, exemplaarID))
         {
@@ -42,7 +42,7 @@ public class BibliotheekCLI extends Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het inleveren van het exemplaar gelukt is, anders false
      */
-    public void printAndInleverenExemplaar(int lidID, int exemplaarID)
+    public void printInleverenExemplaar(int lidID, int exemplaarID)
     {
         if(super.inleverenExemplaar(lidID, exemplaarID))
         {
@@ -138,11 +138,37 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printReserveringen() 
     {
+        // TODO Verder uitwerken
         System.out.println("---------Reserveringen----------");
-        for(Reservering reservering : reserveringen)
+        for(int key : keys) 
         {
-            System.out.println("# " + reservering.getID() + " Titel: " + artikelen.get(reservering.getArtikelID()).getTitel() +
-                " Datum gereserveerd: " + reservering.getReserveringsdatum() + " Door lid: " + leden.get(reservering.getLidID()).getNaam());
+
+            Reservering x = reserveringMap.get(key);
+            Set<Integer> articleKeys = artikelMap.keySet();
+            for(int articleKey : articleKeys)
+            {
+                Artikel r = artikelMap.get(key);
+                if(x.getArtikelID() == r.getID())
+                {
+                    System.out.println(r.getTitel());
+
+                    //                     System.out.println(r.getReleaseDate());
+                }
+            }
+            Lid l = ledenMap.get(key);
+            Set<Integer> ledenKeys = ledenMap.keySet();
+            for(int ledenKey : ledenKeys)
+            {
+                if(x.getLidID() == l.getID())
+                {
+                    System.out.println(l.getName());
+                }
+            }
+
+            //int id =reservering.getArtikelID()
+            //System.out.println(reservering.getArtikelID());
+            //System.out.println("Titel: " + artikelen.getID().getName());            
+            //System.out.println("Datum gereserveerd: " + reservering.getDatum());
         }
         System.out.println("------------------------------");
     }
