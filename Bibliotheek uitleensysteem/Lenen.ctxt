@@ -1,5 +1,0 @@
-#BlueJ class context
-comment0.params=uitleen_id\ lid_id\ artikel_id\ uitleenDatum
-comment0.target=Lenen(int,\ int,\ int,\ java.lang.String)
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Geleend\n
-numComments=1

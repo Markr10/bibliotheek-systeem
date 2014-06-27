@@ -1,12 +1,8 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Checks()
-comment1.params=id
-comment1.target=void\ inleverCheck(int)
-comment2.params=
-comment2.target=void\ Boetes()
-comment3.params=
-comment3.target=void\ aantalUitgeleend()
-comment4.params=artikel_id
-comment4.target=void\ Uitgeleend(java.lang.String)
-numComments=5
+comment0.text=\n\ Checks\ Constructor\n\n\ @param\ artikel\ A\ parameter\n\ @param\ datumInleveren\ A\ parameter\n\ @param\ datumUitlenen\ A\ parameter\n
+comment1.params=artikel\ datumUitlenen\ datumInleveren
+comment1.target=double\ Boetes(Artikel,\ java.lang.String,\ java.lang.String)
+comment1.text=\n\ Method\ Boetes\n\ Vraagt\ eerst\ het\ aantal\ dagen\ op\ van\ SpecialDate\n\ Daarna\ wordt,\ aan\ de\ hand\ van\ het\ artikel,\ de\ boete\ berekend.\n\ \n\ @param\ artikel\ A\ parameter\n\ @param\ datumUitlenen\ A\ parameter\n\ @param\ datumInleveren\ A\ parameter\n\ @return\ -1\ als\ het\ artikel\ string\ niet\ bestaat\n
+numComments=2

@@ -1,240 +1,949 @@
-import java.util.*;
+import java.util.ArrayList;
 /**
- * Write a description of class Reserveringen here.
+ * Bibliotheek klasse welke verschillende onderdelen van een bibliotheek beheert.
+ * Hierbij moet gedacht worden aan leden, artikelen, boetes, reserveringen, uitlenen en innemen.
  * 
- * Wybren, Danny en Mark
- * 7 April 2014
+ * @author  Wybren, Danny en Mark
+ * @version 7 April 2014
  * 
  */
 public class Bibliotheek
 {
-    private ArrayList<Lid> customers;
-    private HashMap<Integer, Lid> ledenMap;
-    public Lid getLid;
-    // Reserveringen
-    private ArrayList<Reservering> reserveringen;
-    private HashMap<Integer, Reservering> reserveringMap;
-    public Reservering getReservering;
+    public static final short MAX_AANTAL_DAGEN_RESERVERING_OPHALEN = 7;
+    private static final short MAX_AANTAL_ARTIKELEN = 6;
+    private static final short RESERVERINGSKOSTEN = 30; // in centen
+    private static final short RESERVERING_BOETE = 200; // in centen
+    public static final short MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF = 14;
+    protected static final int DREMPEL_EERSTE_BRIEF = 1000; // in centen
+    protected static final int DREMPEL_TWEEDE_BRIEF = 10000; // in centen
 
-    // Uitlenen
-    private ArrayList<Lenen> uitleningen;
-    private HashMap<Integer, Lenen> uitleenMap;
-    public Lenen getUitlening;
+    protected ArrayList<Lid> leden;   // Leden
+    protected ArrayList<Reservering> reserveringen; // Reserveringen
+    private ArrayList<Uitlening> uitleningen; // Uitleningen
+    protected ArrayList<Artikel> artikelen; // Artikelen
+    private ArrayList<Exemplaar> exemplaren; // Exemplaren
+    private ArrayList<Boete> boetes; // Exemplaren
 
-    private ArrayList<Artikel> artikelen;
-    private HashMap<Integer, Artikel> artikelMap;
-    public Artikel getArtikel;
-
-    private String releaseDatum;
-    private String titel;
-    private String name;
-    private int aantal_voorraad;
-    private int uitgeleend_count;
-
-    private int lid_n = 0;
-    private int artikel_n = 0;
-    private int leen_n = 0;
-    private int reservering_n = 0;
-    private String type;
-
+    
     /**
-     * Constructor for objects of class Bibliotheek
+     * Constructor voor objecten van de klasse Bibliotheek.
      */
     public Bibliotheek()
     {
-        customers = new ArrayList<Lid>();
-        artikelen = new ArrayList<Artikel>();
+        leden = new ArrayList<Lid>();
         reserveringen = new ArrayList<Reservering>();
-        uitleenMap = new HashMap<Integer, Lenen>();
-        artikelMap = new HashMap<Integer, Artikel>();
-        reserveringMap = new HashMap<Integer, Reservering>();
-        ledenMap = new HashMap<Integer, Lid>();
-    }
+        uitleningen = new ArrayList<Uitlening>();
+        artikelen = new ArrayList<Artikel>();
+        exemplaren = new ArrayList<Exemplaar>();
+    }   
 
-    // Nieuwe reservering
-    public void addReservering(int reservering_id, int lid_id, int artikel_id, String reserverings_datum)
+    
+    /**
+     * Controleert of een ID van een lid geldig is.
+     *
+     * @param id Het ID van het lid.
+     * @return true als het ID geldig is, anders false
+     */
+    private boolean checkLidID(int id)
     {
-        getReservering = (new Reservering(reserveringen.size(), lid_id, artikel_id, reserverings_datum));
-        reserveringMap.put(reservering_n, getReservering);
-        reservering_n++;
-        System.out.println(reservering_n);
-    }
-
-    // Nieuwe uitlening
-    public void artikelUitlenen(int uitleen_id, int lid_id, int artikel_id, String uitleenDatum) 
-    {
-        SpecialDate dateToday = new SpecialDate();
-        String timeStamp = dateToday.getDateToday();
-        Set<Integer> keys = artikelMap.keySet();
-
-        for(int key : keys)
+        if(id >= 0 && id <= (leden.size() - 1))
         {
-            Artikel a = artikelMap.get(key);
-            Lid hashLid = ledenMap.get(key);
-            if(hashLid.incrementArtikelenLeenCount() == true)
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Controleert of een ID van een reservering geldig is.
+     *
+     * @param id Het ID van het reservering.
+     * @return true als het ID geldig is, anders false
+     */
+    private boolean checkReserveringID(int id)
+    {
+        if(id >= 0 && id <= (reserveringen.size() - 1))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Controleert of een ID van een uitlening geldig is.
+     *
+     * @param id Het ID van het uitlening.
+     * @return true als het ID geldig is, anders false
+     */
+    private boolean checkUitleningID(int id)
+    {
+        if(id >= 0 && id <= (uitleningen.size() - 1))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Controleert of een ID van een artikel geldig is.
+     *
+     * @param id Het ID van het artikel.
+     * @return true als het ID geldig is, anders false
+     */
+    private boolean checkArtikelID(int id)
+    {
+        if(id >= 0 && id <= (artikelen.size() - 1))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Controleert of een ID van een exemplaar geldig is.
+     *
+     * @param id Het ID van het exemplaar.
+     * @return true als het ID geldig is, anders false
+     */
+    private boolean checkExemplaarID(int id)
+    {
+        if(id >= 0 && id <= (exemplaren.size() - 1))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Controleert of een ID van een boete geldig is.
+     *
+     * @param id Het ID van de boete.
+     * @return true als het ID geldig is, anders false
+     */
+    private boolean checkBoeteID(int id)
+    {
+        if(id >= 0 && id <= (boetes.size() - 1))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    
+    /**
+     * Returned de uitleen status van een exemplaar.
+     *
+     * @param exemplaarID Het ID van het exemplaar.
+     * @return true als het exemplaar uitgeleend is, anders false
+     */
+    public boolean getUitgeleend(int exemplaarID)
+    {        
+        // Controleert geldigheid parameter
+        if(checkExemplaarID(exemplaarID))
+        {
+            // Controleert, indien beschikbaar, de laatste uitlening van het exemplaar.
+            for(int i = (uitleningen.size() - 1); i >= 0; i--)
             {
-                if(a.getID() == artikel_id) 
+                if(uitleningen.get(i).getExemplaarID() == exemplaarID)
                 {
-                    a.setUitgeleend();
-                    getUitlening = new Lenen(uitleningen.size(), lid_id, artikel_id, dateToday.getDateToday());
-                    uitleenMap.put(leen_n, getUitlening);
-                    leen_n++;
-                    System.out.println("Artikel uitgeleend");
+                    // Dit is het geval wanneer een lid het exemplaar te leen heeft.
+                    if(uitleningen.get(i).getTerugbrengdatum() == null)
+                    {
+                        return true;
+                    }
+                    break;
                 }
             }
-            else
+        }
+        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet uitgeleend.
+        return false;
+    }
+
+    /**
+     * Returned of de reservering opgehaald/uitgeleend is.
+     * 
+     * @param reservering De reservering die gecontroleerd moet worden.
+     * @return true als het reservering opgehaald/uitgeleend is, anders false
+     */
+    public boolean getReserveringUitgeleend(Reservering reservering)
+    {
+        // Controleert geldigheid parameter en of de reservering klaargezet is.
+        // Omdat Reservering.setReserveringKlaar het exemplaarID en de maximale ophaaldatum beheerd, hoeft hier niet op gecontroleerd te worden.
+        if(checkReserveringID(reservering.getID()) && reservering.getDatumKlaargezet() != null)
+        {
+            // Loopt van eerste naar laatste uitlening omdat eerste keer uitlenen tijdens ophaaltermijn de juiste is.
+            for(int i = 0, length = (uitleningen.size() - 1); i <= length; i++)
             {
-                System.out.println(hashLid.getName() + " heeft al " + hashLid.getArtikelenLeenCount() + " artikelen te leen");
+                Uitlening uitlening = uitleningen.get(i);
+                // Controleert, indien beschikbaar, of het lid het exemplaar van de reservering binnen de datum van klaarzetten en de maximale ophaaldatum geleend heeft.
+                if(uitlening.getLidID() == reservering.getLidID() && uitlening.getExemplaarID() == reservering.getExemplaarID() &&
+                SpecialDate.daysDifference(uitlening.getUitleendatum(), reservering.getDatumKlaargezet()) >= 0 &&
+                SpecialDate.daysDifference(reservering.getMaxOphaaldatum(), uitlening.getUitleendatum()) >= 0)
+                {
+                    return true;
+                }
             }
+        }
+        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet uitgeleend.
+        return false;
+    }
+
+    /**
+     * Returned of een lener een artikel mag lenen of reserveren.
+     *
+     * @param lidID     Het ID van het lid.
+     * @param artikelID Het ID van het artikel.
+     * @return true als een lener een artikel mag lenen of reserveren, anders false
+     */
+    public boolean lidMagArtikelLenenOfReserveren(int lidID, int artikelID)
+    {
+        /*
+         * Dit is het geval als het lid niet geroyaleerd is, wanneer een lid het artikel niet te leen heeft, wannneer
+         * een lid het artikel niet gereserveerd heeft en of een lid nog ruimte heeft om een artikel te reserveren of te lenen.
+         */
+
+        // Controleert geldigheid parameters en of het lid niet geroyaleerd is.
+        if(checkLidID(lidID) && checkArtikelID(artikelID) && !leden.get(lidID).isGeroyeerd())
+        {
+            int artikelenLeenCount = 0;
+
+            // Controleert, indien beschikbaar, de laatste uitlening van een exemplaar van het artikel en
+            // hoeveel artikelen een lener geleend heeft.
+            for(int i = (uitleningen.size() -1); i >= 0; i--)
+            {
+                if(uitleningen.get(i).getLidID() == lidID && uitleningen.get(i).getTerugbrengdatum() == null)
+                {
+                    artikelenLeenCount++;
+
+                    // Controleert of lid artikel te leen heeft.
+                    // Alle uitleningen hebben een geldig exemplaarID.
+                    if(exemplaren.get(uitleningen.get(i).getExemplaarID()).getArtikelID() == artikelID)
+                    {
+                        return false;
+                    }
+                    else if(artikelenLeenCount >= Bibliotheek.MAX_AANTAL_ARTIKELEN) // checkt artikelenLeenCount
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // Controleert, indien beschikbaar, op hoeveel openstaande reserveringen een lener heeft en
+            // of deze reserveringen exemplaren zijn van het artikel.
+            // Onder openstaande reserveringen vallen reserveringen zonder exemplaar en reserveringen die
+            // nog beschikbaar zijn en nog niet zijn uitgeleend.
+            for(int i = (reserveringen.size() -1); i >= 0; i--)
+            {
+                Reservering reservering = reserveringen.get(i);
+                if(reservering.getLidID() == lidID && (reservering.getMaxOphaaldatum() == null ||
+                    (SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) && !getReserveringUitgeleend(reservering))))
+                {
+                    artikelenLeenCount++;
+
+                    // Controleert of lid artikel gereserveerd heeft.
+                    // Hierbij wordt ervan uitgegaan dat alle reserveringen een geldig artikelID hebben.
+                    if(reserveringen.get(i).getArtikelID() == artikelID)
+                    {
+                        return false;
+                    }
+                    else if(artikelenLeenCount >= Bibliotheek.MAX_AANTAL_ARTIKELEN) // checkt artikelenLeenCount
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            // Een lener mag een artikel lenen of reserveren.
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Returned het eerste openstaande reservering object wanneer er een openstaande reservering is voor een bepaald artikel en
+     * het lid deze reservering toegewezen mag krijgen.
+     * 
+     * @param artikelID Het ID van het artikel.
+     * @return Het openstaande reservering object, anders null.
+     */
+    public Reservering getOpenReservering(int artikelID)
+    {
+        // Controleert geldigheid parameter.
+        if(checkArtikelID(artikelID))
+        {
+            // Loopt van de eerste naar laatste reservering omdat de langste openstaande reservering een exemplaar van een artikel moet krijgen.
+            for(int i = 0, length = (reserveringen.size() - 1); i <= length; i++)
+            {
+                Reservering reservering = reserveringen.get(i);
+                if(reservering.getDatumKlaargezet() == null && reservering.getArtikelID() == artikelID &&
+                    !leden.get(reservering.getLidID()).isGeroyeerd())
+                {
+                    return reservering;
+                }
+            }
+        }
+        // Wanneer bovenstaande testen niet slagen, dan bestaat er geen open reservering voor dat artikel.
+        return null;
+    }
+    
+    /**
+     * Returned of een exemplaar voor een lid gereserveerd is.
+     *     
+     * @param lidID       Het ID van het lid.
+     * @param exemplaarID Het ID van het exemplaar.
+     * @return true als het exemplaar gereserveerd is voor het lid, anders false
+     */
+    public boolean getGereserveerdVoorLid(int lidID, int exemplaarID)
+    {
+        // Controleert geldigheid parameters
+        if(checkLidID(lidID) && checkExemplaarID(exemplaarID))
+        {
+            // Controleert, indien beschikbaar, de laatste reservering van het exemplaar.
+            for(int i = (reserveringen.size() - 1); i >= 0; i--)
+            {
+                Reservering reservering = reserveringen.get(i);
+                // Controleert of een exemplaar voor een lid gereserveerd is.
+                if(reservering.getLidID() == lidID && reservering.getExemplaarID() == exemplaarID)
+                {
+                    // Controleert of de reservering nog opgehaald kan worden.
+                    if(!getReserveringUitgeleend(reservering) && SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()))
+                    {
+                        return true;
+                    }
+                    break;
+                }
+            }
+        }
+        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet voor een lid gereserveerd.
+        return false;
+    }
+
+    /**
+     * Returned het uitlening object als een exemplaar is uitgeleend en als dat exemplaar is uitgeleend aan een bepaald lid.
+     *
+     * @param lidID       Het ID van het lid.
+     * @param exemplaarID Het ID van het exemplaar.
+     * @return Het laaste uitlening object van het exemplaar dat is uitgeleend aan het lid, bij incorrecte status null.
+     */
+    public Uitlening checkAndGetUitgeleendEnAanLid(int lidID, int exemplaarID)
+    {
+        // Controleert geldigheid parameters
+        if(checkLidID(lidID) && checkExemplaarID(exemplaarID))
+        {
+            // Controleert, indien beschikbaar, de laatste uitlening van het exemplaar.
+            for(int i = (uitleningen.size() - 1); i >= 0; i--)
+            {
+                Uitlening uitlening = uitleningen.get(i);
+                if(uitlening.getExemplaarID() == exemplaarID)
+                {
+                    // Controleert of het exemplaar uitgeleend is aan het lid.
+                    if(uitlening.getTerugbrengdatum() == null && uitlening.getLidID() == lidID)
+                    {
+                        return uitlening;
+                    }
+                    break;
+                }
+            }
+        }
+        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet uitgeleend.
+        return null;
+    }
+    
+    /**
+     * Returned het verschuldigde bedrag van een lid aan de bibliotheek.
+     * Hieronder vallen openstaande boetes van een lid in centen en niet betaalde reserveringen van een lid.
+     *     
+     * @param lidID       Het ID van het lid.
+     * @return Het verschuldigde bedrag van een lid aan de bibliotheek.
+     */
+    public int getVerschuldigdBedragLid(int lidID)
+    {
+        int totaalVerschuldigd = 0;
+        // Controleert geldigheid parameters
+        if(checkLidID(lidID))
+        {
+            // Controleert de boetes.
+            for(int i = (boetes.size() - 1); i >= 0; i--)
+            {
+                // Controleert de boete in de juiste ArrayList.
+                switch(boetes.get(i).getBoeteKlasseType())
+                {
+                    case RESERVERING:
+                    {
+                        Reservering reservering = reserveringen.get(boetes.get(i).getItemID());
+                        // Controleert of een boete van het lid is en openstaat.
+                        if(reservering.getLidID() == lidID && !boetes.get(i).getBetaald())
+                        {
+                            totaalVerschuldigd += RESERVERING_BOETE;
+                        }
+                        break;
+                    }
+                    case UITLENING:
+                    {
+                        Uitlening uitlening = uitleningen.get(boetes.get(i).getItemID());
+                        // Controleert of een boete van het lid is en openstaat.
+                        if(uitlening.getLidID() == lidID && !boetes.get(i).getBetaald())
+                        {
+                            // Berekent kosten boete en telt deze op bij het totaal.
+                            totaalVerschuldigd += getVerschuldigdBedragUitlening(uitlening);
+                        }
+                        break;
+                    }
+                }
+            }
+
+            // Controleert de reserveringen.
+            for(int i = (reserveringen.size() - 1); i >= 0; i--)
+            {
+                Reservering reservering = reserveringen.get(i);
+                // Controleert of het lid een reservering heeft die niet betaald is.
+                if(reservering.getLidID() == lidID && !reservering.getReserveringskostenBetaald())
+                {
+                    // Haalt de kosten van de reservering op en telt deze op bij het totaal.
+                    totaalVerschuldigd += RESERVERINGSKOSTEN;
+                }
+            }
+        }
+        return totaalVerschuldigd;
+    }
+
+    /**
+     * Returned het op dit moment verschuldigde bedrag voor een uitlening.
+     *
+     * @param uitlening De uitlening waarvoor het op dit moment verschuldigde bedrag uitgerekend moet worden.
+     * @return Het verschuldigde bedrag voor de uitlening.
+     * @return Het verschuldigde bedrag voor de uitlening als de uitlening correct is, anders -1
+     */
+    public int getVerschuldigdBedragUitlening(Uitlening uitlening)
+    {
+        // Controleer of de uitlening teruggebracht is.
+        if(checkUitleningID(uitlening.getID()) && uitlening.getTerugbrengdatum() != null)
+        {
+            int dagen, weken;
+            dagen = weken = 0;
+            double boetePrijs = 0;
+            double leenPrijs = 0;
+            double totaalPrijs = 0;
+            double bedragBoete = 0;
+            final short PRIJS_CD_KLASSIEK = 2; // in centen
+            final short PRIJS_CD_POPULAIR = 1; // in centen
+            final short PRIJS_VIDEO_A = 2; // in centen
+            final short PRIJS_VIDEO_B = 2; // in centen
+            final short PRIJS_BOEK_ROMAN = 0; // in centen
+            final short PRIJS_BOEK_STUDIE = 0; // in centen
+
+            int verschilDagen = SpecialDate.daysDifference(uitlening.getUitleendatum(), uitlening.getTerugbrengdatum());
+
+            // Berekent het verschuldigde bedrag aan de hand van het artikel signature.
+            switch(artikelen.get(exemplaren.get(uitlening.getExemplaarID()).getArtikelID()).toString())
+            {
+                case "Cd POPULAIR": 
+                {
+                    if(verschilDagen <= 7)
+                    {
+                        dagen = verschilDagen;
+                        leenPrijs = dagen * PRIJS_CD_POPULAIR;
+                        boetePrijs = 0;
+                    }
+                    else
+                    {
+                        weken = verschilDagen - 7; // eerste week gratis
+                        dagen = (int) Math.ceil(weken / 7);
+                        leenPrijs = dagen * PRIJS_CD_POPULAIR;
+                        boetePrijs = 1.50; // per week
+                    }
+                    break;
+                }
+                case "Cd KLASSIEK": 
+                {
+                    if(verschilDagen <= 7)
+                    {
+                        dagen = verschilDagen;
+                        leenPrijs = dagen * PRIJS_CD_KLASSIEK;
+                        boetePrijs = 0;
+                    }
+                    else
+                    {
+                        weken = verschilDagen - 7; // eerste week gratis
+                        dagen = (int)Math.ceil(weken / 7);
+                        leenPrijs = dagen * PRIJS_CD_KLASSIEK;
+                        boetePrijs = 2.00; // per week
+                    }
+                    break;
+                }
+                case "Video A":
+                {
+                    dagen = verschilDagen;
+                    leenPrijs = dagen * PRIJS_VIDEO_A;
+                    boetePrijs = 0;
+                    break;
+                }
+                case "Video B":
+                {
+                    if(verschilDagen <= 3)
+                    {
+                        dagen = verschilDagen;
+                        leenPrijs = dagen * PRIJS_VIDEO_B;
+                        boetePrijs = 0;
+                    }
+                    else
+                    {
+                        dagen = verschilDagen - 3;
+                        leenPrijs = dagen * PRIJS_VIDEO_B;
+                        boetePrijs = 1.00; // na 3 dagen
+                    }
+                    break;
+                }
+                case "Boek ROMAN":
+                {
+                    if(verschilDagen <= 21)
+                    {
+                        dagen = verschilDagen;
+                        leenPrijs = dagen * PRIJS_BOEK_ROMAN;
+                        boetePrijs = 0;
+                    }
+                    else
+                    {
+                        dagen = verschilDagen - 21;
+                        leenPrijs = dagen * PRIJS_BOEK_ROMAN;
+                        boetePrijs = 0.25; // na 21 dagen
+                    }
+                    break;
+                }
+                case "Boek STUDIEBOEK":
+                {
+                    if(verschilDagen <= 30)
+                    {
+                        dagen = verschilDagen;
+                        leenPrijs = dagen * PRIJS_BOEK_STUDIE;
+                        boetePrijs = 0;
+                    }
+                    else
+                    {
+                        dagen = verschilDagen - 30;
+                        leenPrijs = dagen * PRIJS_BOEK_STUDIE;
+                        boetePrijs = 1.00; // na 30 dagen
+                    }
+                    break;
+                }
+            }
+            bedragBoete = boetePrijs * dagen;
+            totaalPrijs = leenPrijs + bedragBoete;
+            return (int)totaalPrijs;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    
+    /**
+     * Voegt een nieuw lid toe.
+     *
+     * @param naam De naam van het lid.
+     */
+    public void addLid(String naam)
+    {
+        // Genereert lidID aan hand van lengte ArrayList.
+        leden.add(new Lid(leden.size(), naam));
+    }
+
+    /**
+     * Voegt een nieuw boek toe.
+     *
+     * @param titel De titel van het boek.
+     * @param type  Het type van het boek. Het type is niet hoofdletter gevoelig.
+     * @return true als het toevoegen gelukt is, anders false
+     */
+    public boolean addBoek(String titel, String type)
+    {
+        // Zorgt voor een correct type.
+        try
+        {
+            // Genereert ID/artikelID aan hand van lengte ArrayList.
+            artikelen.add(new Boek(artikelen.size(), titel, BoekType.valueOf(type.toUpperCase())));
+            return true;
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Voegt een nieuwe cd toe.
+     *
+     * @param titel        De titel van de cd.
+     * @param type         Het type van de cd. Het type is niet hoofdletter gevoelig.
+     * @param releasedatum De releasedatum van de cd.
+     * @return true als het toevoegen gelukt is, anders false
+     */
+    public boolean addCd(String titel, String type, String releasedatum)
+    {
+        // Controleert geldigheid releasedatum parameter
+        if(SpecialDate.checkDate(releasedatum))
+        {
+            // Zorgt voor een correct type.
+            try
+            {
+                // Genereert ID/artikelID aan hand van lengte ArrayList.
+                artikelen.add(new Cd(artikelen.size(), titel, CdType.valueOf(type.toUpperCase()), releasedatum));
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Voegt een nieuwe videoband toe.
+     *
+     * @param titel De titel van de videoband.
+     * @param type  Het type van de videoband. Het type is niet hoofdletter gevoelig.
+     * @return true als het toevoegen gelukt is, anders false
+     */
+    public boolean addVideoband(String titel, String type)
+    {
+        try
+        {
+            // Genereert ID/artikelID aan hand van lengte ArrayList.
+            artikelen.add(new Videoband(artikelen.size(), titel, VideobandType.valueOf(type.toUpperCase())));
+            return true;
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Voegt een exemplaar van een artikel toe.
+     * 
+     * @param artikelID Het artikelID van het exemplaar.
+     * @return true als het toevoegen gelukt is, anders false
+     */
+    public boolean addExemplaar(int artikelID)
+    {
+        if(checkArtikelID(artikelID))
+        {
+            exemplaren.add(new Exemplaar(exemplaren.size(), artikelID));
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Voegt een nieuwe reservering toe.
+     *
+     * @param lidID     Het ID van het lid.
+     * @param artikelID Het ID van het artikel.
+     * @return true als het toevoegen gelukt is, anders false
+     */
+    public boolean addReservering(int lidID, int artikelID)
+    {
+        // Controleert geldigheid parameters en kijk of lid het artikel mag reserveren
+        if(checkLidID(lidID) && checkArtikelID(artikelID) && lidMagArtikelLenenOfReserveren(lidID, artikelID))
+        {
+            // Genereert reserveringID aan hand van lengte ArrayList.
+            reserveringen.add(new Reservering(reserveringen.size(), lidID, artikelID));
+            // TODO inningsgeld toevoegen aan lid
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Leent een exemplaar uit.
+     *
+     * @param lidID       Het ID van het lid.
+     * @param exemplaarID Het ID van het exemplaar.
+     * @return true als het uitlenen van het exemplaar gelukt is, anders false
+     */
+    public boolean addUitlening(int lidID, int exemplaarID)
+    {
+        // Controleert geldigheid parameters, controleert of het exemplaar niet uigeleend is,
+        // controleert of lid zo'n artikel mag lenen, controleert of als het een gereserveerd exemplaar is en
+        // zo ja deze voor het lid gereserveerd is.
+        if(checkLidID(lidID) && checkExemplaarID(exemplaarID) && !getUitgeleend(exemplaarID) &&
+        lidMagArtikelLenenOfReserveren(lidID, exemplaren.get(exemplaarID).getArtikelID()) && getGereserveerdVoorLid(lidID, exemplaarID))
+        {
+            uitleningen.add(new Uitlening(uitleningen.size(), lidID, exemplaarID));
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
     
-    public void artikelInleveren()
+    
+    /**
+     * Levert een exemplaar in.
+     *
+     * @param lidID       Het ID van het lid.
+     * @param exemplaarID Het ID van het exemplaar.
+     * @return true als het inleveren van het exemplaar gelukt is, anders false
+     */
+    public boolean inleverenExemplaar(int lidID, int exemplaarID)
     {
-        SpecialDate dateToday = new SpecialDate();
-        String timeStamp = dateToday.getDateToday();
-        Set<Integer> keys = artikelMap.keySet();
+        // Controleert geldigheid parameters, controleert of lid niet geroyaleerd is, controleert of het exemplaar uitgeleend is,
+        // controleert of het exemplaar aan het lid uitgeleend is, 
 
-        for(int key : keys)
+        // controleert of als het een gereserveerd exemplaar is en
+        // zo ja deze voor een lid gereserveerd is zet deze verwerking in gang > modificeer reservering object
+        // vraagt voor boete
+        // TODO inbouwen checks boete
+        // Probeer brieven te resetten wanneer boete is betaald en er geen te laat ingeleverde artikelen meer zijn.
+//             if(!leden.get(lidID).resetBrieven())
+//             {
+//                 return false;
+//             }
+
+        if(checkLidID(lidID) && checkExemplaarID(exemplaarID) && !leden.get(lidID).isGeroyeerd())
         {
-            Artikel a = artikelMap.get(key);
-            Lid hashLid = ledenMap.get(key);
-            if(hashLid.incrementArtikelenLeenCount() == true)
+            Uitlening uitlening = checkAndGetUitgeleendEnAanLid(lidID, exemplaarID);
+            // Ga verder als (gevonden) uitlening object correct is, stelt terugbrengdatum uitlening object in.
+            if(uitlening != null && uitlening.setTerugbrengdatum())
             {
-                if(a.getID() == artikel_id) 
-                {
-                    a.setUitgeleend();
-                    getUitlening = new Lenen(uitleningen.size(), lid_id, artikel_id, dateToday.getDateToday());
-                    uitleenMap.put(leen_n, getUitlening);
-                    leen_n++;
-                    System.out.println("Artikel uitgeleend");
-                }
+                getVerschuldigdBedragUitlening(uitlening);
+                // TODO verder uitbereiden
+                controleerAndSetReservering(exemplaarID);
+                
+                return true;
             }
         }
+        // In alle andere gevallen
+        return false;
     }
 
-    // Add lid    
-    public void addLid(String name)
+    /**
+     * Controleert of er openstaande reserveringen zijn voor het artikel van een ingeleverd exemplaar en
+     * kent aan de eerste open reservering het exemplaar toe.
+     * 
+     * @param exemplaarID Het ID van het exemplaar.
+     * @return true als het vinden van een openstaande reservering en het toekennen van het exemplaar gelukt is, anders false
+     */
+    public boolean controleerAndSetReservering(int exemplaarID)
     {
-        getLid = (new Lid(name, customers.size()));
-        ledenMap.put(lid_n, getLid);
-        lid_n++;
-        System.out.println(lid_n);
-
-    }
-
-    // Remove lid
-    public void removeLid(Lid lid)
-    {
-        customers.remove(lid);
-    }
-
-    // Video
-    public void addVideoband(String titel, String type, String releaseDatum, int aantal_voorraad, String genre)
-    {
-        getArtikel = (new Videoband(artikel_n, titel, type, releaseDatum, genre, aantal_voorraad, uitgeleend_count));
-        artikelMap.put(artikel_n, getArtikel);
-        artikel_n++;
-        System.out.println(artikel_n);
-    }
-    // Boek
-    public void addBoek(String titel, String type, String releaseDatum, String genre, int isbn, int pages)
-    {
-        getArtikel = (new Boek(artikel_n, titel, type, releaseDatum, genre, aantal_voorraad, uitgeleend_count, isbn, pages));
-        artikelMap.put(artikel_n, getArtikel);
-        artikel_n++;
-        System.out.println(artikel_n);
-    }
-    // CD
-    public void addCD(String titel, String type, String genre, String releaseDatum, String artiest)
-    {
-        getArtikel = (new CD(artikel_n, titel, type, releaseDatum, genre, aantal_voorraad, uitgeleend_count, artiest));
-        artikelMap.put(artikel_n, getArtikel);
-        artikel_n++;
-        System.out.println(artikel_n);
-    }
-
-    public void showCustomers()
-    {
-        System.out.println("-------------Leden------------");
-        Set<Integer> keys = ledenMap.keySet();
-        for(int key : keys)
+        // Controleert geldigheid parameter en kijkt of het exemplaar niet uitgeleend is. 
+        if(checkExemplaarID(exemplaarID) && !getUitgeleend(exemplaarID))
         {
-            Lid l = ledenMap.get(key);
-
-            System.out.println(l.getName());
-
+            // Zoekt openstaande reservering op en zet deze klaar.
+            Reservering reservering = getOpenReservering(exemplaren.get(exemplaarID).getArtikelID());
+            if(reservering != null && reservering.setReserveringKlaar(exemplaarID))
+            {
+                return true;
+            }
         }
-        System.out.println("------------------------------");
+        // In alle andere gevallen
+        return false;
     }
-
-    public void totaalKosten()
+    
+    /**
+     * Betaalt de openstaande boetes van een lid.
+     * 
+     * @param lidID Het ID van het lid.
+     * @return true als het betalen gelukt is, anders false
+     */
+    public boolean betaalBoetes(int lidID)
     {
-
-    }
-
-    public void showArtikelen()
-    {
-        System.out.println("---------Artikelen----------");
-        Set<Integer> keys = artikelMap.keySet();
-
-        for(int key : keys)
+        // Controleert geldigheid parameters
+        if(checkLidID(lidID) && !leden.get(lidID).isGeroyeerd())
         {
-            Artikel a = artikelMap.get(key);
-            if(a.getType().equals("book")) 
+            // Doorloop de boetes.
+            for(int i = (boetes.size() - 1); i >= 0; i--)
             {
-                //                 System.out.println("book!");
-                System.out.println("# " + a.getID() + " Type: " + a.getType() + " Naam: " + a.getTitel() + " Releasedatum: " + a.getReleaseDate());
-            }
-            if(a.getType().equals("cd")) 
-            {
-                //                 System.out.println("cd!");
-                System.out.println("# " + a.getID() + " Type: " + a.getType() + " Naam: " + a.getTitel() + " Releasedatum: " + a.getReleaseDate());
-            }
-            if(a.getType().equals("video")) 
-            {
-                //                 System.out.println("video!");
-                System.out.println("# " + a.getID() + " Type: " + a.getType() + " Naam: " + a.getTitel() + " Releasedatum: " + a.getReleaseDate());
-            }
-
-        }
-        System.out.println("------------------------------");
-    }
-
-    public void showReserveringen() 
-    {
-        System.out.println("---------Reserveringen----------");
-        Set<Integer> keys = reserveringMap.keySet();
-        for(int key : keys) 
-        {
-
-            Reservering x = reserveringMap.get(key);
-            Set<Integer> articleKeys = artikelMap.keySet();
-            for(int articleKey : articleKeys)
-            {
-                Artikel r = artikelMap.get(key);
-                if(x.getArtikelID() == r.getID())
+                // Controleert de boete in de juiste ArrayList.
+                switch(boetes.get(i).getBoeteKlasseType())
                 {
-                    System.out.println(r.getTitel());
-
-                    //                     System.out.println(r.getReleaseDate());
-                }
-            }
-            Lid l = ledenMap.get(key);
-            Set<Integer> ledenKeys = ledenMap.keySet();
-            for(int ledenKey : ledenKeys)
-            {
-                if(x.getLidID() == l.getID())
-                {
-                    System.out.println(l.getName());
+                    case RESERVERING:
+                    {
+                        Reservering reservering = reserveringen.get(boetes.get(i).getItemID());
+                        // Controleert of een boete van het lid is en openstaat en
+                        // of het betalen niet gelukt is.
+                        if(reservering.getLidID() == lidID && !boetes.get(i).getBetaald() &&
+                            !boetes.get(i).setBetaald())
+                        {
+                            return false;
+                        }
+                        break;
+                    }
+                    case UITLENING:
+                    {
+                        Uitlening uitlening = uitleningen.get(boetes.get(i).getItemID());
+                        // Controleert of een boete van het lid is en openstaat en
+                        // of het betalen niet gelukt is.
+                        if(uitlening.getLidID() == lidID && !boetes.get(i).getBetaald() &&
+                            !boetes.get(i).setBetaald())
+                        {
+                            return false;
+                        }
+                        break;
+                    }
                 }
             }
 
-            //int id =reservering.getArtikelID()
-            //System.out.println(reservering.getArtikelID());
-            //System.out.println("Titel: " + artikelen.getID().getName());            
-            //System.out.println("Datum gereserveerd: " + reservering.getDatum());
+            // Doorloop de reserveringen.
+            for(int i = (reserveringen.size() - 1); i >= 0; i--)
+            {
+                Reservering reservering = reserveringen.get(i);
+                // Controleert of het lid een reservering heeft die niet betaald is en
+                // of het betalen niet gelukt is.
+                if(reservering.getLidID() == lidID && !reservering.getReserveringskostenBetaald() &&
+                    !reservering.setReserveringskostenBetaald())
+                {
+                    return false;
+                }
+            }
+            
+            // Het betalen is gelukt.
+            return true;
         }
-        System.out.println("------------------------------");
+        // Lid kan/mag niet betalen.
+        return false;
     }
+    
+    /**
+     * Verwerkt verlopen reserveringen.
+     * Geeft een boete aan het lid en reserveert, indien er openstaande reserveringen zijn,
+     * het exemplaar voor een ander lid.
+     * 
+     * @return true als het verwerken gelukt is, anders false
+     */
+    public boolean verwerkVerlopenReserveringen()
+    {
+        return false;
+    }
+    
+    /**
+     * Berekend het verschuldigde bedrag van leden en
+     * bepaald of ze een of meerdere waarschuwingbrieven moeten krijgen.
+     * Elke rij in de ArrayList stelt een waarschuwingsbrief voor zodat
+     * het makkelijk is welke waarschuwingsbrieven verstuurd moeten worden.
+     * 
+     * @return Een ArrayList met de leden die een waarschuwingsbrief moeten krijgen.
+     */
+    public ArrayList<int[]> verwerkVerschuldigdBedrag()
+    {
+        // Opbouw rijen van de ArrayList: lidID en de drempel waarde van de waarschuwingsbrief.
+        ArrayList<int[]> waarschuwingsbrieven = new ArrayList<int[]>();
+        for(Lid lid : leden)
+        {
+            // Controleer of lid eerste waarschuwingsbrief moet krijgen en probeer dan
+            // eerste waarschuwingsbrief naar lid te versturen.
+            if(!lid.isGeroyeerd() && getVerschuldigdBedragLid(lid.getID()) > DREMPEL_EERSTE_BRIEF &&
+                !lid.getEersteBrief() && lid.setEersteBrief())
+            {
+                waarschuwingsbrieven.add(new int[] {lid.getID(), DREMPEL_EERSTE_BRIEF});
+            }
+            // Controleer of lid tweede waarschuwingsbrief moet krijgen en probeer dan
+            // tweede waarschuwingsbrief naar lid te versturen.
+            if(!lid.isGeroyeerd() && getVerschuldigdBedragLid(lid.getID()) > DREMPEL_TWEEDE_BRIEF &&
+                lid.getTweedeBrief() == null && lid.setTweedeBrief())
+            {
+                waarschuwingsbrieven.add(new int[] {lid.getID(), DREMPEL_TWEEDE_BRIEF});
+            }
+        }
+    
+        return waarschuwingsbrieven;
+    }
+    
+    // CHECK
+    //     /**
+    //      * Returned een beschikbaar examplaar van een artikel.
+    //      *
+    //      * @return Het aantal beschikbare examplaren van een artikel.
+    //      */
+    //     public int getAantalBeschikbaar()
+    //     {
+    //         int aantalBeschikbaar = 0;
+    //         for(Exemplaar exemplaar : exemplaren)
+    //         {
+    //             if(exemplaar.getUitgeleend())
+    //             {
+    //                 aantalBeschikbaar++;
+    //             }
+    //         }
+    //         return aantalBeschikbaar;
+    //     }
+    //     
+    // 
+    //     /**
+    //      * Verlaagt het aantal beschikbare examplaren van een artikel.
+    //      * 
+    //      * @return true als het verlagen gelukt is, anders false
+    //      */
+    //     public boolean decrementAantalBeschikbaar()
+    //     {
+    //         //  Controleer of er nog exemplaren kunnen worden teruggebracht.
+    //         if(getAantalBeschikbaar() > 1)
+    //         {
+    //             aantalBeschikbaar--;
+    //             return true;
+    //         }
+    //         else
+    //         {
+    //             return false;
+    //         }
+    //     }
+
+    // CHECK
+    //      // NOTE: Waarschijnlijk overbodig
+    //     /**
+    //      * Returned het aantal beschikbare examplaren van een artikel.
+    //      *
+    //      * @return Het aantal beschikbare examplaren van een artikel.
+    //      */
+    //     public int getAantalBeschikbaar()
+    //     {
+    //         int aantalBeschikbaar = 0;
+    //         for(Exemplaar exemplaar : exemplaren)
+    //         {
+    //             if(exemplaar.getUitgeleend())
+    //             {
+    //                 aantalBeschikbaar++;
+    //             }
+    //         }
+    //         return aantalBeschikbaar;
+    //     }
+    //
+    // CHECK
+    //     // Remove lid
+    //     public void removeLid(Lid lid)
+    //     {
+    //         customers.remove(lid);
+    //     }
 }

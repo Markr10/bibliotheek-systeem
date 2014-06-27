@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=id\ itemID\ boeteKlasseType\ betaald
+comment0.target=Boete(int,\ int,\ BoeteKlasseType,\ boolean)
+comment0.text=\n\ Constructor\ voor\ objecten\ van\ de\ klasse\ Boete.\n\n\ @param\ id\ \ \ \ \ \ \ \ \ \ \ \ \ \ Het\ ID\ van\ de\ boete.\n\ @param\ itemID\ \ \ \ \ \ \ \ \ \ Het\ ID\ van\ het\ item\ die\ bij\ de\ boete\ hoort.\n\ @param\ boeteKlasseType\ De\ klasse\ van\ het\ item\ van\ de\ boete.\n\ @param\ betaald\ \ \ \ \ \ \ \ \ Of\ de\ boete\ betaald\ is.\n
+comment1.params=
+comment1.target=int\ getID()
+comment1.text=\n\ Returned\ het\ ID\ van\ de\ boete.\n\ \n\ @return\ Het\ ID\ van\ de\ boete.\n
+comment2.params=
+comment2.target=int\ getItemID()
+comment2.text=\n\ Returned\ het\ ID\ van\ het\ item\ die\ bij\ de\ boete\ hoort.\n\ \n\ @return\ Het\ ID\ van\ het\ item\ die\ bij\ de\ boete\ hoort.\n
+comment3.params=
+comment3.target=BoeteKlasseType\ getBoeteKlasseType()
+comment3.text=\n\ Returned\ de\ klasse\ van\ het\ item\ van\ de\ boete.\n\ \n\ @return\ De\ klasse\ van\ het\ item\ van\ de\ boete.\n
+comment4.params=
+comment4.target=boolean\ getBetaald()
+comment4.text=\n\ Returned\ of\ de\ boete\ betaald\ is.\n\ \n\ @return\ true\ als\ de\ boete\ betaald\ is,\ anders\ false\n
+comment5.params=
+comment5.target=boolean\ setBetaald()
+comment5.text=\n\ Betaald\ de\ boete\ indien\ mogelijk.\n\ \n\ @return\ true\ als\ het\ betalen\ gelukt\ is,\ anders\ false\n
+numComments=6

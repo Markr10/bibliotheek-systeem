@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=id\ lidID\ exemplaarID
+comment0.target=Uitlening(int,\ int,\ int)
+comment0.text=\n\ Constructor\ voor\ objecten\ van\ de\ klasse\ Uitlening.\n\n\ @param\ id\ \ \ \ \ \ \ \ \ \ \ \ \ Het\ id\ van\ de\ uitlening.\n\ @param\ lidID\ \ \ \ \ \ \ \ \ \ Het\ lidID\ van\ de\ uitlening.\n\ @param\ exemplaarID\ \ \ \ Het\ exemplaarID\ van\ de\ uitlening.\n
+comment1.params=
+comment1.target=int\ getID()
+comment1.text=\n\ Returned\ het\ ID\ van\ de\ uitlening.\n\ \n\ @return\ Het\ ID\ van\ de\ uitlening.\n
+comment2.params=
+comment2.target=int\ getLidID()
+comment2.text=\n\ Returned\ het\ lidID\ van\ de\ uitlening.\n\ \n\ @return\ Het\ lidID\ van\ de\ uitlening.\n
+comment3.params=
+comment3.target=int\ getExemplaarID()
+comment3.text=\n\ Returned\ het\ exemplaarID\ van\ de\ uitlening.\n\ \n\ @return\ Het\ exemplaarID\ van\ de\ uitlening.\n
+comment4.params=
+comment4.target=java.lang.String\ getUitleendatum()
+comment4.text=\n\ Returned\ de\ uitleendatum\ van\ de\ uitlening.\n\ \n\ @return\ De\ uitleendatum\ van\ de\ uitlening.\n
+comment5.params=
+comment5.target=java.lang.String\ getTerugbrengdatum()
+comment5.text=\n\ Returned\ de\ terugbrengdatum\ van\ de\ uitlening.\n\ \n\ @return\ De\ terugbrengdatum\ van\ de\ uitlening\ als\n\ de\ uitlening\ ooit\ is\ teruggebracht,\ anders\ null.\n
+comment6.params=
+comment6.target=boolean\ setTerugbrengdatum()
+comment6.text=\n\ Stelt\ de\ terugbrengdatum\ van\ de\ uitlening\ in.\n\ \n\ @return\ true\ als\ het\ instellen\ gelukt\ is,\ anders\ false\n
+numComments=7

@@ -4,18 +4,19 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * De testklasse BibliotheekTest.
+ * De testklasse ExemplaarTest.
  *
  * @author  Wybren, Danny en Mark
  * @version 7 April 2014
  */
-public class BibliotheekTest
+public class ExemplaarTest
 {
-    private Bibliotheek biblioth1;
+    private Exemplaar exemplaa1;
+
     /**
-     * Default constructor for test class BibliotheekTest.
+     * Default constructor for test class ExemplaarTest
      */
-    public BibliotheekTest()
+    public ExemplaarTest()
     {
     }
 
@@ -27,11 +28,7 @@ public class BibliotheekTest
     @Before
     public void setUp()
     {
-        // Bibliotheek met 3 artikelen.
-        biblioth1 = new Bibliotheek();
-        biblioth1.addBoek("Roman Empire", "Roman");
-        biblioth1.addCd("Nederpop", "Pop", "12092006");
-        biblioth1.addVideoband("The Bandit", "A");
+        exemplaa1 = new Exemplaar(3, 4);
     }
 
     /**
@@ -43,5 +40,20 @@ public class BibliotheekTest
     public void tearDown()
     {
     }
+
+    @Test
+    public void testGetID()
+    {
+        assertEquals(3, exemplaa1.getID());
+    }
+
+    @Test
+    public void testGetArtikelID()
+    {
+        assertEquals(4, exemplaa1.getArtikelID());
+    }
 }
+
+
+
 

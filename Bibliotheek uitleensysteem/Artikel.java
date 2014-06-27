@@ -1,92 +1,70 @@
-import java.util.*;
+import java.util.ArrayList;
 /**
- * Write a description of class Reserveringen here.
+ * Een abstracte klasse waarmee artikelen gemaakt kunnen worden.
  * 
- * Wybren, Danny en Mark
- * 7 April 2014
+ * @author  Wybren, Danny en Mark
+ * @version 7 April 2014
  * 
  */
 public abstract class Artikel
 {
-    // Artikel variabelen (Globaal)
-    public int id;
+    // Artikel variabelen (protected waar nodig)
+    private int id;
     private String titel;
-    public String type;
-    private String releaseDatum;
-    public String genre;
-    private int uitgeleend_count;
-    private int aantal_voorraad;
-
-//     // CD Variabelen
-//     private String artiest;
-//     private int aantal_cds;
-//     private int tracks;
-//     public int afspeelDuur;
-//             // Genre via Artikel
-//             
-//     // Book Variabelen
-//     private String titel;
-//     private String auteurs;
-//     public int isbn;
-//     public int pages;
-//             // Genre via Artikel
-// 
-//     // Video Variabelen
-//     //private String titel;
-//     private String acteurs;
-//             // Genre via Artikel
-
+    protected Enum type;
     
-    public Artikel(int id, String titel, String type, String releaseDatum, String genre, int aantal_voorraad, int uitgeleend_count)
+    /**
+     * Constructor voor objecten van de klasse artikel.
+     *
+     * @param id    Het id van het artikel.
+     * @param titel De titel van het artikel.
+     * @param type  Het type van het artikel.
+     */
+    public Artikel(int id, String titel, Enum type)
     {
         this.id = id;
         this.titel = titel;
         this.type = type;
-        this.releaseDatum = releaseDatum;
-        this.genre = genre;
-        this.aantal_voorraad = aantal_voorraad;
-        this.uitgeleend_count = uitgeleend_count;
     }
-
-    // Getting id
+    
+    /**
+     * Returned het ID van het artikel.
+     * 
+     * @return Het ID van het artikel.
+     */
     public int getID() 
     {
         return id;
     }
     
-    // Getting Titel
+    /**
+     * Returned de titel van het artikel.
+     * 
+     * @return De titel van het artikel.
+     */
     public String getTitel() 
     {
         return titel;
     }
 
-    public String getType() 
+    /**
+     * Returned het type van het artikel.
+     * 
+     * @return Het type van het artikel.
+     */
+    public Enum getType() 
     {
         return type;
     }
     
-    public String getReleaseDate() 
+    /**
+     * Method toString
+     *
+     * @return naam van de klasse + het type
+     */
+    @Override
+    public String toString()
     {
-        return releaseDatum;
-    }
-    
-    public String getGenre()
-    {
-        return genre;
-    }
-    
-    public int getVoorraad()
-    {
-        return aantal_voorraad;
-    }
-    
-    public int getUitgeleend()
-    {
-        return uitgeleend_count;
-    }
-    
-    public void setUitgeleend()
-    {
-        uitgeleend_count++;
+        return (this.getClass().getSimpleName() + " " + type.toString());
     }
 }

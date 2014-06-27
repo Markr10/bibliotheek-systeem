@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=id\ artikelID
+comment0.target=Exemplaar(int,\ int)
+comment0.text=\n\ Constructor\ voor\ objecten\ van\ de\ klasse\ Exemplaar.\n\n\ @param\ id\ \ \ \ \ \ \ \ Het\ ID\ van\ het\ exemplaar.\n\ @param\ artikelID\ Het\ artikelID\ van\ het\ exemplaar.\n
+comment1.params=
+comment1.target=int\ getID()
+comment1.text=\n\ Returned\ het\ ID\ van\ het\ exemplaar.\n\ \n\ @return\ Het\ ID\ van\ het\ exemplaar.\n
+comment2.params=
+comment2.target=int\ getArtikelID()
+comment2.text=\n\ Returned\ het\ artikelID\ van\ het\ exemplaar.\n\ \n\ @return\ Het\ artikelID\ van\ het\ exemplaar.\n
+numComments=3
