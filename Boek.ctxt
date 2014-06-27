@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=id\ titel\ type
+comment0.target=Boek(int,\ java.lang.String,\ BoekType)
+comment0.text=\n\ Constructor\ voor\ objecten\ van\ de\ klasse\ boek.\n\n\ @param\ id\ \ \ \ Het\ id\ van\ het\ boek.\n\ @param\ titel\ De\ titel\ van\ het\ boek.\n\ @param\ type\ \ Het\ type\ van\ het\ boek.\n
+numComments=1
