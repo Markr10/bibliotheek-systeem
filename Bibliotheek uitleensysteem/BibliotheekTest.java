@@ -1,19 +1,20 @@
+
+
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
- * De testklasse BibliotheekTest.
+ * The test class BibliotheekTest.
  *
- * @author  Wybren, Danny en Mark
- * @version 7 April 2014
+ * @author  (your name)
+ * @version (a version number or a date)
  */
 public class BibliotheekTest
 {
-    private Bibliotheek biblioth1;
     /**
-     * Default constructor for test class BibliotheekTest.
+     * Default constructor for test class BibliotheekTest
      */
     public BibliotheekTest()
     {
@@ -27,11 +28,6 @@ public class BibliotheekTest
     @Before
     public void setUp()
     {
-        // Bibliotheek met 3 artikelen.
-        biblioth1 = new Bibliotheek();
-        biblioth1.addBoek("Roman Empire", "Roman");
-        biblioth1.addCd("Nederpop", "Pop", "12092006");
-        biblioth1.addVideoband("The Bandit", "A");
     }
 
     /**
@@ -42,6 +38,16 @@ public class BibliotheekTest
     @After
     public void tearDown()
     {
+    }
+
+    @Test
+    public void add3Artikel()
+    {
+        Bibliotheek biblioth1 = new Bibliotheek();
+        biblioth1.addBoek("boek", "Roman", "23082012", "danny", 231472381, 201);
+        biblioth1.addCD("CD", "Pop", "Nederpop", "12092006", "Pietje");
+        biblioth1.addVideoband("Video", "A", "23042011", 10, "Thriller");
+        biblioth1.showArtikelen();
     }
 }
 

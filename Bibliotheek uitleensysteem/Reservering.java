@@ -1,168 +1,73 @@
 
 /**
- * Een klasse om een reservering objecten te creëren.
+ * Write a description of class Reserveringen here.
  * 
- * @author  Wybren, Danny en Mark
- * @version 7 April 2014
+ * Wybren, Danny en Mark
+ * 7 April 2014
  * 
  */
 public class Reservering
 {
-    private int id;
-    private int lidID;
-    private int artikelID;
-    private String reserveringsdatum;
-    private boolean reserveringskostenBetaald;
-    private String datumKlaargezet;
-    private int exemplaarID;
-    private String maxOphaaldatum; // ophaaldag is tot en met deze dag
-
+    private int reservering_id;
+    private int lid_id;
+    private int artikel_id;
+    private int kosten; // centen omzetten naar euro's toevoegen aan klant kosten
+    private int totaalKosten;
+    private String reserverings_datum;
+    private String status;
 
     /**
-     * Constructor voor objecten van de klasse Reservering.
-     * 
-     * @param id        Het ID van de reservering.
-     * @param lidID     Het lidID van de reservering.
-     * @param artikelID Het artikelID van de reservering.
-     * 
+     * Constructor for objects of class Reservering
      */
-    public Reservering(int id, int lidID, int artikelID)
+    public Reservering(int reservering_id, int lid_id, int artikel_id, String reserverings_datum)
     {
-        this.id = id;
-        this.lidID = lidID;
-        this.artikelID = artikelID;
-        
-        reserveringsdatum = SpecialDate.getDateToday();
-        reserveringskostenBetaald = false;
-        exemplaarID = -1;
-        datumKlaargezet = maxOphaaldatum = null;
+        this.reservering_id = reservering_id;
+        this.lid_id = lid_id;
+        this.artikel_id = artikel_id;
+        this.reserverings_datum = reserverings_datum;
+        this.status = "open";
     }
-    
-    
-    /**
-     * Returned het ID van de reservering.
-     * 
-     * @return Het ID van de reservering.
-     */
-    public int getID()
+
+    public int getReserveringID()
     {
-        return id;
+        return reservering_id;
     }
-    
-    /**
-     * Returned het lidID van de reservering.
-     * 
-     * @return Het lidID van de reservering.
-     */
-    public int getLidID()
-    {
-        return lidID;
-    }
-    
-    /**
-     * Returned het artikelID van de reservering.
-     * 
-     * @return Het artikelID van de reservering.
-     */
     public int getArtikelID()
     {
-        return artikelID;
+        return artikel_id;
     }
     
-    /**
-     * Returned de reserveringsdatum van de reservering.
-     * 
-     * @return De reserveringsdatum van de reservering
-     */
-    public String getReserveringsdatum()
+    public int getLidID()
     {
-        return reserveringsdatum;
+        return lid_id;
     }
-    
-    /**
-     * Returned of de reserveringskosten betaald zijn.
-     * 
-     * @return true als de reserveringskosten betaald zijn, anders false
-     */
-    public boolean getReserveringskostenBetaald()
+//     public String getName()
+//     {
+//         return name;
+//     }
+    public String getDatum()
     {
-        return reserveringskostenBetaald;
+        return reserverings_datum;
     }
-    
-    /**
-     * Returned de datum waarop de reservering is klaargezet.
-     * 
-     * @return De datum waarop de reservering is klaargezet.
-     * Wanneer dit nooit gebeurd is, wordt null gereturned.
-     */
-    public String getDatumKlaargezet()
+    public void setDatum(String reserverings_datum)
     {
-        return datumKlaargezet;
+        this.reserverings_datum = reserverings_datum;
     }
-    
-    /**
-     * Returned het exemplaarID van de reservering.
-     * 
-     * @return Het exemplaarID van de reservering.
-     * @return Het exemplaarID van de reservering als
-     * de reservering ooit is klaargezet, anders -1.
-     */
-    public int getExemplaarID()
+
+    public int nieuweReservering() 
     {
-        return exemplaarID;
+        int kosten = 30; // in centen
+        berekenTotaalKosten();
+        return kosten;
     }
-    
-    /**
-     * Returned de maximale ophaaldatum van de reservering.
-     * 
-     * @return De maximale ophaaldatum van de reservering als
-     * de reservering ooit is klaargezet, anders null.
-     */
-    public String getMaxOphaaldatum()
+
+    public void berekenTotaalKosten()
     {
-        return maxOphaaldatum;
+        totaalKosten += kosten;
     }
-    
-    
-    /**
-     * Betaald de reserveringskosten indien mogelijk.
-     * 
-     * @return true als het betalen gelukt is, anders false
-     */
-    public boolean setReserveringskostenBetaald()
+
+    public int getTotaalKosten()
     {
-        // Controleer of de reserveringskosten al betaald zijn.
-        if(!reserveringskostenBetaald)
-        {
-            reserveringskostenBetaald = true;
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    
-    /**
-     * Zorgt ervoor dat een reservering opgehaald kan worden.
-     * 
-     * @param exemplaarID Het exemplaarID van de reservering.
-     * @return true als het klaarzetten gelukt is, anders false
-     */
-    public boolean setReserveringKlaar(int exemplaarID)
-    {
-        // Controleer of de datumKlaargezet ingesteld kan worden.
-        // Omdat setReserveringKlaar de maximale ophaaldatum beheerd, hoeft hier niet op gecontroleerd te worden.
-        if(datumKlaargezet == null)
-        {
-            datumKlaargezet = SpecialDate.getDateToday();
-            // De datum waarop de reservering maximaal mag worden opgehaald. De datum is dus tot en met die dag en is in het formaat "ddMMyyyy".
-            maxOphaaldatum = SpecialDate.addDays(SpecialDate.getDateToday(), Bibliotheek.MAX_AANTAL_DAGEN_RESERVERING_OPHALEN);
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return totaalKosten;
     }
 }
