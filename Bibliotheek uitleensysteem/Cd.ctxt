@@ -5,6 +5,4 @@ comment0.text=\n\ Constructor\ voor\ objecten\ van\ de\ klasse\ Cd.\n\n\ @param\
 comment1.params=
 comment1.target=java.lang.String\ getReleasedatum()
 comment1.text=\n\ Returned\ de\ releasedatum\ van\ de\ cd.\n\ \n\ @return\ De\ releasedatum\ van\ de\ cd.\n
-comment2.params=kosten
-comment2.target=int\ leeftijdCd(int)
-numComments=3
+numComments=2

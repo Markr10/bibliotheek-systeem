@@ -151,6 +151,7 @@ public class SpecialDate
     
     /**
      * Calculates the difference (years) between the start date and today.
+     * Ceil the years.
      * 
      * @param startDate A start date in the format "ddMMyyyy".
      * @return The difference in years between the start date and today.
@@ -172,6 +173,16 @@ public class SpecialDate
                 calToday.get(Calendar.DAY_OF_MONTH) < calStart.get(Calendar.DAY_OF_MONTH))
             {
                 years--;
+            }
+            else if(years > 0 && calToday.get(Calendar.MONTH) > calStart.get(Calendar.MONTH) &&
+                calToday.get(Calendar.DAY_OF_MONTH) < calStart.get(Calendar.DAY_OF_MONTH))
+            {
+                years++;
+            }
+            else if(years > 0 && calToday.get(Calendar.MONTH) == calStart.get(Calendar.MONTH) &&
+                calToday.get(Calendar.DAY_OF_MONTH) > calStart.get(Calendar.DAY_OF_MONTH))
+            {
+                years++;
             }
             return years;
         }

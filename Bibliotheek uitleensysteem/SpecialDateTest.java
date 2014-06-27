@@ -58,6 +58,24 @@ public class SpecialDateTest
     }
     
     /**
+     * Test the method roundedYearsDifference.
+     * It can fail on someday because it calculates
+     * the difference (years) between the start date and today.
+     * Then the expected result may be adjusted.
+     */
+    @Test
+    public void testRoundedYearsDifference()
+    {
+        assertEquals(0, SpecialDate.roundedYearsDifference("07032014"));
+        assertEquals(1, SpecialDate.roundedYearsDifference("04062013"));
+        assertEquals(1, SpecialDate.roundedYearsDifference("07112012"));
+        assertEquals(4, SpecialDate.roundedYearsDifference("01062011"));
+        assertEquals(4, SpecialDate.roundedYearsDifference("16052011"));
+        assertEquals(0, SpecialDate.roundedYearsDifference("05112013"));
+        assertEquals(0, SpecialDate.roundedYearsDifference("07112013"));
+    }
+    
+    /**
      * Test the method yearsDifference with an invalid argument.
      */
     @Test
@@ -96,7 +114,7 @@ public class SpecialDateTest
     @Test
     public void testGetDateToday()
     {
-        assertEquals("26052014", SpecialDate.getDateToday());
+        assertEquals("04062014", SpecialDate.getDateToday());
     }
     
     /**
@@ -108,9 +126,9 @@ public class SpecialDateTest
     @Test
     public void testDaysDifference()
     {
-        assertEquals(564, SpecialDate.daysDifference("08112012"));
-        assertEquals(1105, SpecialDate.daysDifference("17052011"));
-        assertEquals(1, SpecialDate.daysDifference("25052014"));
+        assertEquals(573, SpecialDate.daysDifference("08112012"));
+        assertEquals(1114, SpecialDate.daysDifference("17052011"));
+        assertEquals(1, SpecialDate.daysDifference(SpecialDate.addDays(SpecialDate.getDateToday(), -1)));
         assertEquals(0, SpecialDate.daysDifference(SpecialDate.getDateToday()));
     }
     
