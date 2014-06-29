@@ -12,4 +12,6 @@ comment3.params=
 comment3.target=void\ testAddLid()
 comment4.params=
 comment4.target=void\ testAddBoek()
-numComments=5
+comment5.params=
+comment5.target=void\ testAddCd()
+numComments=6

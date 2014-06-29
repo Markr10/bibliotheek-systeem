@@ -33,7 +33,7 @@ public class BibliotheekTest
         // Bibliotheek met 3 artikelen.
         biblioth1 = new Bibliotheek();
         biblioth1.addBoek("Roman Empire", "Roman");
-        biblioth1.addCd("Nederpop", "Pop", "12092006");
+        biblioth1.addCd("Nederpop", "Populair", "12092006");
         biblioth1.addVideoband("The Bandit", "A");
         biblioth2 = new Bibliotheek();
     }
@@ -75,7 +75,39 @@ public class BibliotheekTest
         assertEquals(BoekType.valueOf("STUDIEBOEK"), biblioth2.artikelen.get(1).getType());
         assertEquals(1, biblioth2.artikelen.get(1).getID());
     }
+
+    @Test
+    public void testAddCd()
+    {
+        assertEquals(false, biblioth2.addCd("Nederpop 1", "POP", "12092006"));
+        assertEquals(false, biblioth2.addCd("Nederpop 2", "POP", "test"));
+        assertEquals(true, biblioth2.addCd("Nederpop 3", "POPuLaiR", "12092006"));
+        assertEquals(false, biblioth2.addCd("Nederpop 4", "POPuLaiR", "test"));
+        assertEquals(false, biblioth2.addCd("Nederpop 5", "POPuLaiR", "12092015"));
+        assertEquals(true, biblioth2.addCd("Nederpop 6", "POPuLaiR", SpecialDate.getDateToday()));
+        assertEquals(true, biblioth2.addCd("Nederpop oud", "POPuLaiR", "29021988"));
+        assertEquals(false, biblioth2.addCd("Nederklassiek 1", "classic", "12092006"));
+        assertEquals(false, biblioth2.addCd("Nederklassiek 2", "classic", "test"));
+        assertEquals(true, biblioth2.addCd("Nederklassiek 3", "KLASSIEK", "12092006"));
+        assertEquals(true, biblioth2.addCd("Nederklassiek 4", "klassiek", "12092006"));
+        assertEquals(true, biblioth2.addCd("Nederklassiek 5", "klAssIek", "12092006"));
+        assertEquals(true, biblioth2.addCd("Nederklassiek 6", "klAssIek", "12092006"));
+        assertEquals(false, biblioth2.addCd("Nederklassiek 7", "klAssIek", "test"));
+        assertEquals(false, biblioth2.addCd("Nederklassiek 8", "klAssIek", "12092015"));
+        assertEquals(true, biblioth2.addCd("Nederklassiek 9", "klAssIek", SpecialDate.getDateToday()));
+        assertEquals(true, biblioth2.addCd("Nederklassiek oud", "klAssIek", "29021988"));
+        assertEquals(9, biblioth2.artikelen.size());
+        assertEquals("Nederpop 3", biblioth2.artikelen.get(0).getTitel());
+        assertEquals(CdType.valueOf("POPULAIR"), biblioth2.artikelen.get(0).getType());
+        assertEquals(0, biblioth2.artikelen.get(0).getID());
+        assertEquals("12092006", ((Cd)biblioth2.artikelen.get(0)).getReleasedatum());
+        assertEquals("Nederklassiek oud", biblioth2.artikelen.get(8).getTitel());
+        assertEquals(CdType.valueOf("KLASSIEK"), biblioth2.artikelen.get(8).getType());
+        assertEquals(8, biblioth2.artikelen.get(8).getID());
+        assertEquals("29021988", ((Cd)biblioth2.artikelen.get(8)).getReleasedatum());
+    }
 }
+
 
 
 
