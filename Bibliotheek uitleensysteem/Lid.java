@@ -10,7 +10,7 @@ public class Lid
 {
     private int id;
     private String naam;
-    private boolean geroyeerd;
+    protected boolean geroyeerd;
 //     private String address; // NOTE: Waarschijnlijk overbodig
     private boolean eersteBrief;
     protected String tweedeBrief;
