@@ -14,4 +14,6 @@ comment4.params=
 comment4.target=void\ testAddBoek()
 comment5.params=
 comment5.target=void\ testAddCd()
-numComments=6
+comment6.params=
+comment6.target=void\ testAddVideoband()
+numComments=7

@@ -106,6 +106,22 @@ public class BibliotheekTest
         assertEquals(8, biblioth2.artikelen.get(8).getID());
         assertEquals("29021988", ((Cd)biblioth2.artikelen.get(8)).getReleasedatum());
     }
+    
+    @Test
+    public void testAddVideoband()
+    {
+        assertEquals(true, biblioth2.addVideoband("The Bandit", "A"));
+        assertEquals(false, biblioth2.addVideoband("The Bandit 2", "c"));
+        assertEquals(false, biblioth2.addVideoband("The Bandit 3", "test"));
+        assertEquals(true, biblioth2.addVideoband("The Bandit 4", "b"));
+        assertEquals(2, biblioth2.artikelen.size());
+        assertEquals("The Bandit", biblioth2.artikelen.get(0).getTitel());
+        assertEquals(VideobandType.valueOf("A"), biblioth2.artikelen.get(0).getType());
+        assertEquals(0, biblioth2.artikelen.get(0).getID());
+        assertEquals("The Bandit 4", biblioth2.artikelen.get(1).getTitel());
+        assertEquals(VideobandType.valueOf("B"), biblioth2.artikelen.get(1).getType());
+        assertEquals(1, biblioth2.artikelen.get(1).getID());
+    }
 }
 
 
