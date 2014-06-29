@@ -19,10 +19,10 @@ public class Bibliotheek
 
     protected ArrayList<Lid> leden;   // Leden
     protected ArrayList<Reservering> reserveringen; // Reserveringen
-    private ArrayList<Uitlening> uitleningen; // Uitleningen
+    protected ArrayList<Uitlening> uitleningen; // Uitleningen
     protected ArrayList<Artikel> artikelen; // Artikelen
-    private ArrayList<Exemplaar> exemplaren; // Exemplaren
-    private ArrayList<Boete> boetes; // Exemplaren
+    protected ArrayList<Exemplaar> exemplaren; // Exemplaren
+    protected ArrayList<Boete> boetes; // Exemplaren
 
     
     /**
