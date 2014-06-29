@@ -13,7 +13,7 @@ public class Lid
     private boolean geroyeerd;
 //     private String address; // NOTE: Waarschijnlijk overbodig
     private boolean eersteBrief;
-    private String tweedeBrief;
+    protected String tweedeBrief;
 
     /**
      * Constructor voor objecten van de klasse Lid.
