@@ -13,6 +13,10 @@ public class BibliotheekTest
 {
     private Bibliotheek biblioth1;
     private Bibliotheek biblioth2;
+    private Bibliotheek biblioth3;
+
+    
+    
 
     
     /**
@@ -33,9 +37,15 @@ public class BibliotheekTest
         // Bibliotheek met 3 artikelen.
         biblioth1 = new Bibliotheek();
         biblioth1.addBoek("Roman Empire", "Roman");
-        biblioth1.addCd("Nederpop", "Populair", "12092006");
+        biblioth1.addCd("Nederpop", "populair", "12092006");
         biblioth1.addVideoband("The Bandit", "A");
         biblioth2 = new Bibliotheek();
+        biblioth3 = new Bibliotheek();
+        biblioth3.addLid("Piet");
+        biblioth3.addLid("Paula");
+        biblioth3.addBoek("E-learning 2", "studieboek");
+        biblioth3.addCd("Nederklassiek oud", "klassiek", "29021988");
+        biblioth3.addVideoband("The Bandit 4", "B");
     }
 
     /**
@@ -138,7 +148,23 @@ public class BibliotheekTest
         assertEquals(2, biblioth1.exemplaren.get(2).getID());
         assertEquals(1, biblioth1.exemplaren.get(2).getArtikelID());
     }
+
+    @Test
+    public void testAddReservering()
+    {
+        assertEquals(true, biblioth3.leden.get(1).setEersteBrief());
+        biblioth3.leden.get(1).tweedeBrief = SpecialDate.addDays(SpecialDate.getDateToday(), (-Bibliotheek.MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF - 1));
+        assertEquals(true, biblioth3.leden.get(1).setGeroyeerd());
+        assertEquals(true, biblioth3.leden.get(1).isGeroyeerd());
+        assertEquals(true, biblioth3.addReservering(0, 0));
+        assertEquals(false, biblioth3.addReservering(0, 3));
+        assertEquals(false, biblioth3.addReservering(2, 0));
+        assertEquals(false, biblioth3.addReservering(2, 3));
+        assertEquals(false, biblioth3.addReservering(1, 0));
+        assertEquals(false, biblioth3.addReservering(1, 3));
+    }
 }
+
 
 
 
