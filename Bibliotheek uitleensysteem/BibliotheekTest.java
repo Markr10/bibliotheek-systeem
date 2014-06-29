@@ -14,7 +14,7 @@ public class BibliotheekTest
     private Bibliotheek biblioth1;
     private Bibliotheek biblioth2;
     private Bibliotheek biblioth3;
-
+    private Bibliotheek biblioth4;
     
     
 
@@ -46,6 +46,17 @@ public class BibliotheekTest
         biblioth3.addBoek("E-learning 2", "studieboek");
         biblioth3.addCd("Nederklassiek oud", "klassiek", "29021988");
         biblioth3.addVideoband("The Bandit 4", "B");
+        biblioth4 = new Bibliotheek();
+        biblioth4.addLid("Piet");
+        biblioth4.addLid("Paula");
+        biblioth4.leden.get(1).geroyeerd = true;
+        assertEquals(true, biblioth4.leden.get(1).isGeroyeerd());
+        biblioth4.addBoek("E-learning 2", "studieboek");
+        biblioth4.addCd("Nederklassiek oud", "klassiek", "29021988");
+        biblioth4.addVideoband("The Bandit 4", "B");
+        biblioth4.addExemplaar(0);
+        biblioth4.addExemplaar(1);
+        biblioth4.addExemplaar(2);
     }
 
     /**
@@ -152,16 +163,12 @@ public class BibliotheekTest
     @Test
     public void testAddReservering()
     {
-        assertEquals(true, biblioth3.leden.get(1).setEersteBrief());
-        biblioth3.leden.get(1).tweedeBrief = SpecialDate.addDays(SpecialDate.getDateToday(), (-Bibliotheek.MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF - 1));
-        assertEquals(true, biblioth3.leden.get(1).setGeroyeerd());
-        assertEquals(true, biblioth3.leden.get(1).isGeroyeerd());
-        assertEquals(true, biblioth3.addReservering(0, 0));
-        assertEquals(false, biblioth3.addReservering(0, 3));
-        assertEquals(false, biblioth3.addReservering(2, 0));
-        assertEquals(false, biblioth3.addReservering(2, 3));
-        assertEquals(false, biblioth3.addReservering(1, 0));
-        assertEquals(false, biblioth3.addReservering(1, 3));
+        assertEquals(true, biblioth4.addReservering(0, 0));
+        assertEquals(false, biblioth4.addReservering(0, 3));
+        assertEquals(false, biblioth4.addReservering(2, 0));
+        assertEquals(false, biblioth4.addReservering(2, 3));
+        assertEquals(false, biblioth4.addReservering(1, 0));
+        assertEquals(false, biblioth4.addReservering(1, 3));
     }
 }
 
