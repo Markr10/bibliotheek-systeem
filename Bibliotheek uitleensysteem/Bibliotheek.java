@@ -77,7 +77,7 @@ public class Bibliotheek
     /**
      * Controleert of een ID van een uitlening geldig is.
      *
-     * @param id Het ID van het uitlening.
+     * @param id Het ID van de uitlening.
      * @return true als het ID geldig is, anders false
      */
     protected boolean checkUitleningID(int id)
@@ -118,7 +118,7 @@ public class Bibliotheek
      */
     protected boolean checkExemplaarID(int id)
     {
-        if(id >= 0 && id <= (exemplaren.size() - 1))
+        if(id >= 0 && id <= (exemplaren.size() - 1) && !artikelen.get(exemplaren.get(id).getArtikelID()).getNietMeerInGebruik())
         {
             return true;
         }
@@ -312,7 +312,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het exemplaar gereserveerd is, anders false
      */
-    public boolean getGereserveerd(int exemplaarID)
+    public boolean getGereserveerdExemplaar(int exemplaarID)
     {
         // Controleert geldigheid parameter
         if(checkExemplaarID(exemplaarID))
@@ -975,7 +975,7 @@ public class Bibliotheek
                 if(exemplaar.getArtikelID() == artikelID)
                 {
                     // Controleert of het exemplaar is uitgeleend of gereserveerd.
-                    if(getUitgeleend(i) || getGereserveerd(i))
+                    if(getUitgeleend(exemplaar.getID()) || getGereserveerdExemplaar(exemplaar.getID()))
                     {
                         return true;
                     }
@@ -1277,19 +1277,53 @@ public class Bibliotheek
         return false;
     }
     
-    public void controleerAndSetReservering()
+    /**
+     * Controleert of de uitleningen een boete hebben en
+     * maakt, indien nodig, de desbetreffende boete items aan.
+     */
+    public void setBoetes()
     {
         for(int i = (uitleningen.size() - 1); i >= 0; i--)
         {
             Uitlening uitlening = uitleningen.get(i);
-            if(getVerschuldigdBedragUitlening(uitlening) > 0 && !getBoete(uitlening.getID()))
+            if(getVerschuldigdBedragUitlening(uitlening) > 0 && !getBoeteUitlening(uitlening.getID()))
             {
                 boetes.add(new Boete(boetes.size(), uitlening.getID(), BoeteKlasseType.valueOf("UITLENING"), false));
             }
         }
     }
     
-    public boolean getBoete(int uitleningID)
+    /**
+     * Verwerkt verlopen reserveringen.
+     * Geeft een boete aan het lid en reserveert, indien er openstaande reserveringen zijn,
+     * het exemplaar voor een ander lid.
+     * 
+     */
+    public void verwerkVerlopenReserveringen()
+    {
+        for(int i = (reserveringen.size() - 1); i >= 0; i--)
+        {
+            Reservering reservering = reserveringen.get(i);
+            if(!getReserveringUitgeleend(reservering) && !SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) &&
+                !getBoeteReservering(reservering.getID()))
+            {
+                boetes.add(new Boete(boetes.size(), reservering.getID(), BoeteKlasseType.valueOf("RESERVERING"), false));
+                Reservering openReservering = getOpenReservering(reservering.getArtikelID());
+                if(openReservering != null)
+                {
+                    openReservering.setReserveringKlaar(reservering.getExemplaarID());
+                }
+            }
+        }
+    }
+    
+    /**
+     * Controleert of er voor de uitlening een boete bestaat.
+     * 
+     * @param uitleningID Het ID van de uitlening.
+     * @return true als er voor de uitlening een boete bestaat, anders false
+     */
+    public boolean getBoeteUitlening(int uitleningID)
     {
         for(int i = (boetes.size() - 1); i >= 0; i--)
         {
@@ -1302,6 +1336,30 @@ public class Bibliotheek
         return false;
     }
     
+    /**
+     * Controleert of er voor de reservering een boete bestaat.
+     * 
+     * @param reserveringID Het ID van de reservering.
+     * @return true als er voor de reservering een boete bestaat, anders false
+     */
+    public boolean getBoeteReservering(int reserveringID)
+    {
+        for(int i = (boetes.size() - 1); i >= 0; i--)
+        {
+            Boete boete = boetes.get(i);
+            if(boete.getItemID() == reserveringID && boete.getBoeteKlasseType().equals(BoeteKlasseType.valueOf("RESERVERING")))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    /**
+     * Berekent de inkomsten van de bibliotheek.
+     * 
+     * @return een array met het totaal aan inkomsten en het totaal aan boetes hiervan
+     */
     public int[] berekenInkomsten()
     {
         int totaal = 0;
@@ -1363,7 +1421,7 @@ public class Bibliotheek
      * @param lidID Het ID van het lid.
      * @return true als het betalen gelukt is, anders false
      */
-    public boolean betaalBoetes(int lidID)
+    public boolean betaalBoetesLid(int lidID)
     {
         // Controleert geldigheid parameters
         if(checkLidID(lidID) && !leden.get(lidID).isGeroyeerd())
@@ -1418,18 +1476,6 @@ public class Bibliotheek
             return true;
         }
         // Lid kan/mag niet betalen.
-        return false;
-    }
-    
-    /**
-     * Verwerkt verlopen reserveringen.
-     * Geeft een boete aan het lid en reserveert, indien er openstaande reserveringen zijn,
-     * het exemplaar voor een ander lid.
-     * 
-     * @return true als het verwerken gelukt is, anders false
-     */
-    public boolean verwerkVerlopenReserveringen()
-    {
         return false;
     }
     

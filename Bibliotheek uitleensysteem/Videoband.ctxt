@@ -1,5 +1,0 @@
-#BlueJ class context
-comment0.params=id\ titel\ type
-comment0.target=Videoband(int,\ java.lang.String,\ VideobandType)
-comment0.text=\n\ Constructor\ voor\ objecten\ van\ de\ klasse\ videoband.\n\n\ @param\ id\ \ \ \ \ \ \ \ \ \ \ \ \ Het\ id\ van\ de\ videoband.\n\ @param\ titel\ \ \ \ \ \ \ \ \ \ De\ titel\ van\ de\ videoband.\n\ @param\ type\ \ \ \ \ \ \ \ \ \ \ Het\ type\ van\ de\ videoband.\n
-numComments=1
