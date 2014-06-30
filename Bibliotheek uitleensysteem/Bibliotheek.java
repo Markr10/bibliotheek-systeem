@@ -118,7 +118,7 @@ public class Bibliotheek
      */
     private boolean checkExemplaarID(int id)
     {
-        if(id >= 0 && id <= (exemplaren.size() - 1))
+        if(id >= 0 && id <= (exemplaren.size() - 1) && !artikelen.get(exemplaren.get(id).getArtikelID()).getNietMeerInGebruik())
         {
             return true;
         }
