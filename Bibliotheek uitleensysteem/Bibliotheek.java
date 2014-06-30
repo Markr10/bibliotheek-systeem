@@ -462,7 +462,7 @@ public class Bibliotheek
      * Returned het op dit moment verschuldigde bedrag voor een uitlening.
      *
      * @param uitlening De uitlening waarvoor het op dit moment verschuldigde bedrag uitgerekend moet worden.
-     * @return Het verschuldigde bedrag voor de uitlening.
+     * @return Het verschuldigde bedrag voor de uitlening in centen.
      * @return Het verschuldigde bedrag voor de uitlening als de uitlening correct is, anders -1
      */
     public int getVerschuldigdBedragUitlening(Uitlening uitlening)
@@ -470,117 +470,237 @@ public class Bibliotheek
         // Controleer of de uitlening teruggebracht is.
         if(checkUitleningID(uitlening.getID()) && uitlening.getTerugbrengdatum() != null)
         {
-            int dagen, weken;
-            dagen = weken = 0;
+            double dagen, weken, leeftijd;
+            dagen = weken = leeftijd = 0;
             double boetePrijs = 0;
             double leenPrijs = 0;
             double totaalPrijs = 0;
             double bedragBoete = 0;
-            final short PRIJS_CD_KLASSIEK = 2; // in centen
-            final short PRIJS_CD_POPULAIR = 1; // in centen
-            final short PRIJS_VIDEO_A = 2; // in centen
-            final short PRIJS_VIDEO_B = 2; // in centen
-            final short PRIJS_BOEK_ROMAN = 0; // in centen
-            final short PRIJS_BOEK_STUDIE = 0; // in centen
+            final short PRIJS_CD_KLASSIEK = 2; // in euro's
+            final short PRIJS_CD_POPULAIR = 1; // in euro's
+            final short PRIJS_VIDEO_A = 2; // in euro's
+            final short PRIJS_VIDEO_B = 2; // in euro's
+            final short PRIJS_BOEK_ROMAN = 0; // in euro's
+            final short PRIJS_BOEK_STUDIE = 0; // in euro's
 
             int verschilDagen = SpecialDate.daysDifference(uitlening.getUitleendatum(), uitlening.getTerugbrengdatum());
 
             // Berekent het verschuldigde bedrag aan de hand van het artikel signature.
             switch(artikelen.get(exemplaren.get(uitlening.getExemplaarID()).getArtikelID()).toString())
             {
+                //Voor populaire Cd’s zijn deze bedragen respectievelijk € 1,00 en € 2,00
+                //Deze korting wordt gegeven op het totale leengeld voor de betreffende CD
+                //en bedraagt:
+                //als 1 jaar < leeftijd <= 5 jaar : 10%
+                //als 5 jaar < leeftijd           : 50 %
+
                 case "Cd POPULAIR": 
                 {
-                    if(verschilDagen <= 7)
+                    leeftijd = SpecialDate.roundedYearsDifference(((Cd)artikelen.get(exemplaren.get(uitlening.getExemplaarID()).getArtikelID())).getReleasedatum());
+                    if(leeftijd < 1)
                     {
-                        dagen = verschilDagen;
-                        leenPrijs = dagen * PRIJS_CD_POPULAIR;
-                        boetePrijs = 0;
+                        if(verschilDagen <= 10)
+                        {
+                            leenPrijs = PRIJS_CD_POPULAIR;
+                            boetePrijs = 0;
+                            totaalPrijs = leenPrijs + boetePrijs;
+                        }
+                        else
+                        {
+                            weken = verschilDagen - 10; // eerste week gratis
+                            dagen = (int) Math.ceil(weken / 7);
+                            leenPrijs = PRIJS_CD_POPULAIR;
+                            boetePrijs = 2.00; // per week
+                            bedragBoete = boetePrijs * dagen;
+                            totaalPrijs = leenPrijs + bedragBoete;
+                        }
                     }
-                    else
+                    if(leeftijd >= 1 && leeftijd <= 5)
                     {
-                        weken = verschilDagen - 7; // eerste week gratis
-                        dagen = (int) Math.ceil(weken / 7);
-                        leenPrijs = dagen * PRIJS_CD_POPULAIR;
-                        boetePrijs = 1.50; // per week
+                        if(verschilDagen <= 10)
+                        {
+                            leenPrijs = (PRIJS_CD_POPULAIR / 100) * 90;
+                            boetePrijs = 0;
+                            totaalPrijs = leenPrijs;
+                        }
+                        else
+                        {
+                            weken = verschilDagen - 10; // eerste week gratis
+                            dagen = (int) Math.ceil(weken / 7);
+                            leenPrijs = (PRIJS_CD_POPULAIR / 100) * 90;
+                            boetePrijs = 2.00; // per week
+                            bedragBoete = boetePrijs * dagen;
+                            totaalPrijs = leenPrijs + bedragBoete;
+                        }
                     }
-                    break;
+                    if(leeftijd > 5)
+                    {
+                        if(verschilDagen <= 10)
+                        {
+                            leenPrijs = (PRIJS_CD_POPULAIR / 100) * 50;
+                            boetePrijs = 0;
+                            totaalPrijs = leenPrijs;
+                        }
+                        else
+                        {
+                            weken = verschilDagen - 10; // eerste week gratis
+                            dagen = (int) Math.ceil(weken / 7);
+                            leenPrijs = (PRIJS_CD_POPULAIR / 100) * 50;
+                            boetePrijs = 2.00; // per week
+                            bedragBoete = boetePrijs * dagen;
+                            totaalPrijs = leenPrijs + bedragBoete;
+                        }
+                    }
                 }
+                break;
                 case "Cd KLASSIEK": 
                 {
-                    if(verschilDagen <= 7)
+                    leeftijd = SpecialDate.roundedYearsDifference(((Cd)artikelen.get(exemplaren.get(uitlening.getExemplaarID()).getArtikelID())).getReleasedatum());
+                    System.out.println(leeftijd);
+                    if(leeftijd < 1)
                     {
-                        dagen = verschilDagen;
-                        leenPrijs = dagen * PRIJS_CD_KLASSIEK;
-                        boetePrijs = 0;
+                        if(verschilDagen <= 10)
+                        {
+                            leenPrijs = PRIJS_CD_KLASSIEK;
+                            boetePrijs = 0;
+                            totaalPrijs = leenPrijs + boetePrijs;
+                        }
+                        else
+                        {
+                            weken = verschilDagen - 10; // eerste week gratis
+                            dagen = (int) Math.ceil(weken / 7);
+                            leenPrijs = PRIJS_CD_KLASSIEK;
+                            boetePrijs = 1.50; // per week
+                            bedragBoete = boetePrijs * dagen;
+                            totaalPrijs = leenPrijs + bedragBoete;
+                        }
                     }
-                    else
+                    if(leeftijd >= 1 && leeftijd <= 5)
                     {
-                        weken = verschilDagen - 7; // eerste week gratis
-                        dagen = (int)Math.ceil(weken / 7);
-                        leenPrijs = dagen * PRIJS_CD_KLASSIEK;
-                        boetePrijs = 2.00; // per week
+                        if(verschilDagen <= 10)
+                        {
+                            leenPrijs = (PRIJS_CD_KLASSIEK / 100) * 90;
+                            boetePrijs = 0;
+                            totaalPrijs = leenPrijs;
+                        }
+                        else
+                        {
+                            weken = verschilDagen - 10; // eerste week gratis
+                            dagen = (int) Math.ceil(weken / 7);
+                            leenPrijs = (PRIJS_CD_KLASSIEK / 100) * 90;
+                            boetePrijs = 1.50; // per week
+                            bedragBoete = boetePrijs * dagen;
+                            totaalPrijs = leenPrijs + bedragBoete;
+                        }
                     }
-                    break;
+                    if(leeftijd > 5)
+                    {
+                        if(verschilDagen <= 10)
+                        {
+                            leenPrijs = (PRIJS_CD_KLASSIEK / 100) * 50;
+                            boetePrijs = 0;
+                            totaalPrijs = leenPrijs;
+                        }
+                        else
+                        {
+                            weken = verschilDagen - 10; // eerste week gratis
+                            dagen = (int) Math.ceil(weken / 7);
+                            leenPrijs = (PRIJS_CD_KLASSIEK / 100) * 50;
+                            boetePrijs = 1.50; // per week
+                            bedragBoete = boetePrijs * dagen;
+                            totaalPrijs = leenPrijs + bedragBoete;
+                        }
+                    }
                 }
-                case "Video A":
+                break;
+                case "Videoband A":
                 {
                     dagen = verschilDagen;
-                    leenPrijs = dagen * PRIJS_VIDEO_A;
+                    if(dagen == 0)
+                    {
+                        dagen++;
+                    }
+                    leenPrijs = PRIJS_VIDEO_A;
                     boetePrijs = 0;
-                    break;
+                    totaalPrijs = leenPrijs * dagen + boetePrijs;
                 }
-                case "Video B":
+                break;
+                case "Videoband B":
                 {
                     if(verschilDagen <= 3)
                     {
                         dagen = verschilDagen;
-                        leenPrijs = dagen * PRIJS_VIDEO_B;
+                        if(dagen == 0)
+                        {
+                            dagen++;
+                        }
+                        leenPrijs = PRIJS_VIDEO_B;
                         boetePrijs = 0;
+                        totaalPrijs = leenPrijs + boetePrijs;
                     }
                     else
                     {
                         dagen = verschilDagen - 3;
-                        leenPrijs = dagen * PRIJS_VIDEO_B;
-                        boetePrijs = 1.00; // na 3 dagen
+                        leenPrijs = PRIJS_VIDEO_B;
+                        boetePrijs = dagen * 1.00; // na 3 dagen
+                        totaalPrijs = leenPrijs + boetePrijs;
                     }
-                    break;
                 }
+                break;
+                
                 case "Boek ROMAN":
                 {
                     if(verschilDagen <= 21)
                     {
                         dagen = verschilDagen;
+                        if(dagen == 0)
+                        {
+                            dagen++;
+                        }
                         leenPrijs = dagen * PRIJS_BOEK_ROMAN;
                         boetePrijs = 0;
+                        totaalPrijs = leenPrijs + boetePrijs;
                     }
                     else
                     {
                         dagen = verschilDagen - 21;
-                        leenPrijs = dagen * PRIJS_BOEK_ROMAN;
-                        boetePrijs = 0.25; // na 21 dagen
+                        leenPrijs = PRIJS_BOEK_ROMAN;
+                        boetePrijs = dagen * 0.25; // na 21 dagen
+                        totaalPrijs = leenPrijs + boetePrijs;
                     }
-                    break;
                 }
+                break;
+                
                 case "Boek STUDIEBOEK":
                 {
                     if(verschilDagen <= 30)
                     {
                         dagen = verschilDagen;
+                        if(dagen == 0)
+                        {
+                            dagen++;
+                        }
                         leenPrijs = dagen * PRIJS_BOEK_STUDIE;
                         boetePrijs = 0;
+                        totaalPrijs = leenPrijs + boetePrijs;
                     }
                     else
                     {
-                        dagen = verschilDagen - 30;
-                        leenPrijs = dagen * PRIJS_BOEK_STUDIE;
-                        boetePrijs = 1.00; // na 30 dagen
+                        weken = verschilDagen - 30;// eerste 30 gratis
+                        dagen = Math.ceil(weken / 7.0);
+                        leenPrijs = PRIJS_BOEK_STUDIE;
+                        boetePrijs = dagen * 1.00; // na 30 dagen
+                        totaalPrijs = leenPrijs + boetePrijs;
                     }
-                    break;
+                }
+                break;
+                default:
+                {
+                    // stopt methode, dus geen break nodig
+                    return -1;
                 }
             }
-            bedragBoete = boetePrijs * dagen;
-            totaalPrijs = leenPrijs + bedragBoete;
-            return (int)totaalPrijs;
+            return (int)(totaalPrijs*100);
         }
         else
         {
