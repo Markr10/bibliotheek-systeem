@@ -146,4 +146,23 @@ public class BibliotheekCLI extends Bibliotheek
         }
         System.out.println("------------------------------");
     }
+    
+    /**
+     * Print het overzicht van de financiën van de bibliotheek.
+     *
+     */
+    public void printFinanciën()
+    {
+        System.out.println("---------Financiën----------");
+        for(Artikel artikel : artikelen)
+        {
+            System.out.print("# " + artikel.getID() + " Type: " + artikel.toString() + " Titel: " + artikel.getTitel());
+            if(artikel instanceof Cd)
+            {
+                System.out.print(" Releasedatum: " + ((Cd)artikel).getReleasedatum());
+            }
+            System.out.println();
+        }
+        System.out.println("------------------------------");
+    }
 }
