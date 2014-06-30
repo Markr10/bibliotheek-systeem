@@ -8,10 +8,10 @@ import java.util.ArrayList;
  */
 public abstract class Artikel
 {
-    // Artikel variabelen (protected waar nodig)
     private int id;
     private String titel;
     protected Enum type;
+    private boolean nietMeerInGebruik;
     
     /**
      * Constructor voor objecten van de klasse artikel.
@@ -25,6 +25,8 @@ public abstract class Artikel
         this.id = id;
         this.titel = titel;
         this.type = type;
+        
+        nietMeerInGebruik = false;
     }
     
     /**
@@ -46,14 +48,54 @@ public abstract class Artikel
     {
         return titel;
     }
+    
+    /**
+     * Returned of een artikel niet meer gebruikt mag worden.
+     * 
+     * @return De niet meer gebruikt status van het artikel.
+     */
+    public boolean getNietMeerInGebruik() 
+    {
+        return nietMeerInGebruik;
+    }
+
+    /**
+     * Stelt in dat het artikel niet meer gebruikt mag worden.
+     * 
+     * @return true als het instellen gelukt is, anders false
+     */
+    public boolean setNietMeerInGebruik()
+    {
+        if(!nietMeerInGebruik)
+        {
+            nietMeerInGebruik = true;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    /**
+     * Returned de titel van het artikel.
+     * 
+     * @return De titel van het artikel.
+     */
+    public String setTitel(String titel) 
+    {
+        this.titel = titel;
+        return titel;
+    }
 
     /**
      * Returned het type van het artikel.
      * 
      * @return Het type van het artikel.
      */
-    public Enum getType() 
+    public Enum setType(Enum type) 
     {
+        this.type = type;
         return type;
     }
     

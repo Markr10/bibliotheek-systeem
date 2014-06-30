@@ -11,7 +11,7 @@ public class Lid
     private int id;
     private String naam;
     protected boolean geroyeerd;
-//     private String address; // NOTE: Waarschijnlijk overbodig
+    private boolean geroyeerd;
     private boolean eersteBrief;
     protected String tweedeBrief;
 
@@ -28,7 +28,6 @@ public class Lid
         
         geroyeerd = false;
         resetBrieven();
-//         address = null; // NOTE: Waarschijnlijk overbodig
     }
     
     
@@ -52,18 +51,6 @@ public class Lid
         return naam;
     }
     
-//     // Get Address  // NOTE: Waarschijnlijk overbodig
-//     public String getAddress()
-//     {
-//         return address;
-//     }
-//     
-//     // Set Adress
-//     public void setAdres(String address) 
-//     {
-//         this.address = address;
-//     }
-
     /**
      * Returned of het lid geroyeerd is.
      *

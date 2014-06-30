@@ -9,7 +9,6 @@
 public class Cd extends Artikel
 {
     private String releasedatum;
-    
     private int kostenNaKorting;
 
     /**
@@ -33,6 +32,17 @@ public class Cd extends Artikel
      */
     public String getReleasedatum() 
     {
+        return releasedatum;
+    }
+    
+    /**
+     * Set en returned de releasedatum van de cd.
+     * 
+     * @return De nieuwe releasedatum van de cd.
+     */
+    public String setReleasedatum(String releasedatum) 
+    {
+        this.releasedatum = releasedatum;
         return releasedatum;
     }
 }

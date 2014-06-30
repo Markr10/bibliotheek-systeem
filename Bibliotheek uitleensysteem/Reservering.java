@@ -17,7 +17,6 @@ public class Reservering
     private int exemplaarID;
     private String maxOphaaldatum; // ophaaldag is tot en met deze dag
 
-
     /**
      * Constructor voor objecten van de klasse Reservering.
      * 
@@ -37,7 +36,6 @@ public class Reservering
         exemplaarID = -1;
         datumKlaargezet = maxOphaaldatum = null;
     }
-    
     
     /**
      * Returned het ID van de reservering.

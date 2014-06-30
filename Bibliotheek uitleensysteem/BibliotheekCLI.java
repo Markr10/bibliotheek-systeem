@@ -146,4 +146,17 @@ public class BibliotheekCLI extends Bibliotheek
         }
         System.out.println("------------------------------");
     }
+    
+    /**
+     * Print het overzicht van de financiën van de bibliotheek.
+     *
+     */
+    public void printFinanciën()
+    {
+        int[] berekendeInkomsten = berekenInkomsten();
+        System.out.println("---------Financiën----------");
+        System.out.println("Totale inkomsten: " + berekendeInkomsten[0] + ".");
+        System.out.println("Totaal bedrag boetes: " + berekendeInkomsten[1] + ".");
+        System.out.println("------------------------------");
+    }
 }

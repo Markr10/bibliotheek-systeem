@@ -16,7 +16,6 @@ public class ImportLeden
  
   public void run() 
   {
- 
     String csvFile = "C:/Users/Danny/Desktop/Leden.csv";
     BufferedReader br = null;
     String line = "";
@@ -24,19 +23,14 @@ public class ImportLeden
  
     try 
     {
- 
         br = new BufferedReader(new FileReader(csvFile));
         while ((line = br.readLine()) != null) 
         {
- 
-                // use comma as separator
+            // use comma as separator
             String[] lid = line.split(cvsSplitBy);
  
-            System.out.println("Lid [Voornaam= " + lid[1] 
-                                 + " , Achternaam= " + lid[2] + "]");
- 
+            System.out.println("Lid [Voornaam= " + lid[1] + " , Achternaam= " + lid[2] + "]");
         }
- 
     } 
     catch (FileNotFoundException e) 
     {
