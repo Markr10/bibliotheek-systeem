@@ -661,6 +661,101 @@ public class Bibliotheek
             return false;
         }
     }
+    
+    /**
+     * Wijzigt een CD artikel.
+     * 
+     * @param artikelID Het ID van het artikel.
+     * @param titel        De titel van de cd.
+     * @param type         Het type van de cd. Het type is niet hoofdletter gevoelig.
+     * @param releasedatum De releasedatum van de cd.
+     * @return true als het toevoegen gelukt is, anders false
+     */
+    public boolean wijzigCD(int artikelID, String titel, String type, String releasedatum)
+    {
+        // Controleert geldigheid releasedatum en artikelID parameters
+        if(SpecialDate.checkDate(releasedatum) && checkArtikelID(artikelID))
+        {
+            // Zorgt voor een correct type.
+            try
+            {
+                artikelen.get(artikelID).setTitel(titel);                
+                artikelen.get(artikelID).setType(CdType.valueOf(type.toUpperCase()));
+                ((Cd)artikelen.get(artikelID)).setReleasedatum(releasedatum);
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    /**
+     * Wijzigt een boek artikel.
+     * 
+     * @param artikelID Het ID van het artikel.
+     * @param titel        De titel van de boek.
+     * @param type         Het type van de boek. Het type is niet hoofdletter gevoelig.
+     * @return true als het toevoegen gelukt is, anders false
+     */
+    public boolean wijzigBoek(int artikelID, String titel, String type)
+    {
+        // Controleert geldigheid artikelID parameter
+        if(checkArtikelID(artikelID))
+        {
+            // Zorgt voor een correct type.
+            try
+            {
+                artikelen.get(artikelID).setTitel(titel);                
+                artikelen.get(artikelID).setType(BoekType.valueOf(type.toUpperCase()));
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    /**
+     * Wijzigt een videoband artikel.
+     * 
+     * @param artikelID Het ID van het artikel.
+     * @param titel        De titel van de boek.
+     * @param type         Het type van de boek. Het type is niet hoofdletter gevoelig.
+     * @return true als het toevoegen gelukt is, anders false
+     */
+    public boolean wijzigVideoband(int artikelID, String titel, String type)
+    {
+        // Controleert geldigheid artikelID parameter
+        if(checkArtikelID(artikelID))
+        {
+            // Zorgt voor een correct type.
+            try
+            {
+                artikelen.get(artikelID).setTitel(titel);                
+                artikelen.get(artikelID).setType(VideobandType.valueOf(type.toUpperCase()));
+                return true;
+            }
+            catch(Exception e)
+            {
+                return false;
+            }
+        }
+        else
+        {
+            return false;
+        }
+    }
 
     /**
      * Voegt een nieuwe reservering toe.
