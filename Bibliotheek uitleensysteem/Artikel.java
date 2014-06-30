@@ -12,6 +12,7 @@ public abstract class Artikel
     private int id;
     private String titel;
     protected Enum type;
+    private boolean nietMeerInGebruik;
     
     /**
      * Constructor voor objecten van de klasse artikel.
@@ -25,6 +26,8 @@ public abstract class Artikel
         this.id = id;
         this.titel = titel;
         this.type = type;
+        
+        nietMeerInGebruik = false;
     }
     
     /**
@@ -46,15 +49,33 @@ public abstract class Artikel
     {
         return titel;
     }
+    
+    /**
+     * Returned of een artikel niet meer gebruikt mag worden.
+     * 
+     * @return De niet meer gebruikt status van het artikel.
+     */
+    public boolean getNietMeerInGebruik() 
+    {
+        return nietMeerInGebruik;
+    }
 
     /**
-     * Returned het type van het artikel.
+     * Stelt in dat het artikel niet meer gebruikt mag worden.
      * 
-     * @return Het type van het artikel.
+     * @return true als het instellen gelukt is, anders false
      */
-    public Enum getType() 
+    public boolean setNietMeerInGebruik()
     {
-        return type;
+        if(!nietMeerInGebruik)
+        {
+            nietMeerInGebruik = true;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     
     /**

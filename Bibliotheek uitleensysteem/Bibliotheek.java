@@ -100,7 +100,7 @@ public class Bibliotheek
      */
     private boolean checkArtikelID(int id)
     {
-        if(id >= 0 && id <= (artikelen.size() - 1))
+        if(id >= 0 && id <= (artikelen.size() - 1) && !artikelen.get(id).getNietMeerInGebruik())
         {
             return true;
         }
@@ -304,6 +304,37 @@ public class Bibliotheek
         }
         // Wanneer bovenstaande testen niet slagen, dan bestaat er geen open reservering voor dat artikel.
         return null;
+    }
+    
+    /**
+     * Returned of een exemplaar gereserveerd is.
+     *     
+     * @param exemplaarID Het ID van het exemplaar.
+     * @return true als het exemplaar gereserveerd is, anders false
+     */
+    public boolean getGereserveerd(int exemplaarID)
+    {
+        // Controleert geldigheid parameter
+        if(checkExemplaarID(exemplaarID))
+        {
+            // Controleert, indien beschikbaar, de laatste reservering van het exemplaar.
+            for(int i = (reserveringen.size() - 1); i >= 0; i--)
+            {
+                Reservering reservering = reserveringen.get(i);
+                // Controleert of een exemplaar voor een lid gereserveerd is.
+                if(reservering.getExemplaarID() == exemplaarID)
+                {
+                    // Controleert of de reservering nog opgehaald kan worden.
+                    if(!getReserveringUitgeleend(reservering) && SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()))
+                    {
+                        return true;
+                    }
+                    break;
+                }
+            }
+        }
+        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet voor een lid gereserveerd.
+        return false;
     }
     
     /**
@@ -557,6 +588,34 @@ public class Bibliotheek
         }
     }
 
+    /**
+     * Controleer of exemplaren van een artikel uitgeleend of gereserveerd zijn.
+     * 
+     * @param artikelID Het ID van het artikel.
+     * @return true als exemplaren van het artikel zijn uitgeleend of gereserveerd, anders false
+     */
+    public boolean getArtikelExemplarenUigeleendGeReserveerd(int artikelID)
+    {
+        if(checkLidID(artikelID))
+        {
+            // Controleert, indien beschikbaar, of de exemplaren van het artikel uitgeleend of gereserveerd zijn
+            for(int i = (exemplaren.size() - 1); i >= 0; i--)
+            {
+                Exemplaar exemplaar = exemplaren.get(i);
+                if(exemplaar.getArtikelID() == artikelID)
+                {
+                    // Controleert of het exemplaar is uitgeleend of gereserveerd.
+                    if(getUitgeleend(i) || getGereserveerd(i))
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        // Wanneer bovenstaande testen niet slagen, dan zijn de mogelijke exemplaren van het artikel niet uitgeleend of gereserveerd
+        return false;
+    }
+    
     
     /**
      * Voegt een nieuw lid toe.
@@ -701,6 +760,25 @@ public class Bibliotheek
         lidMagArtikelLenenOfReserveren(lidID, exemplaren.get(exemplaarID).getArtikelID()) && getGereserveerdVoorLid(lidID, exemplaarID))
         {
             uitleningen.add(new Uitlening(uitleningen.size(), lidID, exemplaarID));
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    
+    /**
+     * Stelt in dat het artikel niet meer gebruikt mag worden.
+     *
+     * @param artikelID Het ID van het artikel.
+     * @return true als het inleveren van het exemplaar gelukt is, anders false
+     */
+    public boolean verwijderArtikel(int artikelID)
+    {
+        if(checkArtikelID(artikelID) && artikelen.get(artikelID).setNietMeerInGebruik() && !getArtikelExemplarenUigeleendGeReserveerd(artikelID))
+        {
             return true;
         }
         else
