@@ -29,7 +29,6 @@ public class Boete
         this.betaald = betaald;
     }
     
-    
     /**
      * Returned het ID van de boete.
      * 
@@ -69,7 +68,6 @@ public class Boete
     {
         return betaald;
     }
-    
     
     /**
      * Betaald de boete indien mogelijk.

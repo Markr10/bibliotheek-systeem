@@ -102,26 +102,4 @@ public class Uitlening
             return false;
         }
     }
-    
-//     /** // NOTE: Waarschijnlijk overbodig
-//      * Stelt de terugbrengdatum van de uitlening in.
-//      * 
-//      * @param datum De datum waarop de uitlening teruggebracht is.
-//      * Deze datum mag niet in de toekomst liggen en
-//      * moet zijn in het formaat "ddMMyyyy".
-//      * @return true als het instellen gelukt is, anders false
-//      */
-//     public boolean setTerugbrengdatum(String datum)
-//     {
-//         // Controleer de datum en of de uitlening teruggebracht kan worden.
-//         if(SpecialDate.checkDate(datum) && (terugbrengdatum == null))
-//         {
-//             terugbrengdatum = datum;
-//             return true;
-//         }
-//         else
-//         {
-//             return false;
-//         }
-//     }
 }

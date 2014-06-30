@@ -9,7 +9,6 @@
 public class Cd extends Artikel
 {
     private String releasedatum;
-    
     private int kostenNaKorting;
 
     /**

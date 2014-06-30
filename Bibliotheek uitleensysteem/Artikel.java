@@ -8,7 +8,6 @@ import java.util.ArrayList;
  */
 public abstract class Artikel
 {
-    // Artikel variabelen (protected waar nodig)
     private int id;
     private String titel;
     protected Enum type;

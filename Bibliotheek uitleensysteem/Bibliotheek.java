@@ -1200,7 +1200,6 @@ public class Bibliotheek
         {
             // Genereert reserveringID aan hand van lengte ArrayList.
             reserveringen.add(new Reservering(reserveringen.size(), lidID, artikelID));
-            // TODO inningsgeld toevoegen aan lid
             return true;
         }
         else
@@ -1262,19 +1261,6 @@ public class Bibliotheek
      */
     public boolean inleverenExemplaar(int lidID, int exemplaarID)
     {
-        // Controleert geldigheid parameters, controleert of lid niet geroyaleerd is, controleert of het exemplaar uitgeleend is,
-        // controleert of het exemplaar aan het lid uitgeleend is, 
-
-        // controleert of als het een gereserveerd exemplaar is en
-        // zo ja deze voor een lid gereserveerd is zet deze verwerking in gang > modificeer reservering object
-        // vraagt voor boete
-        // TODO inbouwen checks boete
-        // Probeer brieven te resetten wanneer boete is betaald en er geen te laat ingeleverde artikelen meer zijn.
-//             if(!leden.get(lidID).resetBrieven())
-//             {
-//                 return false;
-//             }
-
         if(checkLidID(lidID) && checkExemplaarID(exemplaarID) && !leden.get(lidID).isGeroyeerd())
         {
             Uitlening uitlening = checkAndGetUitgeleendEnAanLid(lidID, exemplaarID);
@@ -1282,7 +1268,6 @@ public class Bibliotheek
             if(uitlening != null && uitlening.setTerugbrengdatum())
             {
                 getVerschuldigdBedragUitlening(uitlening);
-                // TODO verder uitbereiden
                 controleerAndSetReservering(exemplaarID);
                 
                 return true;
@@ -1290,6 +1275,63 @@ public class Bibliotheek
         }
         // In alle andere gevallen
         return false;
+    }
+    
+    public void controleerAndSetReservering()
+    {
+        for(int i = (uitleningen.size() - 1); i >= 0; i--)
+        {
+            Uitlening uitlening = uitleningen.get(i);
+            if(getVerschuldigdBedragUitlening(uitlening) > 0 && !getBoete(uitlening.getID()))
+            {
+                boetes.add(new Boete(boetes.size(), uitlening.getID(), BoeteKlasseType.valueOf("UITLENING"), false));
+            }
+        }
+    }
+    
+    public boolean getBoete(int uitleningID)
+    {
+        for(int i = (boetes.size() - 1); i >= 0; i--)
+        {
+            Boete boete = boetes.get(i);
+            if(boete.getItemID() == uitleningID && boete.getBoeteKlasseType().equals(BoeteKlasseType.valueOf("UITLENING")))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public int[] berekenInkomsten()
+    {
+        int totaal = 0;
+        int totaalBoetes = 0;
+        // Doorloop de boetes.
+        for(int i = (boetes.size() - 1); i >= 0; i--)
+        {
+            if(!boetes.get(i).getBetaald())
+            {
+                continue;
+            }
+            // Controleert de boete in de juiste ArrayList.
+            switch(boetes.get(i).getBoeteKlasseType())
+            {
+                case RESERVERING:
+                {
+                    Reservering reservering = reserveringen.get(boetes.get(i).getItemID());
+                    totaal += RESERVERING_BOETE;
+                }
+                break;
+                case UITLENING:
+                {
+                    Uitlening uitlening = uitleningen.get(boetes.get(i).getItemID());
+                    totaal += getVerschuldigdBedragUitlening(uitlening);
+                    totaalBoetes += getBoeteBedragUitlening(uitlening);
+                }
+                break;
+            }
+        }
+        return new int[] {totaal, totaalBoetes};
     }
 
     /**
@@ -1423,70 +1465,4 @@ public class Bibliotheek
     
         return waarschuwingsbrieven;
     }
-    
-    // CHECK
-    //     /**
-    //      * Returned een beschikbaar examplaar van een artikel.
-    //      *
-    //      * @return Het aantal beschikbare examplaren van een artikel.
-    //      */
-    //     public int getAantalBeschikbaar()
-    //     {
-    //         int aantalBeschikbaar = 0;
-    //         for(Exemplaar exemplaar : exemplaren)
-    //         {
-    //             if(exemplaar.getUitgeleend())
-    //             {
-    //                 aantalBeschikbaar++;
-    //             }
-    //         }
-    //         return aantalBeschikbaar;
-    //     }
-    //     
-    // 
-    //     /**
-    //      * Verlaagt het aantal beschikbare examplaren van een artikel.
-    //      * 
-    //      * @return true als het verlagen gelukt is, anders false
-    //      */
-    //     public boolean decrementAantalBeschikbaar()
-    //     {
-    //         //  Controleer of er nog exemplaren kunnen worden teruggebracht.
-    //         if(getAantalBeschikbaar() > 1)
-    //         {
-    //             aantalBeschikbaar--;
-    //             return true;
-    //         }
-    //         else
-    //         {
-    //             return false;
-    //         }
-    //     }
-
-    // CHECK
-    //      // NOTE: Waarschijnlijk overbodig
-    //     /**
-    //      * Returned het aantal beschikbare examplaren van een artikel.
-    //      *
-    //      * @return Het aantal beschikbare examplaren van een artikel.
-    //      */
-    //     public int getAantalBeschikbaar()
-    //     {
-    //         int aantalBeschikbaar = 0;
-    //         for(Exemplaar exemplaar : exemplaren)
-    //         {
-    //             if(exemplaar.getUitgeleend())
-    //             {
-    //                 aantalBeschikbaar++;
-    //             }
-    //         }
-    //         return aantalBeschikbaar;
-    //     }
-    //
-    // CHECK
-    //     // Remove lid
-    //     public void removeLid(Lid lid)
-    //     {
-    //         customers.remove(lid);
-    //     }
 }

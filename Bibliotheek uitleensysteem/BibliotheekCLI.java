@@ -153,16 +153,10 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printFinanciën()
     {
+        int[] berekendeInkomsten = berekenInkomsten();
         System.out.println("---------Financiën----------");
-        for(Artikel artikel : artikelen)
-        {
-            System.out.print("# " + artikel.getID() + " Type: " + artikel.toString() + " Titel: " + artikel.getTitel());
-            if(artikel instanceof Cd)
-            {
-                System.out.print(" Releasedatum: " + ((Cd)artikel).getReleasedatum());
-            }
-            System.out.println();
-        }
+        System.out.println("Totale inkomsten: " + berekendeInkomsten[0] + ".");
+        System.out.println("Totaal bedrag boetes: " + berekendeInkomsten[1] + ".");
         System.out.println("------------------------------");
     }
 }
