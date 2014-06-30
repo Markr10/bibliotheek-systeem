@@ -964,7 +964,7 @@ public class Bibliotheek
      * @param artikelID Het ID van het artikel.
      * @return true als exemplaren van het artikel zijn uitgeleend of gereserveerd, anders false
      */
-    public boolean getArtikelExemplarenUigeleendGeReserveerd(int artikelID)
+    public boolean getArtikelExemplarenUigeleendOfGereserveerd(int artikelID)
     {
         if(checkLidID(artikelID))
         {
@@ -1241,7 +1241,7 @@ public class Bibliotheek
      */
     public boolean verwijderArtikel(int artikelID)
     {
-        if(checkArtikelID(artikelID) && artikelen.get(artikelID).setNietMeerInGebruik() && !getArtikelExemplarenUigeleendGeReserveerd(artikelID))
+        if(checkArtikelID(artikelID) && artikelen.get(artikelID).setNietMeerInGebruik() && !getArtikelExemplarenUigeleendOfGereserveerd(artikelID))
         {
             return true;
         }
