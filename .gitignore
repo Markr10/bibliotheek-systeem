@@ -1,6 +1,9 @@
 # Generated doc files
 doc/
 
+#BlueJ class context files
+*.ctxt
+
 # Java class files
 *.class
 
