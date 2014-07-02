@@ -107,12 +107,12 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printLeden()
     {
-        System.out.println("-------------Leden------------");
+        System.out.println("-------------Leden----------------");
         for(Lid lid : leden)
         {
             System.out.println(lid.getNaam());
         }
-        System.out.println("------------------------------");
+        System.out.println("----------------------------------");
     }
 
     /**
@@ -121,7 +121,7 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printArtikelen()
     {
-        System.out.println("---------Artikelen----------");
+        System.out.println("------------Artikelen-------------");
         for(Artikel artikel : artikelen)
         {
             System.out.print("# " + artikel.getID() + " Type: " + artikel.toString() + " Titel: " + artikel.getTitel());
@@ -131,7 +131,7 @@ public class BibliotheekCLI extends Bibliotheek
             }
             System.out.println();
         }
-        System.out.println("------------------------------");
+        System.out.println("----------------------------------");
     }
 
     /**
@@ -140,14 +140,15 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printReserveringen() 
     {
-        System.out.println("---------Reserveringen----------");
+        System.out.println("---------Reserveringen------------");
         for(Reservering reservering : reserveringen)
         {
             System.out.println("# " + reservering.getID() + " Titel: " + artikelen.get(reservering.getArtikelID()).getTitel() +
                 " Datum gereserveerd: " + reservering.getReserveringsdatum() + " Door lid: " + leden.get(reservering.getLidID()).getNaam());
         }
-        System.out.println("------------------------------");
+        System.out.println("----------------------------------");
     }
+    
     
     /**
      * Print het overzicht van de financiën van de bibliotheek.
@@ -156,10 +157,10 @@ public class BibliotheekCLI extends Bibliotheek
     public void printFinanciën()
     {
         int[] berekendeInkomsten = berekenInkomsten();
-        System.out.println("---------Financiën----------");
+        System.out.println("------------Financiën-------------");
         System.out.println("Totale inkomsten: " + berekendeInkomsten[0] + ".");
         System.out.println("Totaal bedrag boetes: " + berekendeInkomsten[1] + ".");
-        System.out.println("------------------------------");
+        System.out.println("----------------------------------");
     }
     
     /**
@@ -168,7 +169,7 @@ public class BibliotheekCLI extends Bibliotheek
     public void printInfoArtikelen()
     {
         LinkedHashMap<Integer, int[]> infoLijst = getInfoArtikelen();
-        System.out.println("---------Artikelen info----------");
+        System.out.println("----------Artikelen info----------");
         
         Set<Integer> keys = infoLijst.keySet();
         for (Integer key : keys) 
@@ -178,6 +179,6 @@ public class BibliotheekCLI extends Bibliotheek
                  "Gemiddelde uitleentermijn: " + (infoRij[1]/infoRij[0]));
         }
         
-        System.out.println("------------------------------");
+        System.out.println("----------------------------------");
     }
 }
