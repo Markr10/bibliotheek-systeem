@@ -23,6 +23,8 @@ public class Bibliotheek
     protected ArrayList<Artikel> artikelen; // Artikelen
     private ArrayList<Exemplaar> exemplaren; // Exemplaren
     private ArrayList<Boete> boetes; // Exemplaren
+    private ArrayList<ImportArtikelen> importArtikelen;
+    private ArrayList<ImportLeden> importLeden;
 
     
     /**
@@ -37,7 +39,43 @@ public class Bibliotheek
         exemplaren = new ArrayList<Exemplaar>();
     }   
 
+    private void importArtikelen(String path)  
+    {
+        // Import Artikelen aanroepen en de lijst terugsturen als arraylist
+        ImportArtikelen aa = new ImportArtikelen();
+        ArrayList artList = aa.main(_args_);
+        
+        // Door de ArrayList loopen en checken welk type
+        for(int i = 0; i <= artList.size(); i++)
+        {
+            if(aa.type == "boek") 
+            {
+                // Boek toevoegen
+                addVideoband(titel, type);
+            }
+            if(aa.type == "video") 
+            {
+                // Video toevoegen
+                addBoek(titel, type);
+            }
+            if(aa.type == "cd") 
+            {
+                // CD toevoegen
+                addCd(titel, type, releasedatum);
+            }
+        }
+    }
     
+    private void importLeden(String path)  
+    {
+    
+        ImportLeden al = new ImportLeden();
+        ArrayList ledenList = al.main(_args_);
+        for(int i = 0; i <= ledenList.size(); i++)
+        {
+            addLid(naam);
+        }
+    }
     /**
      * Controleert of een ID van een lid geldig is.
      *
