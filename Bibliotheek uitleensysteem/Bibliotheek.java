@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
+
 /**
  * Bibliotheek klasse welke verschillende onderdelen van een bibliotheek beheert.
  * Hierbij moet gedacht worden aan leden, artikelen, boetes, reserveringen, uitlenen en innemen.
