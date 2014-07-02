@@ -2,60 +2,73 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
- 
+
 public class ImportLeden 
 {
- 
-  public static void main(String[] args) 
-  {
- 
-    ImportLeden obj = new ImportLeden();
-    obj.run();
- 
-  }
- 
-  public void run() 
-  {
-    String csvFile = "C:/Users/Danny/Desktop/Leden.csv";
-    BufferedReader br = null;
-    String line = "";
-    String cvsSplitBy = ",";
- 
-    try 
+
+    public static void main(String[] args) 
     {
-        br = new BufferedReader(new FileReader(csvFile));
-        while ((line = br.readLine()) != null) 
+        ImportLeden obj = new ImportLeden();
+        obj.run("C:/Users/Danny/Desktop/Leden.csv");
+    }
+
+    public String run(String path) 
+    {
+        String csvFile = path; // "C:/Users/Danny/Desktop/Leden.csv"
+        BufferedReader br = null;
+        String line = "";
+        String cvsSplitBy = ",";
+        String titel, type, releasedatum;
+        ArrayList temp = new ArrayList();
+        try 
         {
-            // use comma as separator
-            String[] lid = line.split(cvsSplitBy);
- 
-            System.out.println("Lid [Voornaam= " + lid[1] + " , Achternaam= " + lid[2] + "]");
-        }
-    } 
-    catch (FileNotFoundException e) 
-    {
-        e.printStackTrace();
-    } 
-    catch (IOException e) 
-    {
-        e.printStackTrace();
-    } 
-    finally 
-    {
-        if (br != null) 
-        {
-            try 
-            {   
-                br.close();
-            } 
-            catch (IOException e) 
+            br = new BufferedReader(new FileReader(csvFile));
+            while ((line = br.readLine()) != null)
             {
-                e.printStackTrace();
+                // use comma as separator
+                String[] add = line.split(cvsSplitBy);
+                
+//                 if(add[0] == "video") 
+//                 {
+//                     System.out.println("Video [Titel= " + add[1] + " , Achternaam= " + add[2] + "]");
+//                     addVideoband(titel, type);
+//                 }
+//                 if(add[0] == "boek") 
+//                 {
+//                     System.out.println("Boek [Titel= " + add[1] + " , Achternaam= " + add[2] + "]");
+//                     addBoek(titel, type);
+//                 }
+//                 if(add[0] == "cd") 
+//                 {
+//                     System.out.println("CD [Titel= " + add[1] + " , Achternaam= " + add[2] + "]");
+//                     addCd(titel, type, releasedatum);
+//                 }
+            }
+        } 
+        catch (FileNotFoundException e) 
+        {
+            e.printStackTrace();
+        } 
+        catch (IOException e) 
+        {
+            e.printStackTrace();
+        } 
+        finally 
+        {
+            if (br != null) 
+            {
+                try 
+                {   
+                    br.close();
+                } 
+                catch (IOException e) 
+                {
+                    e.printStackTrace();
+                }
             }
         }
+        System.out.println();
+        System.out.println("Done");
     }
-    System.out.println();
-    System.out.println("Done");
-  }
- 
+
 }
