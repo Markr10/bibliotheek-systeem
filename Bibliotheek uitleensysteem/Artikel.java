@@ -50,6 +50,16 @@ public abstract class Artikel
     }
     
     /**
+     * Returned het type van het artikel.
+     * 
+     * @return Het type van het artikel.
+     */
+    public Enum getType() 
+    {
+        return type;
+    }
+    
+    /**
      * Returned of een artikel niet meer gebruikt mag worden.
      * 
      * @return De niet meer gebruikt status van het artikel.
