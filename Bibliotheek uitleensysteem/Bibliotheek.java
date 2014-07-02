@@ -1525,7 +1525,7 @@ public class Bibliotheek
      * 
      * @return Een LinkedHashMap met informatie over alle geldige artikelen.
      */
-    public LinkedHashMap<Integer, int[]> getInfoOverArtikelen()
+    public LinkedHashMap<Integer, int[]> getInfoArtikelen()
     {
         LinkedHashMap<Integer, int[]> infoOverArtikelen = new LinkedHashMap<Integer, int[]>();
         

@@ -166,13 +166,15 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printInfoArtikelen()
     {
-        LinkedHashMap<Integer, int[]> getInfo = getInfoOverArtikelen();
+        LinkedHashMap<Integer, int[]> infoLijst = getInfoArtikelen();
         System.out.println("---------Artikelen info----------");
         
-        Set<Integer> keys = getInfo.keySet();
+        Set<Integer> keys = infoLijst.keySet();
         for (Integer key : keys) 
         {
-            System.out.println(getInfo.get(key));
+            int[] infoRij = infoLijst.get(key);
+            System.out.println("# " + key + " Aantal keer uitgeleend: " + infoRij[0] +
+                 "Gemiddelde uitleentermijn: " + (infoRij[1]/infoRij[0]));
         }
         
         System.out.println("------------------------------");
