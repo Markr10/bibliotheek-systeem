@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 /**
  * Bibliotheek klasse welke verschillende onderdelen van een bibliotheek beheert.
  * Hierbij moet gedacht worden aan leden, artikelen, boetes, reserveringen, uitlenen en innemen.
@@ -1518,18 +1518,18 @@ public class Bibliotheek
      * met betrekking tot het aantal keer dat een artikel is uitgeleend en
      * de totale uitgeleende tijd in dagen aan toe. En returned
      * het geheel.
-     * De key van de HashMap is het id van het artikel.
+     * De key van de LinkedHashMap is het id van het artikel.
      * De bijbehorende value is een int-array met het
      * aantal keer dat een artikel is uitgeleend en
      * de totale uitgeleende tijd in dagen.
      * 
-     * @return Een HashMap met informatie over alle geldige artikelen.
+     * @return Een LinkedHashMap met informatie over alle geldige artikelen.
      */
-    public HashMap<Integer, int[]> getInfoOverArtikelen()
+    public LinkedHashMap<Integer, int[]> getInfoOverArtikelen()
     {
-        HashMap<Integer, int[]> infoOverArtikelen = new HashMap<Integer, int[]>();
+        LinkedHashMap<Integer, int[]> infoOverArtikelen = new LinkedHashMap<Integer, int[]>();
         
-        // Vul de HashMap met geldige artikelen
+        // Vul de LinkedHashMap met geldige artikelen
         for(Artikel artikel : artikelen)
         {
             if(checkArtikelID(artikel.getID()))
@@ -1538,7 +1538,7 @@ public class Bibliotheek
             }
         }
         
-        // Vul de HashMap met de informatie over de artikelen
+        // Vul de LinkedHashMap met de informatie over de artikelen
         for(Uitlening uitlening : uitleningen)
         {
             int[] artikelRij = infoOverArtikelen.get(exemplaren.get(uitlening.getExemplaarID()).getArtikelID());

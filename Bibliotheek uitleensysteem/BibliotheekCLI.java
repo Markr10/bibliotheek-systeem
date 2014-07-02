@@ -1,6 +1,6 @@
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Set;
 /**
  * Een klasse die de uitvoer van een bibliotheek object toont in de command-line.
  * 
@@ -166,7 +166,7 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printInfoArtikelen()
     {
-        HashMap<Integer, int[]> getInfo = new HashMap<Integer, int[]>(getInfoOverArtikelen());
+        LinkedHashMap<Integer, int[]> getInfo = getInfoOverArtikelen();
         System.out.println("---------Artikelen info----------");
         
         Set<Integer> keys = getInfo.keySet();
