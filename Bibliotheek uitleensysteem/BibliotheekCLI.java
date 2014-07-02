@@ -175,8 +175,8 @@ public class BibliotheekCLI extends Bibliotheek
         for (Integer key : keys) 
         {
             int[] infoRij = infoLijst.get(key);
-            System.out.println("# " + key + " Aantal keer uitgeleend: " + infoRij[0] +
-                 "Gemiddelde uitleentermijn: " + (infoRij[1]/infoRij[0]));
+            System.out.println("# " + key + "  Aantal keer uitgeleend: " + infoRij[0] +
+                 "  Gemiddelde uitleentermijn: " + (infoRij[1]/infoRij[0]) + " dagen");
         }
         
         System.out.println("----------------------------------");
