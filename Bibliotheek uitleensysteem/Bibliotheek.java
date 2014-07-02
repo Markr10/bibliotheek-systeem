@@ -563,7 +563,6 @@ public class Bibliotheek
                 case "Cd KLASSIEK": 
                 {
                     leeftijd = SpecialDate.roundedYearsDifference(((Cd)artikelen.get(exemplaren.get(uitlening.getExemplaarID()).getArtikelID())).getReleasedatum());
-                    System.out.println(leeftijd);
                     if(leeftijd < 1)
                     {
                         if(verschilDagen <= 10)
@@ -813,7 +812,6 @@ public class Bibliotheek
                 case "Cd KLASSIEK": 
                 {
                     leeftijd = SpecialDate.roundedYearsDifference(((Cd)artikelen.get(exemplaren.get(uitlening.getExemplaarID()).getArtikelID())).getReleasedatum());
-                    System.out.println(leeftijd);
                     if(leeftijd < 1)
                     {
                         if(verschilDagen <= 10)
