@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-
+import java.util.HashMap;
+import java.util.*;
 /**
  * Een klasse die de uitvoer van een bibliotheek object toont in de command-line.
  * 
@@ -157,6 +158,23 @@ public class BibliotheekCLI extends Bibliotheek
         System.out.println("---------Financiën----------");
         System.out.println("Totale inkomsten: " + berekendeInkomsten[0] + ".");
         System.out.println("Totaal bedrag boetes: " + berekendeInkomsten[1] + ".");
+        System.out.println("------------------------------");
+    }
+    
+    /**
+     * Print het overzicht van de artikelen.
+     */
+    public void printInfoArtikelen()
+    {
+        HashMap<Integer, int[]> getInfo = new HashMap<Integer, int[]>(getInfoOverArtikelen());
+        System.out.println("---------Artikelen info----------");
+        
+        Set<Integer> keys = getInfo.keySet();
+        for (Integer key : keys) 
+        {
+            System.out.println(getInfo.get(key));
+        }
+        
         System.out.println("------------------------------");
     }
 }
