@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 /**
  * Bibliotheek klasse welke verschillende onderdelen van een bibliotheek beheert.
  * Hierbij moet gedacht worden aan leden, artikelen, boetes, reserveringen, uitlenen en innemen.
@@ -1510,5 +1511,45 @@ public class Bibliotheek
         }
     
         return waarschuwingsbrieven;
+    }
+    
+    /**
+     * Haalt alle geldige artikelen op, voegt hier informatie
+     * met betrekking tot het aantal keer dat een artikel is uitgeleend en
+     * de totale uitgeleende tijd in dagen aan toe. En returned
+     * het geheel.
+     * De key van de HashMap is het id van het artikel.
+     * De bijbehorende value is een int-array met het
+     * aantal keer dat een artikel is uitgeleend en
+     * de totale uitgeleende tijd in dagen.
+     * 
+     * @return Een HashMap met informatie over alle geldige artikelen.
+     */
+    public HashMap<Integer, int[]> getInfoOverArtikelen()
+    {
+        HashMap<Integer, int[]> infoOverArtikelen = new HashMap<Integer, int[]>();
+        
+        // Vul de HashMap met geldige artikelen
+        for(Artikel artikel : artikelen)
+        {
+            if(checkArtikelID(artikel.getID()))
+            {
+                infoOverArtikelen.put(artikel.getID(), new int[] {0, 0});
+            }
+        }
+        
+        // Vul de HashMap met de informatie over de artikelen
+        for(Uitlening uitlening : uitleningen)
+        {
+            int[] artikelRij = infoOverArtikelen.get(exemplaren.get(uitlening.getExemplaarID()).getArtikelID());
+            // Ga voor elke uitlening na of deze teruggebracht is en of het bijbehorende artikel nog geldig is
+            if(uitlening.getTerugbrengdatum() != null && artikelRij != null)
+            {
+                artikelRij[0] += 1; // aantal keer uitgeleend
+                artikelRij[1] += SpecialDate.daysDifference(uitlening.getUitleendatum(), uitlening.getTerugbrengdatum()); // totale uitgeleende tijd in dagen
+            }
+        }
+        
+        return infoOverArtikelen;
     }
 }
