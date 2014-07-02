@@ -37,6 +37,7 @@ public class Bibliotheek
         uitleningen = new ArrayList<Uitlening>();
         artikelen = new ArrayList<Artikel>();
         exemplaren = new ArrayList<Exemplaar>();
+        boetes = new ArrayList<Boete>();
     }   
 
     
