@@ -341,13 +341,14 @@ public class Bibliotheek
     }
     
     /**
-     * Returned of een exemplaar voor een lid gereserveerd is.
+     * Returned of een exemplaar gereserveerd is en zo ja of
+     * het exemplaar gereserveerd is voor het lid.
      *     
      * @param lidID       Het ID van het lid.
      * @param exemplaarID Het ID van het exemplaar.
-     * @return true als het exemplaar gereserveerd is voor het lid, anders false
+     * @return true als het exemplaar niet gereserveerd is of gereserveerd is voor het lid, anders false
      */
-    public boolean getGereserveerdVoorLid(int lidID, int exemplaarID)
+    public boolean getGereserveerdEnVoorLid(int lidID, int exemplaarID)
     {
         // Controleert geldigheid parameters
         if(checkLidID(lidID) && checkExemplaarID(exemplaarID))
@@ -357,19 +358,22 @@ public class Bibliotheek
             {
                 Reservering reservering = reserveringen.get(i);
                 // Controleert of een exemplaar voor een lid gereserveerd is.
-                if(reservering.getLidID() == lidID && reservering.getExemplaarID() == exemplaarID)
+                if(reservering.getExemplaarID() == exemplaarID)
                 {
                     // Controleert of de reservering nog opgehaald kan worden.
                     if(!getReserveringUitgeleend(reservering) && SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()))
                     {
-                        return true;
+                        if(reservering.getLidID() != lidID)
+                        {
+                            return false;
+                        }
                     }
                     break;
                 }
             }
         }
-        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet voor een lid gereserveerd.
-        return false;
+        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet (meer) gereserveerd of het exemplaar is gereserveerd het voor lid.
+        return true;
     }
 
     /**
@@ -1224,7 +1228,7 @@ public class Bibliotheek
         // controleert of lid zo'n artikel mag lenen, controleert of als het een gereserveerd exemplaar is en
         // zo ja deze voor het lid gereserveerd is.
         if(checkLidID(lidID) && checkExemplaarID(exemplaarID) && !getUitgeleend(exemplaarID) &&
-        lidMagArtikelLenenOfReserveren(lidID, exemplaren.get(exemplaarID).getArtikelID()) && getGereserveerdVoorLid(lidID, exemplaarID))
+        lidMagArtikelLenenOfReserveren(lidID, exemplaren.get(exemplaarID).getArtikelID()) && getGereserveerdEnVoorLid(lidID, exemplaarID))
         {
             uitleningen.add(new Uitlening(uitleningen.size(), lidID, exemplaarID));
             return true;
