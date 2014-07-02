@@ -53,7 +53,3 @@ public class ExemplaarTest
         assertEquals(4, exemplaa1.getArtikelID());
     }
 }
-
-
-
-

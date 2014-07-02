@@ -11,7 +11,6 @@ public class Lid
     private int id;
     private String naam;
     protected boolean geroyeerd;
-    private boolean geroyeerd;
     private boolean eersteBrief;
     protected String tweedeBrief;
 

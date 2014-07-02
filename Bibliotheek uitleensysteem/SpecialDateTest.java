@@ -251,4 +251,3 @@ public class SpecialDateTest
         assertEquals("20042014", SpecialDate.addDays("20042014", 0));
     }
 }
-

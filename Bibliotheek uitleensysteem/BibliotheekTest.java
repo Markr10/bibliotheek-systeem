@@ -16,9 +16,6 @@ public class BibliotheekTest
     private Bibliotheek biblioth3;
     private Bibliotheek biblioth4;
     
-    
-
-    
     /**
      * Default constructor for test class BibliotheekTest.
      */
@@ -171,9 +168,3 @@ public class BibliotheekTest
         assertEquals(false, biblioth4.addReservering(1, 3));
     }
 }
-
-
-
-
-
-
