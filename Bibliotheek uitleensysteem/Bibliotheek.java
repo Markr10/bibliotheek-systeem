@@ -1367,7 +1367,7 @@ public class Bibliotheek
      * @param uitlening De uitlening die gebruikt zou moeten worden.
      * @return true als er een boete item aangemaakt is voor de uitlening, anders false
      */
-    private boolean controleerAndSetBoeteUitlening(Uitlening uitlening)
+    protected boolean controleerAndSetBoeteUitlening(Uitlening uitlening)
     {
         if(checkUitleningID(uitlening.getID()) && getVerschuldigdBedragUitlening(uitlening) > 0 && !isBoeteUitlening(uitlening.getID()))
         {
