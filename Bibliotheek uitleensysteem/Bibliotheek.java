@@ -1361,6 +1361,23 @@ public class Bibliotheek
     }
 
     /**
+     * Controleert of de uitlening een boete heeft en
+     * maakt, indien nodig, het desbetreffende boete item aan.
+     * 
+     * @param uitlening De uitlening die gebruikt zou moeten worden.
+     * @return true als er een boete item aangemaakt is voor de uitlening, anders false
+     */
+    private boolean controleerAndSetBoeteUitlening(Uitlening uitlening)
+    {
+        if(checkUitleningID(uitlening.getID()) && getVerschuldigdBedragUitlening(uitlening) > 0 && !isBoeteUitlening(uitlening.getID()))
+        {
+            boetes.add(new Boete(boetes.size(), uitlening.getID(), BoeteKlasseType.valueOf("UITLENING"), false));
+            return true;
+        }
+        return false;
+    }
+    
+    /**
      * Controleert of er openstaande reserveringen zijn voor het artikel van een ingeleverd exemplaar en
      * kent aan de eerste open reservering het exemplaar toe.
      * 
@@ -1398,7 +1415,7 @@ public class Bibliotheek
             // Ga verder als (gevonden) uitlening object correct is, stelt terugbrengdatum uitlening object in.
             if(uitlening != null && uitlening.setTerugbrengdatum())
             {
-                getVerschuldigdBedragUitlening(uitlening);
+                controleerAndSetBoeteUitlening(uitlening);
                 controleerAndSetReservering(exemplaarID);
 
                 return true;
@@ -1409,7 +1426,7 @@ public class Bibliotheek
     }
 
 
-        /**
+    /**
      * Controleert of de uitleningen een boete hebben en
      * maakt, indien nodig, de desbetreffende boete items aan.
      */
@@ -1417,11 +1434,7 @@ public class Bibliotheek
     {
         for(int i = (uitleningen.size() - 1); i >= 0; i--)
         {
-            Uitlening uitlening = uitleningen.get(i);
-            if(getVerschuldigdBedragUitlening(uitlening) > 0 && !isBoeteUitlening(uitlening.getID()))
-            {
-                boetes.add(new Boete(boetes.size(), uitlening.getID(), BoeteKlasseType.valueOf("UITLENING"), false));
-            }
+            controleerAndSetBoeteUitlening(uitleningen.get(i));
         }
     }
 
