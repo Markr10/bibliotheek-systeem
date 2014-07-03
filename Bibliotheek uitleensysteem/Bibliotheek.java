@@ -262,7 +262,7 @@ public class Bibliotheek
     public boolean addReservering(int lidID, int artikelID)
     {
         // Controleert geldigheid parameters en kijk of lid het artikel mag reserveren
-        if(checkLidID(lidID) && checkArtikelID(artikelID) && lidMagArtikelLenenOfReserveren(lidID, artikelID))
+        if(checkLidID(lidID) && checkArtikelID(artikelID) && isLidArtikelLenenOfReserveren(lidID, artikelID))
         {
             // Genereert reserveringID aan hand van lengte ArrayList.
             reserveringen.add(new Reservering(reserveringen.size(), lidID, artikelID));
@@ -286,8 +286,8 @@ public class Bibliotheek
         // Controleert geldigheid parameters, controleert of het exemplaar niet uigeleend is,
         // controleert of lid zo'n artikel mag lenen, controleert of als het een gereserveerd exemplaar is en
         // zo ja deze voor het lid gereserveerd is.
-        if(checkLidID(lidID) && checkExemplaarID(exemplaarID) && !getUitgeleend(exemplaarID) &&
-        lidMagArtikelLenenOfReserveren(lidID, exemplaren.get(exemplaarID).getArtikelID()) && getGereserveerdEnVoorLid(lidID, exemplaarID))
+        if(checkLidID(lidID) && checkExemplaarID(exemplaarID) && !isUitgeleend(exemplaarID) &&
+        isLidArtikelLenenOfReserveren(lidID, exemplaren.get(exemplaarID).getArtikelID()) && isGereserveerdEnVoorLid(lidID, exemplaarID))
         {
             uitleningen.add(new Uitlening(uitleningen.size(), lidID, exemplaarID));
             return true;
@@ -403,7 +403,7 @@ public class Bibliotheek
      */
     public boolean verwijderArtikel(int artikelID)
     {
-        if(checkArtikelID(artikelID) && artikelen.get(artikelID).setNietMeerInGebruik() && !getArtikelExemplarenUigeleendOfGereserveerd(artikelID))
+        if(checkArtikelID(artikelID) && artikelen.get(artikelID).setNietMeerInGebruik() && !isArtikelExemplarenUigeleendOfGereserveerd(artikelID))
         {
             return true;
         }
@@ -420,7 +420,7 @@ public class Bibliotheek
      * @param artikelID Het ID van het artikel.
      * @return true als exemplaren van het artikel zijn uitgeleend of gereserveerd, anders false
      */
-    public boolean getArtikelExemplarenUigeleendOfGereserveerd(int artikelID)
+    public boolean isArtikelExemplarenUigeleendOfGereserveerd(int artikelID)
     {
         if(checkLidID(artikelID))
         {
@@ -431,7 +431,7 @@ public class Bibliotheek
                 if(exemplaar.getArtikelID() == artikelID)
                 {
                     // Controleert of het exemplaar is uitgeleend of gereserveerd.
-                    if(getUitgeleend(exemplaar.getID()) || getGereserveerdExemplaar(exemplaar.getID()))
+                    if(isUitgeleend(exemplaar.getID()) || isGereserveerdExemplaar(exemplaar.getID()))
                     {
                         return true;
                     }
@@ -448,7 +448,7 @@ public class Bibliotheek
      * @param reserveringID Het ID van de reservering.
      * @return true als er voor de reservering een boete bestaat, anders false
      */
-    public boolean getBoeteReservering(int reserveringID)
+    public boolean isBoeteReservering(int reserveringID)
     {
         for(int i = (boetes.size() - 1); i >= 0; i--)
         {
@@ -467,7 +467,7 @@ public class Bibliotheek
      * @param uitleningID Het ID van de uitlening.
      * @return true als er voor de uitlening een boete bestaat, anders false
      */
-    public boolean getBoeteUitlening(int uitleningID)
+    public boolean isBoeteUitlening(int uitleningID)
     {
         for(int i = (boetes.size() - 1); i >= 0; i--)
         {
@@ -486,7 +486,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het exemplaar gereserveerd is, anders false
      */
-    public boolean getGereserveerdExemplaar(int exemplaarID)
+    public boolean isGereserveerdExemplaar(int exemplaarID)
     {
         // Controleert geldigheid parameter
         if(checkExemplaarID(exemplaarID))
@@ -499,7 +499,7 @@ public class Bibliotheek
                 if(reservering.getExemplaarID() == exemplaarID)
                 {
                     // Controleert of de reservering nog opgehaald kan worden.
-                    if(!getReserveringUitgeleend(reservering) && SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()))
+                    if(!isReserveringUitgeleend(reservering) && SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()))
                     {
                         return true;
                     }
@@ -519,7 +519,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het exemplaar niet gereserveerd is of gereserveerd is voor het lid, anders false
      */
-    public boolean getGereserveerdEnVoorLid(int lidID, int exemplaarID)
+    public boolean isGereserveerdEnVoorLid(int lidID, int exemplaarID)
     {
         // Controleert geldigheid parameters
         if(checkLidID(lidID) && checkExemplaarID(exemplaarID))
@@ -532,7 +532,7 @@ public class Bibliotheek
                 if(reservering.getExemplaarID() == exemplaarID)
                 {
                     // Controleert of de reservering nog opgehaald kan worden.
-                    if(!getReserveringUitgeleend(reservering) && SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()))
+                    if(!isReserveringUitgeleend(reservering) && SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()))
                     {
                         if(reservering.getLidID() != lidID)
                         {
@@ -553,7 +553,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het exemplaar uitgeleend is, anders false
      */
-    public boolean getUitgeleend(int exemplaarID)
+    public boolean isUitgeleend(int exemplaarID)
     {        
         // Controleert geldigheid parameter
         if(checkExemplaarID(exemplaarID))
@@ -582,7 +582,7 @@ public class Bibliotheek
      * @param reservering De reservering die gecontroleerd moet worden.
      * @return true als het reservering opgehaald/uitgeleend is, anders false
      */
-    public boolean getReserveringUitgeleend(Reservering reservering)
+    public boolean isReserveringUitgeleend(Reservering reservering)
     {
         // Controleert geldigheid parameter en of de reservering klaargezet is.
         // Omdat Reservering.setReserveringKlaar het exemplaarID en de maximale ophaaldatum beheerd, hoeft hier niet op gecontroleerd te worden.
@@ -612,7 +612,7 @@ public class Bibliotheek
      * @param artikelID Het ID van het artikel.
      * @return true als een lener een artikel mag lenen of reserveren, anders false
      */
-    public boolean lidMagArtikelLenenOfReserveren(int lidID, int artikelID)
+    public boolean isLidArtikelLenenOfReserveren(int lidID, int artikelID)
     {
         /*
          * Dit is het geval als het lid niet geroyaleerd is, wanneer een lid het artikel niet te leen heeft, wannneer
@@ -653,7 +653,7 @@ public class Bibliotheek
             {
                 Reservering reservering = reserveringen.get(i);
                 if(reservering.getLidID() == lidID && (reservering.getMaxOphaaldatum() == null ||
-                    (SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) && !getReserveringUitgeleend(reservering))))
+                    (SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) && !isReserveringUitgeleend(reservering))))
                 {
                     artikelenLeenCount++;
 
@@ -679,6 +679,7 @@ public class Bibliotheek
         }
     }
 
+
     /**
      * Returned het uitlening object als een exemplaar is uitgeleend en als dat exemplaar is uitgeleend aan een bepaald lid.
      *
@@ -686,7 +687,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return Het laaste uitlening object van het exemplaar dat is uitgeleend aan het lid, bij incorrecte status null.
      */
-    public Uitlening checkAndGetUitgeleendEnAanLid(int lidID, int exemplaarID)
+    public Uitlening isAndGetUitgeleendEnAanLid(int lidID, int exemplaarID)
     {
         // Controleert geldigheid parameters
         if(checkLidID(lidID) && checkExemplaarID(exemplaarID))
@@ -709,6 +710,7 @@ public class Bibliotheek
         // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet uitgeleend.
         return null;
     }
+
 
     /**
      * Returned het op dit moment boete bedrag voor een uitlening.
@@ -1368,7 +1370,7 @@ public class Bibliotheek
     public boolean controleerAndSetReservering(int exemplaarID)
     {
         // Controleert geldigheid parameter en kijkt of het exemplaar niet uitgeleend is. 
-        if(checkExemplaarID(exemplaarID) && !getUitgeleend(exemplaarID))
+        if(checkExemplaarID(exemplaarID) && !isUitgeleend(exemplaarID))
         {
             // Zoekt openstaande reservering op en zet deze klaar.
             Reservering reservering = getOpenReservering(exemplaren.get(exemplaarID).getArtikelID());
@@ -1392,7 +1394,7 @@ public class Bibliotheek
     {
         if(checkLidID(lidID) && checkExemplaarID(exemplaarID) && !leden.get(lidID).isGeroyeerd())
         {
-            Uitlening uitlening = checkAndGetUitgeleendEnAanLid(lidID, exemplaarID);
+            Uitlening uitlening = isAndGetUitgeleendEnAanLid(lidID, exemplaarID);
             // Ga verder als (gevonden) uitlening object correct is, stelt terugbrengdatum uitlening object in.
             if(uitlening != null && uitlening.setTerugbrengdatum())
             {
@@ -1416,7 +1418,7 @@ public class Bibliotheek
         for(int i = (uitleningen.size() - 1); i >= 0; i--)
         {
             Uitlening uitlening = uitleningen.get(i);
-            if(getVerschuldigdBedragUitlening(uitlening) > 0 && !getBoeteUitlening(uitlening.getID()))
+            if(getVerschuldigdBedragUitlening(uitlening) > 0 && !isBoeteUitlening(uitlening.getID()))
             {
                 boetes.add(new Boete(boetes.size(), uitlening.getID(), BoeteKlasseType.valueOf("UITLENING"), false));
             }
@@ -1434,8 +1436,8 @@ public class Bibliotheek
         for(int i = (reserveringen.size() - 1); i >= 0; i--)
         {
             Reservering reservering = reserveringen.get(i);
-            if(!getReserveringUitgeleend(reservering) && !SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) &&
-            !getBoeteReservering(reservering.getID()))
+            if(!isReserveringUitgeleend(reservering) && !SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) &&
+            !isBoeteReservering(reservering.getID()))
             {
                 boetes.add(new Boete(boetes.size(), reservering.getID(), BoeteKlasseType.valueOf("RESERVERING"), false));
                 Reservering openReservering = getOpenReservering(reservering.getArtikelID());
