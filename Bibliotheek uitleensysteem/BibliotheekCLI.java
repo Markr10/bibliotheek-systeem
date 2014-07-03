@@ -169,7 +169,7 @@ public class BibliotheekCLI extends Bibliotheek
     public void printInfoArtikelen()
     {
         LinkedHashMap<Integer, int[]> infoLijst = getInfoArtikelen();
-        System.out.println("-------Artikelen informatie-------");
+        System.out.println("--------Artikel informatie--------");
 
         Set<Integer> keys = infoLijst.keySet();
         for (Integer key : keys) 
