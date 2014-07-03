@@ -17,7 +17,7 @@ public class BibliotheekTest
     private Bibliotheek biblioth4;
     private Bibliotheek biblioth5;
     private Bibliotheek biblioth6;
-    
+
     /**
      * Default constructor for test class BibliotheekTest.
      */
@@ -38,16 +38,16 @@ public class BibliotheekTest
         biblioth1.addBoek("Roman Empire", "Roman");
         biblioth1.addCd("Nederpop", "populair", "12092006");
         biblioth1.addVideoband("The Bandit", "A");
-        
+
         biblioth2 = new Bibliotheek();
-        
+
         biblioth3 = new Bibliotheek();
         biblioth3.addLid("Piet");
         biblioth3.addLid("Paula");
         biblioth3.addBoek("E-learning 2", "studieboek");
         biblioth3.addCd("Nederklassiek oud", "klassiek", "29021988");
         biblioth3.addVideoband("The Bandit 4", "B");
-        
+
         biblioth4 = new Bibliotheek();
         biblioth4.addLid("Piet");
         biblioth4.addLid("Paula");
@@ -59,7 +59,7 @@ public class BibliotheekTest
         biblioth4.addExemplaar(0);
         biblioth4.addExemplaar(1);
         biblioth4.addExemplaar(2);
-        
+
         biblioth5 = new Bibliotheek();
         biblioth5.addLid("Piet");
         biblioth5.addLid("Paula");
@@ -69,7 +69,7 @@ public class BibliotheekTest
         biblioth5.addExemplaar(0);
         biblioth5.addExemplaar(1);
         biblioth5.addExemplaar(2);
-        
+
         biblioth6 = new Bibliotheek();
         biblioth6.addLid("Piet");
         biblioth6.addLid("Paula");
@@ -92,18 +92,6 @@ public class BibliotheekTest
     @After
     public void tearDown()
     {
-    }
-
-    @Test
-    public void testAddLid()
-    {
-        biblioth2.addLid("Paula");
-        biblioth2.addLid("Piet");
-        assertEquals(2, biblioth2.leden.size());
-        assertEquals("Paula", biblioth2.leden.get(0).getNaam());
-        assertEquals(0, biblioth2.leden.get(0).getID());
-        assertEquals("Piet", biblioth2.leden.get(1).getNaam());
-        assertEquals(1, biblioth2.leden.get(1).getID());
     }
 
     @Test
@@ -152,7 +140,7 @@ public class BibliotheekTest
         assertEquals(8, biblioth2.artikelen.get(8).getID());
         assertEquals("29021988", ((Cd)biblioth2.artikelen.get(8)).getReleasedatum());
     }
-    
+
     @Test
     public void testAddVideoband()
     {
@@ -186,6 +174,18 @@ public class BibliotheekTest
     }
 
     @Test
+    public void testAddLid()
+    {
+        biblioth2.addLid("Paula");
+        biblioth2.addLid("Piet");
+        assertEquals(2, biblioth2.leden.size());
+        assertEquals("Paula", biblioth2.leden.get(0).getNaam());
+        assertEquals(0, biblioth2.leden.get(0).getID());
+        assertEquals("Piet", biblioth2.leden.get(1).getNaam());
+        assertEquals(1, biblioth2.leden.get(1).getID());
+    }
+
+    @Test
     public void testAddReservering()
     {
         assertEquals(true, biblioth4.addReservering(0, 0));
@@ -195,18 +195,26 @@ public class BibliotheekTest
         assertEquals(false, biblioth4.addReservering(1, 0));
         assertEquals(false, biblioth4.addReservering(1, 3));
     }
-    
+
     @Test
     public void testAddUitlening()
     {
         assertEquals(true, biblioth5.addUitlening(0, 0));
         assertEquals(true, biblioth5.addUitlening(0, 1));
         assertEquals(true, biblioth5.addUitlening(0, 2));
+        assertEquals(false, biblioth5.addUitlening(0, 3));
+        assertEquals(false, biblioth5.addUitlening(2, 0));
+        assertEquals(false, biblioth5.addUitlening(0, -1));
+        assertEquals(false, biblioth5.addUitlening(-1, 0));
     }
-    
+
     @Test
     public void testInleverenExemplaar()
     {
+        assertEquals(false, biblioth6.addUitlening(0, 3));
+        assertEquals(false, biblioth6.addUitlening(2, 0));
+        assertEquals(false, biblioth6.addUitlening(0, -1));
+        assertEquals(false, biblioth6.addUitlening(-1, 0));
         assertEquals(true, biblioth6.inleverenExemplaar(0, 0));
         assertEquals(true, biblioth6.inleverenExemplaar(0, 1));
         assertEquals(true, biblioth6.inleverenExemplaar(0, 2));
