@@ -19,7 +19,8 @@ public class ImportLeden
         String line = "";
         String cvsSplitBy = ",";
         String titel, type, releasedatum;
-        ArrayList temp = new ArrayList();
+//         ArrayList temp = new ArrayList();
+        ImportValues values = new ImportValues();
         try 
         {
             br = new BufferedReader(new FileReader(csvFile));
@@ -27,22 +28,7 @@ public class ImportLeden
             {
                 // use comma as separator
                 String[] add = line.split(cvsSplitBy);
-                
-//                 if(add[0] == "video") 
-//                 {
-//                     System.out.println("Video [Titel= " + add[1] + " , Achternaam= " + add[2] + "]");
-//                     addVideoband(titel, type);
-//                 }
-//                 if(add[0] == "boek") 
-//                 {
-//                     System.out.println("Boek [Titel= " + add[1] + " , Achternaam= " + add[2] + "]");
-//                     addBoek(titel, type);
-//                 }
-//                 if(add[0] == "cd") 
-//                 {
-//                     System.out.println("CD [Titel= " + add[1] + " , Achternaam= " + add[2] + "]");
-//                     addCd(titel, type, releasedatum);
-//                 }
+                values.put(br);
             }
         } 
         catch (FileNotFoundException e) 
@@ -70,5 +56,5 @@ public class ImportLeden
         System.out.println();
         System.out.println("Done");
     }
-
+    return values;
 }
