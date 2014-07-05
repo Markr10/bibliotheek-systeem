@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 
 /**
@@ -153,20 +154,20 @@ public class Bibliotheek
      *
      * @param titel De titel van het boek.
      * @param type  Het type van het boek. Het type is niet hoofdletter gevoelig.
-     * @return true als het toevoegen gelukt is, anders false
+     * @return het artikelID van het toegevoegde boek, anders -1
      */
-    public boolean addBoek(String titel, String type)
+    public int addBoek(String titel, String type)
     {
         // Zorgt voor een correct type.
         try
         {
             // Genereert ID/artikelID aan hand van lengte ArrayList.
             artikelen.add(new Boek(artikelen.size(), titel, BoekType.valueOf(type.toUpperCase())));
-            return true;
+            return (artikelen.size() - 1);
         }
         catch(Exception e)
         {
-            return false;
+            return -1;
         }
     }
 
@@ -176,9 +177,9 @@ public class Bibliotheek
      * @param titel        De titel van de cd.
      * @param type         Het type van de cd. Het type is niet hoofdletter gevoelig.
      * @param releasedatum De releasedatum van de cd.
-     * @return true als het toevoegen gelukt is, anders false
+     * @return het artikelID van de toegevoegde cd, anders -1
      */
-    public boolean addCd(String titel, String type, String releasedatum)
+    public int addCd(String titel, String type, String releasedatum)
     {
         // Controleert geldigheid releasedatum parameter
         if(SpecialDate.checkDate(releasedatum))
@@ -188,16 +189,16 @@ public class Bibliotheek
             {
                 // Genereert ID/artikelID aan hand van lengte ArrayList.
                 artikelen.add(new Cd(artikelen.size(), titel, CdType.valueOf(type.toUpperCase()), releasedatum));
-                return true;
+                return (artikelen.size() - 1);
             }
             catch(Exception e)
             {
-                return false;
+                return -1;
             }
         }
         else
         {
-            return false;
+            return -1;
         }
     }
 
@@ -206,19 +207,19 @@ public class Bibliotheek
      *
      * @param titel De titel van de videoband.
      * @param type  Het type van de videoband. Het type is niet hoofdletter gevoelig.
-     * @return true als het toevoegen gelukt is, anders false
+     * @return het artikelID van de toegevoegde videoband, anders -1
      */
-    public boolean addVideoband(String titel, String type)
+    public int addVideoband(String titel, String type)
     {
         try
         {
             // Genereert ID/artikelID aan hand van lengte ArrayList.
             artikelen.add(new Videoband(artikelen.size(), titel, VideobandType.valueOf(type.toUpperCase())));
-            return true;
+            return (artikelen.size() - 1);
         }
         catch(Exception e)
         {
-            return false;
+            return -1;
         }
     }
 
@@ -226,18 +227,18 @@ public class Bibliotheek
      * Voegt een exemplaar van een artikel toe.
      * 
      * @param artikelID Het artikelID van het exemplaar.
-     * @return true als het toevoegen gelukt is, anders false
+     * @return het exemplaarID van het toegevoegde exemplaar, anders -1
      */
-    public boolean addExemplaar(int artikelID)
+    public int addExemplaar(int artikelID)
     {
         if(checkArtikelID(artikelID))
         {
             exemplaren.add(new Exemplaar(exemplaren.size(), artikelID));
-            return true;
+            return (exemplaren.size() - 1);
         }
         else
         {
-            return false;
+            return -1;
         }
     }
 
@@ -245,11 +246,13 @@ public class Bibliotheek
      * Voegt een nieuw lid toe.
      *
      * @param naam De naam van het lid.
+     * @return het lidID van het toegevoegde lid
      */
-    public void addLid(String naam)
+    public int addLid(String naam)
     {
         // Genereert lidID aan hand van lengte ArrayList.
         leden.add(new Lid(leden.size(), naam));
+        return (leden.size() - 1);
     }
 
     /**
@@ -293,6 +296,195 @@ public class Bibliotheek
             return true;
         }
         else
+        {
+            return false;
+        }
+    }
+
+
+    /**
+     * Importeert boeken en exemplaren van boeken uit een CSV-bestand.
+     * 
+     * In het CSV-bestand moeten de (kolom) waarden gescheiden worden door een komma.
+     * De eerste regel van het CSV-bestand moet de volgende tekst hebben:
+     * titel, type, exemplaren
+     * 
+     * Dit betekend dat het CSV-bestand bestaat uit drie kolommen die het volgende betekenen:
+     * @custom.csv.column titel      De titel van het boek.
+     * @custom.csv.column type       Het type van het boek. Het type is niet hoofdletter gevoelig.
+     * @custom.csv.column exemplaren Hoeveel exemplaren van het boek toegevoegd moeten worden.
+     * 
+     * @param bestandspadCsvBestand Het bestandspad naar het CSV-bestand.
+     * @return null als alles geïmporteerd is. Wanneer er tijdens het importeren een regel niet geïmporteerd kan worden,
+     * wordt er op dat punt gestopt met importeren en wordt de Exception geretourneerd.
+     */
+    public Exception importeerBoekenAndExemplaren(String bestandspadCsvBestand)
+    {
+        // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
+        try
+        {
+            for(String[] splittedLine : ImportData.run(bestandspadCsvBestand, new String[] {"titel", "type", "exemplaren"}))
+            {
+                int artikelID = addBoek(splittedLine[0], splittedLine[1]);
+                if(artikelID == -1)
+                {
+                    throw new Exception("Rij bevat onjuiste gegevens.\n" + "Bijbehorende regel in het CSV-bestand: " +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                }
+                
+                int aantalExemplaren = Integer.parseInt(splittedLine[2]);
+                if(aantalExemplaren < 0)
+                {
+                    throw new Exception("Het aantal exemplaren van deze rij moet groter of gelijk zijn aan 0.\n" +
+                        "Bijbehorende regel in het CSV-bestand: " +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                }
+                
+                for(int i = 0; i < aantalExemplaren; i++)
+                {
+                    addExemplaar(artikelID);
+                }
+            }
+            return null;
+        }
+        catch(Exception e)
+        {
+            return e;
+        }
+    }
+
+    /**
+     * Importeert cd's en exemplaren van cd's uit een CSV-bestand.
+     * 
+     * In het CSV-bestand moeten de (kolom) waarden gescheiden worden door een komma.
+     * De eerste regel van het CSV-bestand moet de volgende tekst hebben:
+     * titel, type, releasedatum, exemplaren
+     * 
+     * Dit betekend dat het CSV-bestand bestaat uit vier kolommen die het volgende betekenen:
+     * @custom.csv.column titel        De titel van de cd.
+     * @custom.csv.column type         Het type van de cd. Het type is niet hoofdletter gevoelig.
+     * @custom.csv.column releasedatum De releasedatum van de cd.
+     * @custom.csv.column exemplaren   Hoeveel exemplaren van het boek toegevoegd moeten worden.
+     * 
+     * @param bestandspadCsvBestand Het bestandspad naar het CSV-bestand.
+     * @return null als alles geïmporteerd is. Wanneer er tijdens het importeren een regel niet geïmporteerd kan worden,
+     * wordt er op dat punt gestopt met importeren en wordt de Exception geretourneerd.
+     */
+    public boolean importeerCdsAndExemplaren(String bestandspadCsvBestand)
+    {
+        // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
+        try
+        {
+            for(String[] splittedLine : ImportData.run(bestandspadCsvBestand, new String[] {"titel", "type", "releasedatum", "exemplaren"}))
+            {
+                int artikelID = addCd(splittedLine[0], splittedLine[1], splittedLine[2]);
+                if(artikelID == -1)
+                {
+                    throw new Exception("Rij bevat onjuiste gegevens.\n" + "Bijbehorende regel in het CSV-bestand: " +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                }
+                
+                int aantalExemplaren = Integer.parseInt(splittedLine[3]);
+                if(aantalExemplaren < 0)
+                {
+                    throw new Exception("Het aantal exemplaren van deze rij moet groter of gelijk zijn aan 0.\n" +
+                        "Bijbehorende regel in het CSV-bestand: " +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                }
+                
+                for(int i = 0; i < aantalExemplaren; i++)
+                {
+                    addExemplaar(artikelID);
+                }
+            }
+            return true;
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Importeert videobanden en exemplaren van videobanden uit een CSV-bestand.
+     * 
+     * In het CSV-bestand moeten de (kolom) waarden gescheiden worden door een komma.
+     * De eerste regel van het CSV-bestand moet de volgende tekst hebben:
+     * titel, type, exemplaren
+     * 
+     * Dit betekend dat het CSV-bestand bestaat uit drie kolommen die het volgende betekenen:
+     * @custom.csv.column titel      De titel van de videoband.
+     * @custom.csv.column type       Het type van de videoband. Het type is niet hoofdletter gevoelig.
+     * @custom.csv.column exemplaren Hoeveel exemplaren van het boek toegevoegd moeten worden.
+     * 
+     * @param bestandspadCsvBestand Het bestandspad naar het CSV-bestand.
+     * @return null als alles geïmporteerd is. Wanneer er tijdens het importeren een regel niet geïmporteerd kan worden,
+     * wordt er op dat punt gestopt met importeren en wordt de Exception geretourneerd.
+     */
+    public boolean importeerVideobandenAndExemplaren(String bestandspadCsvBestand)
+    {
+        // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
+        try
+        {
+            for(String[] splittedLine : ImportData.run(bestandspadCsvBestand, new String[] {"titel", "type", "exemplaren"}))
+            {
+                int artikelID = addVideoband(splittedLine[0], splittedLine[1]);
+                if(artikelID == -1)
+                {
+                    throw new Exception("Rij bevat onjuiste gegevens.\n" + "Bijbehorende regel in het CSV-bestand: " +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                }
+                
+                int aantalExemplaren = Integer.parseInt(splittedLine[2]);
+                if(aantalExemplaren < 0)
+                {
+                    throw new Exception("Het aantal exemplaren van deze rij moet groter of gelijk zijn aan 0.\n" +
+                        "Bijbehorende regel in het CSV-bestand: " +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                }
+                
+                for(int i = 0; i < aantalExemplaren; i++)
+                {
+                    addExemplaar(artikelID);
+                }
+            }
+            return true;
+        }
+        catch(Exception e)
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Importeert leden uit een CSV-bestand.
+     * 
+     * De eerste regel van het CSV-bestand moet de volgende tekst hebben:
+     * naam
+     * 
+     * Dit betekend dat het CSV-bestand bestaat uit één kolom die het volgende betekend:
+     * @custom.csv.column naam De naam van het lid.
+     * 
+     * @param bestandspadCsvBestand Het bestandspad naar het CSV-bestand.
+     * @return null als alles geïmporteerd is. Wanneer er tijdens het importeren een regel niet geïmporteerd kan worden,
+     * wordt er op dat punt gestopt met importeren en wordt de Exception geretourneerd.
+     */
+    public boolean importeerLeden(String bestandspadCsvBestand)
+    {
+        // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
+        try
+        {
+            for(String[] splittedLine : ImportData.run(bestandspadCsvBestand, new String[] {"naam"}))
+            {
+                if(addLid(splittedLine[0]) == -1)
+                {
+                    throw new Exception("Rij bevat onjuiste gegevens.\n" + "Bijbehorende regel in het CSV-bestand: " +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                }
+            }
+            return true;
+        }
+        catch(Exception e)
         {
             return false;
         }
