@@ -21,7 +21,7 @@ public class SpecialDate
     }
     
     /**
-     * Constructor SpecialDate.
+     * SpecialDate constructor.
      */
     public SpecialDate()
     {

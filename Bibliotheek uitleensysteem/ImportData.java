@@ -18,11 +18,11 @@ public class ImportData
 
     /**
      * Import data from a CSV file and returns it as an ArrayList.
-     * The CSV file must start with the column names. The values must be separated with a comma.
+     * The CSV file must start with the column names. The (column) values must be separated with a comma.
      * It throws an exception when the data could not be imported.
      *
      * @param csvFilePath The path to the CSV file.
-     * @param columns The colum name of the CSV file.
+     * @param columns The colum names of the CSV file.
      * @return Returns the import data from the CSV file.
      */
     public static ArrayList<String[]> run(String csvFilePath, String[] columnNames) throws Exception
