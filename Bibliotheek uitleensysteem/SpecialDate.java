@@ -22,8 +22,9 @@ public class SpecialDate
     
     /**
      * SpecialDate constructor.
+     * The constructor is private because this is a static class.
      */
-    public SpecialDate()
+    private SpecialDate()
     {
     }
     
