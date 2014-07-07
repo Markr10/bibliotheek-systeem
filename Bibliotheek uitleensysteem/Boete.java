@@ -76,7 +76,7 @@ public class Boete
      */
     public boolean setBetaald()
     {
-        // Controleer of de boete al is betaald.
+        // Controleer of de boete al betaald is.
         if(!betaald)
         {
             betaald = true;
