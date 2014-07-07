@@ -69,7 +69,7 @@ public class SpecialDateTest
         assertEquals(0, SpecialDate.roundedYearsDifference("07032014"));
         assertEquals(1, SpecialDate.roundedYearsDifference("04062013"));
         assertEquals(1, SpecialDate.roundedYearsDifference("07112012"));
-        assertEquals(4, SpecialDate.roundedYearsDifference("01062011"));
+        assertEquals(4, SpecialDate.roundedYearsDifference("03072011"));
         assertEquals(4, SpecialDate.roundedYearsDifference("16052011"));
         assertEquals(0, SpecialDate.roundedYearsDifference("05112013"));
         assertEquals(0, SpecialDate.roundedYearsDifference("07112013"));
@@ -114,7 +114,7 @@ public class SpecialDateTest
     @Test
     public void testGetDateToday()
     {
-        assertEquals("04062014", SpecialDate.getDateToday());
+        assertEquals("06072014", SpecialDate.getDateToday());
     }
     
     /**
@@ -126,8 +126,9 @@ public class SpecialDateTest
     @Test
     public void testDaysDifference()
     {
-        assertEquals(573, SpecialDate.daysDifference("08112012"));
-        assertEquals(1114, SpecialDate.daysDifference("17052011"));
+        assertEquals(0, SpecialDate.daysDifference("06072014"));
+        assertEquals(605, SpecialDate.daysDifference("08112012"));
+        assertEquals(1146, SpecialDate.daysDifference("17052011"));
         assertEquals(1, SpecialDate.daysDifference(SpecialDate.addDays(SpecialDate.getDateToday(), -1)));
         assertEquals(0, SpecialDate.daysDifference(SpecialDate.getDateToday()));
     }
@@ -251,4 +252,3 @@ public class SpecialDateTest
         assertEquals("20042014", SpecialDate.addDays("20042014", 0));
     }
 }
-
