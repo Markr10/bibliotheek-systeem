@@ -329,7 +329,7 @@ public class Bibliotheek
                 if(artikelID == -1)
                 {
                     throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: \"" +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
+                        Arrays.toString(splittedLine).replace(", ", ",").substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 int aantalExemplaren = Integer.parseInt(splittedLine[2]);
@@ -337,7 +337,7 @@ public class Bibliotheek
                 {
                     throw new Exception("Het aantal exemplaren van deze rij moet groter of gelijk zijn aan 0. " +
                         "Bijbehorende regel in het CSV-bestand: \"" +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
+                        Arrays.toString(splittedLine).replace(", ", ",").substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 for(int i = 0; i < aantalExemplaren; i++)
@@ -381,7 +381,7 @@ public class Bibliotheek
                 if(artikelID == -1)
                 {
                     throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: \"" +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
+                        Arrays.toString(splittedLine).replace(", ", ",").substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 int aantalExemplaren = Integer.parseInt(splittedLine[3]);
@@ -389,7 +389,7 @@ public class Bibliotheek
                 {
                     throw new Exception("Het aantal exemplaren van deze rij moet groter of gelijk zijn aan 0. " +
                         "Bijbehorende regel in het CSV-bestand: \"" +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
+                        Arrays.toString(splittedLine).replace(", ", ",").substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 for(int i = 0; i < aantalExemplaren; i++)
@@ -432,7 +432,7 @@ public class Bibliotheek
                 if(artikelID == -1)
                 {
                     throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: \"" +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
+                        Arrays.toString(splittedLine).replace(", ", ",").substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 int aantalExemplaren = Integer.parseInt(splittedLine[2]);
@@ -440,7 +440,7 @@ public class Bibliotheek
                 {
                     throw new Exception("Het aantal exemplaren van deze rij moet groter of gelijk zijn aan 0. " +
                         "Bijbehorende regel in het CSV-bestand: \"" +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
+                        Arrays.toString(splittedLine).replace(", ", ",").substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 for(int i = 0; i < aantalExemplaren; i++)
@@ -479,7 +479,7 @@ public class Bibliotheek
                 if(addLid(splittedLine[0]) == -1)
                 {
                     throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: \"" +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
+                        Arrays.toString(splittedLine).replace(", ", ",").substring(1).replaceFirst("]$", "") + "\"");
                 }
             }
             return null;
