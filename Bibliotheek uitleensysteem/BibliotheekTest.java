@@ -219,4 +219,15 @@ public class BibliotheekTest
         assertEquals(true, biblioth6.inleverenExemplaar(0, 1));
         assertEquals(true, biblioth6.inleverenExemplaar(0, 2));
     }
+
+    @Test
+    public void testImporteerLeden()
+    {
+        assertEquals(true, biblioth2.importeerLeden("test/leden.csv"));
+        assertEquals(2, biblioth2.leden.size());
+        assertEquals("Paula", biblioth2.leden.get(0).getNaam());
+        assertEquals(0, biblioth2.leden.get(0).getID());
+        assertEquals("Piet", biblioth2.leden.get(1).getNaam());
+        assertEquals(1, biblioth2.leden.get(1).getID());
+    }
 }
