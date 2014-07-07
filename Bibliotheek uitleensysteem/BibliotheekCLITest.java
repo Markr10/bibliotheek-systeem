@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * De testklasse BibliotheekCLITest.
+ * The test class BibliotheekCLITest.
  *
  * @author  Wybren, Danny en Mark
  * @version 7 April 2014
