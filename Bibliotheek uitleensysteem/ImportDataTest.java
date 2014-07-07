@@ -1,10 +1,10 @@
 import static org.junit.Assert.*;
-import org.junit.Rule;
-import org.junit.rules.ExpectedException;
+import java.io.FileNotFoundException;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
+import org.junit.rules.ExpectedException;
 import org.junit.Test;
-import java.io.FileNotFoundException;
 
 /**
  * The test class ImportDataTest.
@@ -49,7 +49,7 @@ public class ImportDataTest
     {
         ImportData.run(null, new String[] {"test"});
     }
-    
+
     @Test(expected=FileNotFoundException.class)
     public void testNotExistingFile() throws Exception
     {
@@ -67,7 +67,7 @@ public class ImportDataTest
     {
         ImportData.run("test/oneLineBase.csv", null);
     }
-    
+
     @Test
     public void testColumnNameIncorrect() throws Exception
     {
@@ -75,15 +75,15 @@ public class ImportDataTest
         thrown.expectMessage("Start of CSV file is not correct! A column name must consist of one or more characters!");
         ImportData.run("test/oneBlancoLine.csv", new String[] {""});
     }
-    
+
     @Test
     public void testFirstColumnNameIncorrect() throws Exception
     {
         thrown.expect(Exception.class);
         thrown.expectMessage("Start of CSV file is not correct! A column name must consist of one or more characters!");
-        ImportData.run("test/oneLineNoDataFirst.csv", new String[] {"", "middle"});
+        ImportData.run("test/oneLineNoDataFirst.csv", new String[] {"", "right"});
     }
-    
+
     @Test
     public void testSecondColumnNameIncorrect() throws Exception
     {
@@ -91,7 +91,7 @@ public class ImportDataTest
         thrown.expectMessage("Start of CSV file is not correct! A column name must consist of one or more characters!");
         ImportData.run("test/oneLineNoDataSecond.csv", new String[] {"left", "", "right"});
     }
-    
+
     @Test
     public void testThirdColumnNameIncorrect() throws Exception
     {
@@ -99,7 +99,7 @@ public class ImportDataTest
         thrown.expectMessage("Start of CSV file is not correct! A column name must consist of one or more characters!");
         ImportData.run("test/oneLineNoDataThird.csv", new String[] {"left", "middle", ""});
     }
-    
+
     @Test
     public void testCsvEmptyColumn() throws Exception
     {
@@ -108,7 +108,16 @@ public class ImportDataTest
             "is not equals to the founded column name \"\"");
         ImportData.run("test/oneBlancoLine.csv", new String[] {"left"});
     }
-    
+
+    @Test
+    public void testCsvLastEmptyColumn() throws Exception
+    {
+        thrown.expect(IncorrectStartCsvFileException.class);
+        thrown.expectMessage("Start of CSV file is not correct! The expected column name \"right\" " +
+            "is not equals to the founded column name \"\"");
+        ImportData.run("test/oneLineNoDataThird.csv", new String[] {"left", "middle", "right"});
+    }
+
     @Test
     public void testCsvWrongColumn() throws Exception
     {
@@ -117,7 +126,7 @@ public class ImportDataTest
             "is not equals to the founded column name \"left\"");
         ImportData.run("test/oneLineOne.csv", new String[] {"test"});
     }
-    
+
     @Test
     public void testCsvMissingColumn() throws Exception
     {
@@ -125,7 +134,7 @@ public class ImportDataTest
         thrown.expectMessage("Start of CSV file is not correct! The number of the columns names of the CSV file is not correct!");
         ImportData.run("test/oneLineOne.csv", new String[] {"left", "right"});
     }
-    
+
     @Test
     public void testCsvExtraColumn() throws Exception
     {
@@ -141,7 +150,7 @@ public class ImportDataTest
         assertNotNull(arrayLis1);
         assertEquals(true, arrayLis1.isEmpty());
     }
-    
+
     @Test
     public void testThreeColumns() throws Exception
     {
@@ -149,7 +158,7 @@ public class ImportDataTest
         assertNotNull(arrayLis1);
         assertEquals(true, arrayLis1.isEmpty());
     }
-    
+
     @Test
     public void testCsvMissingRowColumn() throws Exception
     {
@@ -157,7 +166,7 @@ public class ImportDataTest
         thrown.expectMessage("The number of the columns is not correct! Corresponding line in CSV file: \" 1 , 3 \"");
         ImportData.run("test/multiLineMissingRowColumn.csv", new String[] {" left ", " middle ", " right "});
     }
-    
+
     @Test
     public void testCsvBlancoLine() throws Exception
     {
@@ -180,7 +189,7 @@ public class ImportDataTest
         assertEquals("", string1[1]);
         assertEquals("", string1[2]);
     }
-    
+
     @Test
     public void testCsvCorrectFile() throws Exception
     {
@@ -195,4 +204,3 @@ public class ImportDataTest
         assertEquals(" 3 ", string1[2]);
     }
 }
-
