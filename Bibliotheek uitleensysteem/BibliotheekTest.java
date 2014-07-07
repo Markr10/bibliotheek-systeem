@@ -223,11 +223,31 @@ public class BibliotheekTest
     @Test
     public void testImporteerLeden()
     {
-        assertEquals(true, biblioth2.importeerLeden("test/leden.csv"));
+        assertNull(biblioth2.importeerLeden("test/leden.csv"));
         assertEquals(2, biblioth2.leden.size());
         assertEquals("Paula", biblioth2.leden.get(0).getNaam());
         assertEquals(0, biblioth2.leden.get(0).getID());
         assertEquals("Piet", biblioth2.leden.get(1).getNaam());
         assertEquals(1, biblioth2.leden.get(1).getID());
+    }
+
+    @Test
+    public void importeerCdsAndExemplaren()
+    {
+        java.lang.Exception exceptio1 = biblioth2.importeerCdsAndExemplaren("test/cds.csv");
+        assertNotNull(exceptio1);
+        assertEquals("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: \"Nederklassiek 7,klAssIek,test,1\"", exceptio1.getMessage());
+        assertEquals(2, biblioth2.artikelen.size());
+        assertEquals("Nederpop oud", biblioth2.artikelen.get(0).getTitel());
+        assertEquals(CdType.valueOf("POPULAIR"), biblioth2.artikelen.get(0).getType());
+        assertEquals(0, biblioth2.artikelen.get(0).getID());
+        assertEquals("29021988", ((Cd)biblioth2.artikelen.get(0)).getReleasedatum());
+        assertEquals("Nederklassiek 4", biblioth2.artikelen.get(1).getTitel());
+        assertEquals(CdType.valueOf("KLASSIEK"), biblioth2.artikelen.get(1).getType());
+        assertEquals(1, biblioth2.artikelen.get(1).getID());
+        assertEquals("12092006", ((Cd)biblioth2.artikelen.get(1)).getReleasedatum());
+        assertEquals(1, biblioth1.exemplaren.size());
+        assertEquals(0, biblioth1.exemplaren.get(0).getID());
+        assertEquals(1, biblioth1.exemplaren.get(0).getArtikelID());
     }
 }
