@@ -97,10 +97,10 @@ public class BibliotheekTest
     @Test
     public void testAddBoek()
     {
-        assertEquals(true, biblioth2.addBoek("Roman Empire", "Roman"));
-        assertEquals(false, biblioth2.addBoek("Roman Empire 2", "R"));
-        assertEquals(false, biblioth2.addBoek("E-learning", "S"));
-        assertEquals(true, biblioth2.addBoek("E-learning 2", "sTuDieBoEk"));
+        assertEquals(0, biblioth2.addBoek("Roman Empire", "Roman"));
+        assertEquals(-1, biblioth2.addBoek("Roman Empire 2", "R"));
+        assertEquals(-1, biblioth2.addBoek("E-learning", "S"));
+        assertEquals(1, biblioth2.addBoek("E-learning 2", "sTuDieBoEk"));
         assertEquals(2, biblioth2.artikelen.size());
         assertEquals("Roman Empire", biblioth2.artikelen.get(0).getTitel());
         assertEquals(BoekType.valueOf("ROMAN"), biblioth2.artikelen.get(0).getType());
@@ -113,23 +113,23 @@ public class BibliotheekTest
     @Test
     public void testAddCd()
     {
-        assertEquals(false, biblioth2.addCd("Nederpop 1", "POP", "12092006"));
-        assertEquals(false, biblioth2.addCd("Nederpop 2", "POP", "test"));
-        assertEquals(true, biblioth2.addCd("Nederpop 3", "POPuLaiR", "12092006"));
-        assertEquals(false, biblioth2.addCd("Nederpop 4", "POPuLaiR", "test"));
-        assertEquals(false, biblioth2.addCd("Nederpop 5", "POPuLaiR", "12092015"));
-        assertEquals(true, biblioth2.addCd("Nederpop 6", "POPuLaiR", SpecialDate.getDateToday()));
-        assertEquals(true, biblioth2.addCd("Nederpop oud", "POPuLaiR", "29021988"));
-        assertEquals(false, biblioth2.addCd("Nederklassiek 1", "classic", "12092006"));
-        assertEquals(false, biblioth2.addCd("Nederklassiek 2", "classic", "test"));
-        assertEquals(true, biblioth2.addCd("Nederklassiek 3", "KLASSIEK", "12092006"));
-        assertEquals(true, biblioth2.addCd("Nederklassiek 4", "klassiek", "12092006"));
-        assertEquals(true, biblioth2.addCd("Nederklassiek 5", "klAssIek", "12092006"));
-        assertEquals(true, biblioth2.addCd("Nederklassiek 6", "klAssIek", "12092006"));
-        assertEquals(false, biblioth2.addCd("Nederklassiek 7", "klAssIek", "test"));
-        assertEquals(false, biblioth2.addCd("Nederklassiek 8", "klAssIek", "12092015"));
-        assertEquals(true, biblioth2.addCd("Nederklassiek 9", "klAssIek", SpecialDate.getDateToday()));
-        assertEquals(true, biblioth2.addCd("Nederklassiek oud", "klAssIek", "29021988"));
+        assertEquals(-1, biblioth2.addCd("Nederpop 1", "POP", "12092006"));
+        assertEquals(-1, biblioth2.addCd("Nederpop 2", "POP", "test"));
+        assertEquals(0, biblioth2.addCd("Nederpop 3", "POPuLaiR", "12092006"));
+        assertEquals(-1, biblioth2.addCd("Nederpop 4", "POPuLaiR", "test"));
+        assertEquals(-1, biblioth2.addCd("Nederpop 5", "POPuLaiR", "12092015"));
+        assertEquals(1, biblioth2.addCd("Nederpop 6", "POPuLaiR", SpecialDate.getDateToday()));
+        assertEquals(2, biblioth2.addCd("Nederpop oud", "POPuLaiR", "29021988"));
+        assertEquals(-1, biblioth2.addCd("Nederklassiek 1", "classic", "12092006"));
+        assertEquals(-1, biblioth2.addCd("Nederklassiek 2", "classic", "test"));
+        assertEquals(3, biblioth2.addCd("Nederklassiek 3", "KLASSIEK", "12092006"));
+        assertEquals(4, biblioth2.addCd("Nederklassiek 4", "klassiek", "12092006"));
+        assertEquals(5, biblioth2.addCd("Nederklassiek 5", "klAssIek", "12092006"));
+        assertEquals(6, biblioth2.addCd("Nederklassiek 6", "klAssIek", "12092006"));
+        assertEquals(-1, biblioth2.addCd("Nederklassiek 7", "klAssIek", "test"));
+        assertEquals(-1, biblioth2.addCd("Nederklassiek 8", "klAssIek", "12092015"));
+        assertEquals(7, biblioth2.addCd("Nederklassiek 9", "klAssIek", SpecialDate.getDateToday()));
+        assertEquals(8, biblioth2.addCd("Nederklassiek oud", "klAssIek", "29021988"));
         assertEquals(9, biblioth2.artikelen.size());
         assertEquals("Nederpop 3", biblioth2.artikelen.get(0).getTitel());
         assertEquals(CdType.valueOf("POPULAIR"), biblioth2.artikelen.get(0).getType());
@@ -144,10 +144,10 @@ public class BibliotheekTest
     @Test
     public void testAddVideoband()
     {
-        assertEquals(true, biblioth2.addVideoband("The Bandit", "A"));
-        assertEquals(false, biblioth2.addVideoband("The Bandit 2", "c"));
-        assertEquals(false, biblioth2.addVideoband("The Bandit 3", "test"));
-        assertEquals(true, biblioth2.addVideoband("The Bandit 4", "b"));
+        assertEquals(0, biblioth2.addVideoband("The Bandit", "A"));
+        assertEquals(-1, biblioth2.addVideoband("The Bandit 2", "c"));
+        assertEquals(-1, biblioth2.addVideoband("The Bandit 3", "test"));
+        assertEquals(1, biblioth2.addVideoband("The Bandit 4", "b"));
         assertEquals(2, biblioth2.artikelen.size());
         assertEquals("The Bandit", biblioth2.artikelen.get(0).getTitel());
         assertEquals(VideobandType.valueOf("A"), biblioth2.artikelen.get(0).getType());
@@ -160,10 +160,10 @@ public class BibliotheekTest
     @Test
     public void testAddExemplaar()
     {
-        assertEquals(true, biblioth1.addExemplaar(2));
-        assertEquals(true, biblioth1.addExemplaar(0));
-        assertEquals(true, biblioth1.addExemplaar(1));
-        assertEquals(false, biblioth1.addExemplaar(3));
+        assertEquals(0, biblioth1.addExemplaar(2));
+        assertEquals(1, biblioth1.addExemplaar(0));
+        assertEquals(2, biblioth1.addExemplaar(1));
+        assertEquals(-1, biblioth1.addExemplaar(3));
         assertEquals(3, biblioth1.exemplaren.size());
         assertEquals(0, biblioth1.exemplaren.get(0).getID());
         assertEquals(2, biblioth1.exemplaren.get(0).getArtikelID());
@@ -246,8 +246,8 @@ public class BibliotheekTest
         assertEquals(CdType.valueOf("KLASSIEK"), biblioth2.artikelen.get(1).getType());
         assertEquals(1, biblioth2.artikelen.get(1).getID());
         assertEquals("12092006", ((Cd)biblioth2.artikelen.get(1)).getReleasedatum());
-        assertEquals(1, biblioth1.exemplaren.size());
-        assertEquals(0, biblioth1.exemplaren.get(0).getID());
-        assertEquals(1, biblioth1.exemplaren.get(0).getArtikelID());
+        assertEquals(1, biblioth2.exemplaren.size());
+        assertEquals(0, biblioth2.exemplaren.get(0).getID());
+        assertEquals(1, biblioth2.exemplaren.get(0).getArtikelID());
     }
 }
