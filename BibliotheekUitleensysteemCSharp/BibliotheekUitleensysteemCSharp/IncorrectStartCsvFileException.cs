@@ -1,18 +1,18 @@
-
+using System;
+using java.lang.Throwable;
 /**
  * Thrown to indicate that the operation could not complete because of an incorrect start of the CSV file.
  * 
  * @author  Wybren, Danny en Mark
  * @version 7 April 2014
  */
-public class IncorrectStartCsvFileException extends Exception
+public class IncorrectStartCsvFileException : Exception
 {
     /**
      * Constructs an {@code IncorrectStartCsvFileException} with null as its detail message.
      */
-    public IncorrectStartCsvFileException()
+    public IncorrectStartCsvFileException() : base()
     {
-        super();
     }
 
     /**
@@ -20,9 +20,8 @@ public class IncorrectStartCsvFileException extends Exception
      *
      * @param message The detail message that will be incorporated in the message for this exception.
      */
-    public IncorrectStartCsvFileException(String message)
+    public IncorrectStartCsvFileException(String message) : base("Start of CSV file is not correct! " + message)
     {
-        super("Start of CSV file is not correct! " + message);
     }
 
     /**
@@ -36,7 +35,7 @@ public class IncorrectStartCsvFileException extends Exception
      */
     public IncorrectStartCsvFileException(String message, Throwable cause)
     {
-        super("Start of CSV file is not correct! " + message, cause);
+        //super("Start of CSV file is not correct! " + message, cause);
     }
 
     /**
@@ -47,6 +46,6 @@ public class IncorrectStartCsvFileException extends Exception
      */
     public IncorrectStartCsvFileException(Throwable cause)
     {
-        super(cause);
+        //super(cause);
     }
 }

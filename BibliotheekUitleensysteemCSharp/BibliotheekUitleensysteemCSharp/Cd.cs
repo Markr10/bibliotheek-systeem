@@ -1,4 +1,4 @@
-
+using System;
 /**
  * Een klasse om cd objecten te creëren.
  * 
@@ -6,7 +6,7 @@
  * @version 7 April 2014
  * 
  */
-public class Cd extends Artikel
+public class Cd : Artikel
 {
     private String releasedatum;
     private int kostenNaKorting;
@@ -19,9 +19,8 @@ public class Cd extends Artikel
      * @param type         Het type van de cd.
      * @param releasedatum De releasedatum van de cd.
      */
-    public Cd(int id, String titel, CdType type, String releasedatum)
+    public Cd(int id, String titel, CdType type, String releasedatum) : base(id, titel, type)
     {
-        super(id, titel, type);
         this.releasedatum = releasedatum;
     }
     

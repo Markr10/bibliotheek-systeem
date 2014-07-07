@@ -7,5 +7,5 @@
  */
 public enum VideobandType
 {
-    A, B;
+    A, B
 }

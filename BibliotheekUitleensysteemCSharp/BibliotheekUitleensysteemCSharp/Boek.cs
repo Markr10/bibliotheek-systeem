@@ -6,7 +6,7 @@
  * @version 7 April 2014
  * 
  */
-public class Boek extends Artikel
+public class Boek : Artikel
 {
     /**
      * Constructor voor objecten van de klasse boek.
@@ -15,8 +15,7 @@ public class Boek extends Artikel
      * @param titel De titel van het boek.
      * @param type  Het type van het boek.
      */
-    public Boek(int id, String titel, BoekType type)
+    public Boek(int id, String titel, BoekType type) : base(id, titel, type)
     {
-        super(id, titel, type);
     }
 }

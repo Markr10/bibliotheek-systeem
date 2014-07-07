@@ -7,5 +7,5 @@
  */
 public enum BoeteKlasseType
 {
-    RESERVERING, UITLENING;
+    RESERVERING, UITLENING
 }

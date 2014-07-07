@@ -7,5 +7,5 @@
  */
 public enum BoekType
 {
-    STUDIEBOEK, ROMAN;
+    STUDIEBOEK, ROMAN
 }

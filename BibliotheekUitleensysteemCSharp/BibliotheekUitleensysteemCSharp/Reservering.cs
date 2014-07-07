@@ -1,3 +1,4 @@
+using System;
 
 /**
  * Een klasse om een reservering objecten te creëren.
@@ -12,10 +13,10 @@ public class Reservering
     private int lidID;
     private int artikelID;
     private String reserveringsdatum;
-    private boolean reserveringskostenBetaald;
+    private Boolean reserveringskostenBetaald;
     private String datumKlaargezet;
     private int exemplaarID;
-    private boolean brief;
+    private Boolean brief;
     private String maxOphaaldatum; // ophaaldag is tot en met deze dag
 
     /**
@@ -84,7 +85,7 @@ public class Reservering
      * 
      * @return true als de reserveringskosten betaald zijn, anders false
      */
-    public boolean getReserveringskostenBetaald()
+    public Boolean getReserveringskostenBetaald()
     {
         return reserveringskostenBetaald;
     }
@@ -117,7 +118,7 @@ public class Reservering
      * 
      * @return true als er een brief verstuurd is, anders false
      */
-    public boolean getBrief()
+    public Boolean getBrief()
     {
         return brief;
     }
@@ -139,7 +140,7 @@ public class Reservering
      * 
      * @return true als het betalen gelukt is, anders false
      */
-    public boolean setReserveringskostenBetaald()
+    public Boolean setReserveringskostenBetaald()
     {
         // Controleer of de reserveringskosten al betaald zijn.
         if(!reserveringskostenBetaald)
@@ -158,7 +159,7 @@ public class Reservering
      * 
      * @return true als het instellen gelukt is, anders false
      */
-    public boolean setBrief()
+    public Boolean setBrief()
     {
         // Controleer of de brief nog niet verstuurd is en of er een reservering klaargezet is.
         if(!brief && datumKlaargezet != null)
@@ -178,7 +179,7 @@ public class Reservering
      * @param exemplaarID Het exemplaarID van de reservering.
      * @return true als het klaarzetten gelukt is, anders false
      */
-    public boolean setReserveringKlaar(int exemplaarID)
+    public Boolean setReserveringKlaar(int exemplaarID)
     {
         // Controleer of de datumKlaargezet ingesteld kan worden.
         // Omdat setReserveringKlaar de maximale ophaaldatum beheerd, hoeft hier niet op gecontroleerd te worden.

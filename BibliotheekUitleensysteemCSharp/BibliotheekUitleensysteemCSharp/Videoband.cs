@@ -6,7 +6,7 @@
  * @version 7 April 2014
  * 
  */
-public class Videoband extends Artikel
+public class Videoband : Artikel
 {
     /**
      * Constructor voor objecten van de klasse videoband.
@@ -15,8 +15,7 @@ public class Videoband extends Artikel
      * @param titel          De titel van de videoband.
      * @param type           Het type van de videoband.
      */
-    public Videoband(int id, String titel, VideobandType type)
+    public Videoband(int id, String titel, VideobandType type) : base(id, titel, type)
     {
-        super(id, titel, type);
     }
 }

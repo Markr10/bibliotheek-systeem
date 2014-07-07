@@ -1,3 +1,6 @@
+using System.Linq;
+using System.Text;
+using System;
 
 /**
  * Enumeratie klasse CdType - De cd types waaruit gekozen kan worden.
@@ -7,5 +10,5 @@
  */
 public enum CdType
 {
-    KLASSIEK, POPULAIR;
+    KLASSIEK, POPULAIR
 }

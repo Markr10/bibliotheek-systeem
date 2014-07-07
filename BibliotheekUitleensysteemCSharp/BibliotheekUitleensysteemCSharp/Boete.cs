@@ -1,3 +1,4 @@
+using System;
 
 /**
  * Een klasse om boete objecten te creëren.
@@ -11,7 +12,7 @@ public class Boete
     private int id;
     private int itemID;
     private BoeteKlasseType boeteKlasseType;
-    private boolean betaald;
+    private Boolean betaald;
     
     /**
      * Constructor voor objecten van de klasse Boete.
@@ -21,7 +22,7 @@ public class Boete
      * @param boeteKlasseType De klasse van het item van de boete.
      * @param betaald         Of de boete betaald is.
      */
-    public Boete(int id, int itemID, BoeteKlasseType boeteKlasseType, boolean betaald)
+    public Boete(int id, int itemID, BoeteKlasseType boeteKlasseType, Boolean betaald)
     {
         this.id = id;
         this.itemID = itemID;
@@ -64,7 +65,7 @@ public class Boete
      * 
      * @return true als de boete betaald is, anders false
      */
-    public boolean getBetaald()
+    public Boolean getBetaald()
     {
         return betaald;
     }
@@ -74,7 +75,7 @@ public class Boete
      * 
      * @return true als het betalen gelukt is, anders false
      */
-    public boolean setBetaald()
+    public Boolean setBetaald()
     {
         // Controleer of de boete al betaald is.
         if(!betaald)

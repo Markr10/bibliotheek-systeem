@@ -41,29 +41,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayList.cs" />
     <Compile Include="Artikel.cs" />
     <Compile Include="Bibliotheek.cs" />
     <Compile Include="BibliotheekCLI.cs" />
-    <Compile Include="BibliotheekCLITest.cs" />
     <Compile Include="Boek.cs" />
     <Compile Include="BoekType.cs" />
     <Compile Include="Boete.cs" />
     <Compile Include="BoeteKlasseType.cs" />
+    <Compile Include="Calendar.cs" />
     <Compile Include="Cd.cs" />
     <Compile Include="CdType.cs" />
+    <Compile Include="Date.cs" />
     <Compile Include="Exemplaar.cs" />
     <Compile Include="ExemplaarTest.cs" />
     <Compile Include="ImportData.cs" />
-    <Compile Include="ImportDataTest.cs" />
     <Compile Include="IncorrectStartCsvFileException.cs" />
     <Compile Include="Lid.cs" />
+    <Compile Include="ParseException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservering.cs" />
+    <Compile Include="SimpleDateFormat.cs" />
     <Compile Include="SpecialDate.cs" />
-    <Compile Include="SpecialDateTest.cs" />
+    <Compile Include="TimeZone.cs" />
     <Compile Include="Uitlening.cs" />
-    <Compile Include="UitleningTest.cs" />
     <Compile Include="Videoband.cs" />
     <Compile Include="VideobandType.cs" />
   </ItemGroup>

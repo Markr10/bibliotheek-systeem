@@ -1,3 +1,4 @@
+using System;
 
 /**
  * Een klasse om een uitlening objecten te creëren.
@@ -89,7 +90,7 @@ public class Uitlening
      * 
      * @return true als het instellen gelukt is, anders false
      */
-    public boolean setTerugbrengdatum()
+    public Boolean setTerugbrengdatum()
     {
         // Controleer of de uitlening teruggebracht kan worden.
         if(terugbrengdatum == null)

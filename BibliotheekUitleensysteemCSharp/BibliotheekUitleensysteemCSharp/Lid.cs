@@ -1,3 +1,4 @@
+using System;
 
 /**
  * Een klasse om een lid objecten te creëren.
@@ -10,8 +11,8 @@ public class Lid
 {
     private int id;
     private String naam;
-    private boolean geroyeerd;
-    private boolean eersteBrief;
+    private Boolean geroyeerd;
+    private Boolean eersteBrief;
     private String tweedeBrief;
 
     /**
@@ -55,7 +56,7 @@ public class Lid
      *
      * @return true als het lid geroyeerd is, anders false
      */
-    public boolean isGeroyeerd()
+    public Boolean isGeroyeerd()
     {
         return geroyeerd;
     }
@@ -65,7 +66,7 @@ public class Lid
      *
      * @return true als de eerste waarschuwingsbrief verstuurd is, anders false
      */
-    public boolean getEersteBrief()
+    public Boolean getEersteBrief()
     {
         return eersteBrief;
     }
@@ -86,7 +87,7 @@ public class Lid
      *
      * @return true als het versturen gelukt is, anders false
      */
-    public boolean setEersteBrief()
+    public Boolean setEersteBrief()
     {
         if(!geroyeerd && !eersteBrief)
         {
@@ -104,7 +105,7 @@ public class Lid
      *
      * @return true als het versturen gelukt is, anders false
      */
-    public boolean setTweedeBrief()
+    public Boolean setTweedeBrief()
     {
         if(!geroyeerd && eersteBrief && tweedeBrief == null)
         {
@@ -122,7 +123,7 @@ public class Lid
      *
      * @return true als het resetten gelukt is, anders false
      */
-    public boolean resetBrieven()
+    public Boolean resetBrieven()
     {
         if(!geroyeerd)
         {
@@ -141,7 +142,7 @@ public class Lid
      *
      * @return true als het royeren gelukt is, anders false
      */
-    public boolean setGeroyeerd()
+    public Boolean setGeroyeerd()
     {
         if(!geroyeerd && eersteBrief && tweedeBrief != null)
         {

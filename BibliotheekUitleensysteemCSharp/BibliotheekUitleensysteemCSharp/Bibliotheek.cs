@@ -1,6 +1,10 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
+using System;
+using System.Text;
+using System.Linq;
+using java.util.ArrayList;
+using java.util.Arrays;
+using java.util.LinkedHashMap;
+using java.lang;
 
 /**
  * Bibliotheek klasse welke verschillende onderdelen van een bibliotheek beheert.
@@ -12,13 +16,13 @@ import java.util.LinkedHashMap;
  */
 public class Bibliotheek
 {
-    protected static final int DREMPEL_EERSTE_BRIEF = 1000; // in centen
-    protected static final int DREMPEL_TWEEDE_BRIEF = 10000; // in centen
-    public static final short MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF = 14;
-    private static final short MAX_AANTAL_ARTIKELEN = 6;
-    public static final short MAX_AANTAL_DAGEN_RESERVERING_OPHALEN = 7;
-    private static final short RESERVERINGSKOSTEN = 30; // in centen
-    protected static final short RESERVERING_BOETE = 200; // in centen
+    protected static readonly int DREMPEL_EERSTE_BRIEF = 1000; // in centen
+    protected static readonly int DREMPEL_TWEEDE_BRIEF = 10000; // in centen
+    public static readonly short MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF = 14;
+    private static readonly short MAX_AANTAL_ARTIKELEN = 6;
+    public static readonly short MAX_AANTAL_DAGEN_RESERVERING_OPHALEN = 7;
+    private static readonly short RESERVERINGSKOSTEN = 30; // in centen
+    protected static readonly short RESERVERING_BOETE = 200; // in centen
 
     protected ArrayList<Artikel> artikelen; // Artikelen
     private ArrayList<Boete> boetes; // Exemplaren
@@ -46,7 +50,7 @@ public class Bibliotheek
      * @param id Het ID van het artikel.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkArtikelID(int id)
+    private Boolean checkArtikelID(int id)
     {
         if(id >= 0 && id <= (artikelen.size() - 1) && !artikelen.get(id).getNietMeerInGebruik())
         {
@@ -64,7 +68,7 @@ public class Bibliotheek
      * @param id Het ID van het exemplaar.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkExemplaarID(int id)
+    private Boolean checkExemplaarID(int id)
     {
         if(id >= 0 && id <= (exemplaren.size() - 1) && !artikelen.get(exemplaren.get(id).getArtikelID()).getNietMeerInGebruik())
         {
@@ -82,7 +86,7 @@ public class Bibliotheek
      * @param id Het ID van het lid.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkLidID(int id)
+    private Boolean checkLidID(int id)
     {
         if(id >= 0 && id <= (leden.size() - 1))
         {
@@ -100,7 +104,7 @@ public class Bibliotheek
      * @param id Het ID van de boete.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkBoeteID(int id)
+    private Boolean checkBoeteID(int id)
     {
         if(id >= 0 && id <= (boetes.size() - 1))
         {
@@ -118,7 +122,7 @@ public class Bibliotheek
      * @param id Het ID van het reservering.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkReserveringID(int id)
+    private Boolean checkReserveringID(int id)
     {
         if(id >= 0 && id <= (reserveringen.size() - 1))
         {
@@ -136,7 +140,7 @@ public class Bibliotheek
      * @param id Het ID van de uitlening.
      * @return true als het ID geldig is, anders false
      */
-    private boolean checkUitleningID(int id)
+    private Boolean checkUitleningID(int id)
     {
         if(id >= 0 && id <= (uitleningen.size() - 1))
         {
@@ -262,7 +266,7 @@ public class Bibliotheek
      * @param artikelID Het ID van het artikel.
      * @return true als het toevoegen gelukt is, anders false
      */
-    public boolean addReservering(int lidID, int artikelID)
+    public Boolean addReservering(int lidID, int artikelID)
     {
         // Controleert geldigheid parameters en kijk of lid het artikel mag reserveren
         if(checkLidID(lidID) && checkArtikelID(artikelID) && isLidArtikelLenenOfReserveren(lidID, artikelID))
@@ -284,7 +288,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het uitlenen van het exemplaar gelukt is, anders false
      */
-    public boolean addUitlening(int lidID, int exemplaarID)
+    public Boolean addUitlening(int lidID, int exemplaarID)
     {
         // Controleert geldigheid parameters, controleert of het exemplaar niet uigeleend is,
         // controleert of lid zo'n artikel mag lenen, controleert of als het een gereserveerd exemplaar is en
@@ -323,7 +327,7 @@ public class Bibliotheek
         // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
         try
         {
-            for(String[] splittedLine : ImportData.run(bestandspadCsvBestand, new String[] {"titel", "type", "exemplaren"}))
+            foreach(String[] splittedLine in ImportData.run(bestandspadCsvBestand, new String[] {"titel", "type", "exemplaren"}))
             {
                 int artikelID = addBoek(splittedLine[0], splittedLine[1]);
                 if(artikelID == -1)
@@ -375,7 +379,7 @@ public class Bibliotheek
         // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
         try
         {
-            for(String[] splittedLine : ImportData.run(bestandspadCsvBestand, new String[] {"titel", "type", "releasedatum", "exemplaren"}))
+            foreach(String[] splittedLine in ImportData.run(bestandspadCsvBestand, new String[] {"titel", "type", "releasedatum", "exemplaren"}))
             {
                 int artikelID = addCd(splittedLine[0], splittedLine[1], splittedLine[2]);
                 if(artikelID == -1)
@@ -499,7 +503,7 @@ public class Bibliotheek
      * @param type         Het type van de boek. Het type is niet hoofdletter gevoelig.
      * @return true als het toevoegen gelukt is, anders false
      */
-    public boolean wijzigBoek(int artikelID, String titel, String type)
+    public Boolean wijzigBoek(int artikelID, String titel, String type)
     {
         // Controleert geldigheid artikelID parameter
         if(checkArtikelID(artikelID))
@@ -531,7 +535,7 @@ public class Bibliotheek
      * @param releasedatum De releasedatum van de cd.
      * @return true als het toevoegen gelukt is, anders false
      */
-    public boolean wijzigCD(int artikelID, String titel, String type, String releasedatum)
+    public Boolean wijzigCD(int artikelID, String titel, String type, String releasedatum)
     {
         // Controleert geldigheid releasedatum en artikelID parameters
         if(SpecialDate.checkDate(releasedatum) && checkArtikelID(artikelID))
@@ -563,7 +567,7 @@ public class Bibliotheek
      * @param type         Het type van de boek. Het type is niet hoofdletter gevoelig.
      * @return true als het toevoegen gelukt is, anders false
      */
-    public boolean wijzigVideoband(int artikelID, String titel, String type)
+    public Boolean wijzigVideoband(int artikelID, String titel, String type)
     {
         // Controleert geldigheid artikelID parameter
         if(checkArtikelID(artikelID))
@@ -593,7 +597,7 @@ public class Bibliotheek
      * @param artikelID Het ID van het artikel.
      * @return true als het inleveren van het exemplaar gelukt is, anders false
      */
-    public boolean verwijderArtikel(int artikelID)
+    public Boolean verwijderArtikel(int artikelID)
     {
         if(checkArtikelID(artikelID) && artikelen.get(artikelID).setNietMeerInGebruik() && !isArtikelExemplarenUigeleendOfGereserveerd(artikelID))
         {
@@ -612,7 +616,7 @@ public class Bibliotheek
      * @param artikelID Het ID van het artikel.
      * @return true als exemplaren van het artikel zijn uitgeleend of gereserveerd, anders false
      */
-    public boolean isArtikelExemplarenUigeleendOfGereserveerd(int artikelID)
+    public Boolean isArtikelExemplarenUigeleendOfGereserveerd(int artikelID)
     {
         if(checkLidID(artikelID))
         {
@@ -640,7 +644,7 @@ public class Bibliotheek
      * @param reserveringID Het ID van de reservering.
      * @return true als er voor de reservering een boete bestaat, anders false
      */
-    public boolean isBoeteReservering(int reserveringID)
+    public Boolean isBoeteReservering(int reserveringID)
     {
         for(int i = (boetes.size() - 1); i >= 0; i--)
         {
@@ -659,7 +663,7 @@ public class Bibliotheek
      * @param uitleningID Het ID van de uitlening.
      * @return true als er voor de uitlening een boete bestaat, anders false
      */
-    public boolean isBoeteUitlening(int uitleningID)
+    public Boolean isBoeteUitlening(int uitleningID)
     {
         for(int i = (boetes.size() - 1); i >= 0; i--)
         {
@@ -678,7 +682,7 @@ public class Bibliotheek
      * @param lidID Het ID van het lid.
      * @return true als het lid exemplaren van artikelen te leen heeft, anders false
      */
-    public boolean isExemplarenTeLeen(int lidID)
+    public Boolean isExemplarenTeLeen(int lidID)
     {        
         // Controleert geldigheid parameter
         if(checkLidID(lidID))
@@ -702,7 +706,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het exemplaar gereserveerd is, anders false
      */
-    public boolean isGereserveerdExemplaar(int exemplaarID)
+    public Boolean isGereserveerdExemplaar(int exemplaarID)
     {
         // Controleert geldigheid parameter
         if(checkExemplaarID(exemplaarID))
@@ -735,7 +739,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het exemplaar niet gereserveerd is of gereserveerd is voor het lid, anders false
      */
-    public boolean isGereserveerdEnVoorLid(int lidID, int exemplaarID)
+    public Boolean isGereserveerdEnVoorLid(int lidID, int exemplaarID)
     {
         // Controleert geldigheid parameters
         if(checkLidID(lidID) && checkExemplaarID(exemplaarID))
@@ -770,7 +774,7 @@ public class Bibliotheek
      * @param artikelID Het ID van het artikel.
      * @return true als een lener een artikel mag lenen of reserveren, anders false
      */
-    public boolean isLidArtikelLenenOfReserveren(int lidID, int artikelID)
+    public Boolean isLidArtikelLenenOfReserveren(int lidID, int artikelID)
     {
         /*
          * Dit is het geval als het lid niet geroyaleerd is, wanneer een lid het artikel niet te leen heeft, wannneer
@@ -843,7 +847,7 @@ public class Bibliotheek
      * @param reservering De reservering die gecontroleerd moet worden.
      * @return true als het reservering opgehaald/uitgeleend is, anders false
      */
-    public boolean isReserveringUitgeleend(Reservering reservering)
+    public Boolean isReserveringUitgeleend(Reservering reservering)
     {
         // Controleert geldigheid parameter en of de reservering klaargezet is.
         // Omdat Reservering.setReserveringKlaar het exemplaarID en de maximale ophaaldatum beheerd, hoeft hier niet op gecontroleerd te worden.
@@ -872,7 +876,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het exemplaar uitgeleend is, anders false
      */
-    public boolean isUitgeleend(int exemplaarID)
+    public Boolean isUitgeleend(int exemplaarID)
     {        
         // Controleert geldigheid parameter
         if(checkExemplaarID(exemplaarID))
@@ -946,12 +950,12 @@ public class Bibliotheek
             double leenPrijs = 0;
             double totaalPrijs = 0;
             double bedragBoete = 0;
-            final short PRIJS_CD_KLASSIEK = 2; // in euro's
-            final short PRIJS_CD_POPULAIR = 1; // in euro's
-            final short PRIJS_VIDEO_A = 2; // in euro's
-            final short PRIJS_VIDEO_B = 2; // in euro's
-            final short PRIJS_BOEK_ROMAN = 0; // in euro's
-            final short PRIJS_BOEK_STUDIE = 0; // in euro's
+            short PRIJS_CD_KLASSIEK = 2; // in euro's
+            const short PRIJS_CD_POPULAIR = 1; // in euro's
+            const short PRIJS_VIDEO_A = 2; // in euro's
+            const short PRIJS_VIDEO_B = 2; // in euro's
+            const short PRIJS_BOEK_ROMAN = 0; // in euro's
+            const short PRIJS_BOEK_STUDIE = 0; // in euro's
 
             int verschilDagen = SpecialDate.daysDifference(uitlening.getUitleendatum(), uitlening.getTerugbrengdatum());
 
@@ -1280,12 +1284,12 @@ public class Bibliotheek
             double leenPrijs = 0;
             double totaalPrijs = 0;
             double bedragBoete = 0;
-            final short PRIJS_CD_KLASSIEK = 2; // in euro's
-            final short PRIJS_CD_POPULAIR = 1; // in euro's
-            final short PRIJS_VIDEO_A = 2; // in euro's
-            final short PRIJS_VIDEO_B = 2; // in euro's
-            final short PRIJS_BOEK_ROMAN = 0; // in euro's
-            final short PRIJS_BOEK_STUDIE = 0; // in euro's
+            const short PRIJS_CD_KLASSIEK = 2; // in euro's
+            const short PRIJS_CD_POPULAIR = 1; // in euro's
+            const short PRIJS_VIDEO_A = 2; // in euro's
+            const short PRIJS_VIDEO_B = 2; // in euro's
+            const short PRIJS_BOEK_ROMAN = 0; // in euro's
+            const short PRIJS_BOEK_STUDIE = 0; // in euro's
 
             int verschilDagen = SpecialDate.daysDifference(uitlening.getUitleendatum(), uitlening.getTerugbrengdatum());
 
@@ -1519,7 +1523,7 @@ public class Bibliotheek
      * @param lidID Het ID van het lid.
      * @return true als het betalen en (indien van toepassing) resetten gelukt is, anders false
      */
-    public boolean betaalBoetesLid(int lidID)
+    public Boolean betaalBoetesLid(int lidID)
     {
         // Controleert geldigheid parameters
         if(checkLidID(lidID) && !leden.get(lidID).isGeroyeerd())
@@ -1590,7 +1594,7 @@ public class Bibliotheek
      * @param uitlening De uitlening die gebruikt zou moeten worden.
      * @return true als er een boete item aangemaakt is voor de uitlening, anders false
      */
-    private boolean controleerAndSetBoeteUitlening(Uitlening uitlening)
+    private Boolean controleerAndSetBoeteUitlening(Uitlening uitlening)
     {
         if(checkUitleningID(uitlening.getID()) && getVerschuldigdBedragUitlening(uitlening) > 0 && !isBoeteUitlening(uitlening.getID()))
         {
@@ -1607,7 +1611,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het vinden van een openstaande reservering en het toekennen van het exemplaar gelukt is, anders false
      */
-    public boolean controleerAndSetReservering(int exemplaarID)
+    public Boolean controleerAndSetReservering(int exemplaarID)
     {
         // Controleert geldigheid parameter en kijkt of het exemplaar niet uitgeleend is. 
         if(checkExemplaarID(exemplaarID) && !isUitgeleend(exemplaarID))
@@ -1630,7 +1634,7 @@ public class Bibliotheek
      * @param exemplaarID Het ID van het exemplaar.
      * @return true als het inleveren van het exemplaar gelukt is, anders false
      */
-    public boolean inleverenExemplaar(int lidID, int exemplaarID)
+    public Boolean inleverenExemplaar(int lidID, int exemplaarID)
     {
         if(checkLidID(lidID) && checkExemplaarID(exemplaarID) && !leden.get(lidID).isGeroyeerd())
         {

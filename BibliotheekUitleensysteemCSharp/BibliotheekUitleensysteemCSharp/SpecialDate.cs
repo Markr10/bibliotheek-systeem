@@ -1,7 +1,8 @@
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.TimeZone;
+using System;
+using java.text.SimpleDateFormat;
+using java.util;
+using java.text.ParseException;
+using java.util.Calendar;
 
 /**
  * A static class that can do calculations with dates.
@@ -12,20 +13,17 @@ import java.util.TimeZone;
  */
 public class SpecialDate
 {
-    private final static SimpleDateFormat SDF;
-    static
-    {
-        SDF = new SimpleDateFormat("ddMMyyyy");
-        SDF.setTimeZone(TimeZone.getTimeZone("UTC"));
-        SDF.setLenient(false);
-    }
+    private readonly static SimpleDateFormat SDF;
     
     /**
      * SpecialDate constructor.
      * The constructor is private because this is a static class.
      */
-    private SpecialDate()
+    private static SpecialDate()
     {
+        SDF = new SimpleDateFormat("ddMMyyyy");
+        SDF.setTimeZone(java.util.TimeZone.getTimeZone("UTC"));
+        SDF.setLenient(false);
     }
     
     /**
@@ -46,7 +44,7 @@ public class SpecialDate
      * @param date The date that must be checked.
      * @return true if the String is a valid date, false otherwise
      */
-    public static boolean checkDate(String date)
+    public static Boolean checkDate(String date)
     {
         if(daysDifference(date) >= 0)
         {
@@ -65,7 +63,7 @@ public class SpecialDate
      * @param date The date that must be checked.
      * @return true if the String is a valid date, false otherwise
      */
-    public static boolean checkDateNowAndFuture(String date)
+    public static Boolean checkDateNowAndFuture(String date)
     {
         if(daysDifference(getDateToday(), date) >= 0)
         {
@@ -83,7 +81,7 @@ public class SpecialDate
      * @param date The date that must be checked.
      * @return true if the String is a valid date in the format "ddMMyyyy", false otherwise
      */
-    public static boolean checkFormatDate(String date)
+    public static Boolean checkFormatDate(String date)
     {
         try
         {
