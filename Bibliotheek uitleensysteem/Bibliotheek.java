@@ -307,7 +307,7 @@ public class Bibliotheek
      * 
      * In het CSV-bestand moeten de (kolom) waarden gescheiden worden door een komma.
      * De eerste regel van het CSV-bestand moet de volgende tekst hebben:
-     * titel, type, exemplaren
+     * titel,type,exemplaren
      * 
      * Dit betekend dat het CSV-bestand bestaat uit drie kolommen die het volgende betekenen:
      * @custom.csv.column titel      De titel van het boek.
@@ -328,16 +328,16 @@ public class Bibliotheek
                 int artikelID = addBoek(splittedLine[0], splittedLine[1]);
                 if(artikelID == -1)
                 {
-                    throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: " +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                    throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: \"" +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 int aantalExemplaren = Integer.parseInt(splittedLine[2]);
                 if(aantalExemplaren < 0)
                 {
                     throw new Exception("Het aantal exemplaren van deze rij moet groter of gelijk zijn aan 0. " +
-                        "Bijbehorende regel in het CSV-bestand: " +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                        "Bijbehorende regel in het CSV-bestand: \"" +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 for(int i = 0; i < aantalExemplaren; i++)
@@ -358,7 +358,7 @@ public class Bibliotheek
      * 
      * In het CSV-bestand moeten de (kolom) waarden gescheiden worden door een komma.
      * De eerste regel van het CSV-bestand moet de volgende tekst hebben:
-     * titel, type, releasedatum, exemplaren
+     * titel,type,releasedatum,exemplaren
      * 
      * Dit betekend dat het CSV-bestand bestaat uit vier kolommen die het volgende betekenen:
      * @custom.csv.column titel        De titel van de cd.
@@ -380,16 +380,16 @@ public class Bibliotheek
                 int artikelID = addCd(splittedLine[0], splittedLine[1], splittedLine[2]);
                 if(artikelID == -1)
                 {
-                    throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: " +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                    throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: \"" +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 int aantalExemplaren = Integer.parseInt(splittedLine[3]);
                 if(aantalExemplaren < 0)
                 {
                     throw new Exception("Het aantal exemplaren van deze rij moet groter of gelijk zijn aan 0. " +
-                        "Bijbehorende regel in het CSV-bestand: " +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                        "Bijbehorende regel in het CSV-bestand: \"" +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 for(int i = 0; i < aantalExemplaren; i++)
@@ -410,7 +410,7 @@ public class Bibliotheek
      * 
      * In het CSV-bestand moeten de (kolom) waarden gescheiden worden door een komma.
      * De eerste regel van het CSV-bestand moet de volgende tekst hebben:
-     * titel, type, exemplaren
+     * titel,type,exemplaren
      * 
      * Dit betekend dat het CSV-bestand bestaat uit drie kolommen die het volgende betekenen:
      * @custom.csv.column titel      De titel van de videoband.
@@ -431,16 +431,16 @@ public class Bibliotheek
                 int artikelID = addVideoband(splittedLine[0], splittedLine[1]);
                 if(artikelID == -1)
                 {
-                    throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: " +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                    throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: \"" +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 int aantalExemplaren = Integer.parseInt(splittedLine[2]);
                 if(aantalExemplaren < 0)
                 {
                     throw new Exception("Het aantal exemplaren van deze rij moet groter of gelijk zijn aan 0. " +
-                        "Bijbehorende regel in het CSV-bestand: " +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                        "Bijbehorende regel in het CSV-bestand: \"" +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
                 }
                 
                 for(int i = 0; i < aantalExemplaren; i++)
@@ -478,8 +478,8 @@ public class Bibliotheek
             {
                 if(addLid(splittedLine[0]) == -1)
                 {
-                    throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: " +
-                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
+                    throw new Exception("Rij bevat onjuiste gegevens. Bijbehorende regel in het CSV-bestand: \"" +
+                        Arrays.toString(splittedLine).substring(1).replaceFirst("]$", "") + "\"");
                 }
             }
             return null;
