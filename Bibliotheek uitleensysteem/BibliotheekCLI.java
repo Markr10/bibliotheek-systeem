@@ -19,11 +19,10 @@ public class BibliotheekCLI extends Bibliotheek
     }
 
     /**
-     * Leent een exemplaar uit.
+     * Leent een exemplaar uit en print of het uitlenen van het exemplaar gelukt is.
      *
      * @param lidID       Het ID van het lid.
      * @param exemplaarID Het ID van het exemplaar.
-     * @return true als het uitlenen van het exemplaar gelukt is, anders false
      */
     public void printAndAddUitlening(int lidID, int exemplaarID)
     {
@@ -38,11 +37,10 @@ public class BibliotheekCLI extends Bibliotheek
     }
 
     /**
-     * Levert een exemplaar in.
+     * Levert een exemplaar in en print of het inleveren van het exemplaar gelukt is.
      *
      * @param lidID       Het ID van het lid.
      * @param exemplaarID Het ID van het exemplaar.
-     * @return true als het inleveren van het exemplaar gelukt is, anders false
      */
     public void printAndInleverenExemplaar(int lidID, int exemplaarID)
     {
@@ -59,7 +57,6 @@ public class BibliotheekCLI extends Bibliotheek
 
     /**
      * Bepaald welke leden nog reserveringsbrieven moeten krijgen en toont deze.
-     * 
      */
     public void printReserveringsbrieven()
     {
@@ -83,7 +80,6 @@ public class BibliotheekCLI extends Bibliotheek
     /**
      * Berekent het verschuldigde bedrag van leden, bepaalt of ze een of
      * meerdere waarschuwingbrieven moeten krijgen en toont deze.
-     * 
      */
     public void printWaarschuwingsbrieven()
     {
@@ -126,7 +122,6 @@ public class BibliotheekCLI extends Bibliotheek
 
     /**
      * Print de artikelen van de bibliotheek.
-     *
      */
     public void printArtikelen()
     {
@@ -145,7 +140,6 @@ public class BibliotheekCLI extends Bibliotheek
 
     /**
      * Print de leden van de bibliotheek.
-     *
      */
     public void printLeden()
     {
@@ -159,7 +153,6 @@ public class BibliotheekCLI extends Bibliotheek
 
     /**
      * Print de reserveringen van de bibliotheek.
-     *
      */
     public void printReserveringen() 
     {
@@ -175,7 +168,6 @@ public class BibliotheekCLI extends Bibliotheek
 
     /**
      * Print het overzicht van de financiën van de bibliotheek.
-     *
      */
     public void printFinanciën()
     {
