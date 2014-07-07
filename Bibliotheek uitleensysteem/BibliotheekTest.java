@@ -232,7 +232,7 @@ public class BibliotheekTest
     }
 
     @Test
-    public void importeerCdsAndExemplaren()
+    public void testImporteerCdsAndExemplaren()
     {
         java.lang.Exception exceptio1 = biblioth2.importeerCdsAndExemplaren("test/cds.csv");
         assertNotNull(exceptio1);
