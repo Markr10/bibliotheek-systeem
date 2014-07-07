@@ -163,14 +163,17 @@ public class BibliotheekTest
         assertEquals(0, biblioth1.addExemplaar(2));
         assertEquals(1, biblioth1.addExemplaar(0));
         assertEquals(2, biblioth1.addExemplaar(1));
+        assertEquals(3, biblioth1.addExemplaar(1));
         assertEquals(-1, biblioth1.addExemplaar(3));
-        assertEquals(3, biblioth1.exemplaren.size());
+        assertEquals(4, biblioth1.exemplaren.size());
         assertEquals(0, biblioth1.exemplaren.get(0).getID());
         assertEquals(2, biblioth1.exemplaren.get(0).getArtikelID());
         assertEquals(1, biblioth1.exemplaren.get(1).getID());
         assertEquals(0, biblioth1.exemplaren.get(1).getArtikelID());
         assertEquals(2, biblioth1.exemplaren.get(2).getID());
         assertEquals(1, biblioth1.exemplaren.get(2).getArtikelID());
+        assertEquals(3, biblioth1.exemplaren.get(3).getID());
+        assertEquals(1, biblioth1.exemplaren.get(3).getArtikelID());
     }
 
     @Test
