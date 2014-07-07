@@ -370,7 +370,7 @@ public class Bibliotheek
      * @return null als alles geïmporteerd is. Wanneer er tijdens het importeren een regel niet geïmporteerd kan worden,
      * wordt er op dat punt gestopt met importeren en wordt de Exception geretourneerd.
      */
-    public boolean importeerCdsAndExemplaren(String bestandspadCsvBestand)
+    public Exception importeerCdsAndExemplaren(String bestandspadCsvBestand)
     {
         // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
         try
@@ -397,11 +397,11 @@ public class Bibliotheek
                     addExemplaar(artikelID);
                 }
             }
-            return true;
+            return null;
         }
         catch(Exception e)
         {
-            return false;
+            return e;
         }
     }
 
@@ -421,7 +421,7 @@ public class Bibliotheek
      * @return null als alles geïmporteerd is. Wanneer er tijdens het importeren een regel niet geïmporteerd kan worden,
      * wordt er op dat punt gestopt met importeren en wordt de Exception geretourneerd.
      */
-    public boolean importeerVideobandenAndExemplaren(String bestandspadCsvBestand)
+    public Exception importeerVideobandenAndExemplaren(String bestandspadCsvBestand)
     {
         // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
         try
@@ -448,11 +448,11 @@ public class Bibliotheek
                     addExemplaar(artikelID);
                 }
             }
-            return true;
+            return null;
         }
         catch(Exception e)
         {
-            return false;
+            return e;
         }
     }
 
@@ -469,7 +469,7 @@ public class Bibliotheek
      * @return null als alles geïmporteerd is. Wanneer er tijdens het importeren een regel niet geïmporteerd kan worden,
      * wordt er op dat punt gestopt met importeren en wordt de Exception geretourneerd.
      */
-    public boolean importeerLeden(String bestandspadCsvBestand)
+    public Exception importeerLeden(String bestandspadCsvBestand)
     {
         // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
         try
@@ -482,11 +482,11 @@ public class Bibliotheek
                         Arrays.toString(splittedLine).substring(1).replaceFirst("]$", ""));
                 }
             }
-            return true;
+            return null;
         }
         catch(Exception e)
         {
-            return false;
+            return e;
         }
     }
 
