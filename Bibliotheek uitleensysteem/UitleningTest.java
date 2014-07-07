@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * De testklasse UitleningTest.
+ * The test class UitleningTest.
  *
  * @author  Wybren, Danny en Mark
  * @version 7 April 2014
@@ -87,32 +87,4 @@ public class UitleningTest
         assertEquals(false, uitlenin1.setTerugbrengdatum());
         assertEquals(SpecialDate.getDateToday(), uitlenin1.getTerugbrengdatum());
     }
-    
-//     @Test // NOTE: Waarschijnlijk overbodig
-//     public void testGetTerugbrengdatumOneArgument()
-//     {
-//         assertNull(uitlenin1.getTerugbrengdatum());
-//         assertEquals(true, uitlenin1.setTerugbrengdatum("08042014"));
-//         assertEquals("08042014", uitlenin1.getTerugbrengdatum());
-//     }
-// 
-//     /**
-//      * Method TestSetTerugbrengdatum
-//      * It can fail on someday because it uses a date in the future.
-//      * Then the expected result may be adjusted.
-//      */
-//     @Test
-//     public void TestSetTerugbrengdatumOneArgument()
-//     {
-//         assertEquals(false, uitlenin1.setTerugbrengdatum("wrong"));
-//         assertEquals(null, uitlenin1.getTerugbrengdatum());
-//         assertEquals(false, uitlenin1.setTerugbrengdatum("07042016"));
-//         assertNull(uitlenin1.getTerugbrengdatum());
-//         assertEquals(true, uitlenin1.setTerugbrengdatum("06042014"));
-//         assertEquals("06042014", uitlenin1.getTerugbrengdatum());
-//         assertEquals(false, uitlenin1.setTerugbrengdatum("05042014"));
-//         assertEquals("06042014", uitlenin1.getTerugbrengdatum());
-//         assertEquals(false, uitlenin1.setTerugbrengdatum("07042014"));
-//         assertEquals("06042014", uitlenin1.getTerugbrengdatum());
-//     }
 }
