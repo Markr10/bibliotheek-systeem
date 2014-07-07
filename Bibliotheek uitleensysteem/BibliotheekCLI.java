@@ -58,6 +58,29 @@ public class BibliotheekCLI extends Bibliotheek
 
 
     /**
+     * Bepaald welke leden nog reserveringsbrieven moeten krijgen en toont deze.
+     * 
+     */
+    public void printReserveringsbrieven()
+    {
+        ArrayList<Integer> lijstMetInfoOverBrieven = super.verwerkReserveringsbrieven();
+        for(Integer reserveringID : lijstMetInfoOverBrieven)
+        {
+            System.out.println("----------Reservering----------");
+            System.out.println();
+            System.out.println("Betreft: klaargezette reservering");
+            System.out.println();
+            System.out.println("Beste " + leden.get(reserveringen.get(reserveringID).getLidID()) + ",");
+            System.out.println();
+            System.out.println("Het artikel " + artikelen.get(reserveringen.get(reserveringID).getArtikelID()).getTitel() +
+                " die u gereserveerd heeft, is voor u klaargezet.");
+            System.out.println("Als u niet binnen " + MAX_AANTAL_DAGEN_RESERVERING_OPHALEN + " dagen deze reservering ophaalt, " +
+                "zal deze reservering vervallen. Bovendien wordt dan een boete in rekening gebracht van € " + (((float)RESERVERING_BOETE) / 100) + ".");
+            System.out.println("--------------------");
+        }
+    }
+
+    /**
      * Berekent het verschuldigde bedrag van leden, bepaalt of ze een of
      * meerdere waarschuwingbrieven moeten krijgen en toont deze.
      * 
@@ -77,9 +100,9 @@ public class BibliotheekCLI extends Bibliotheek
             {
                 System.out.println("----------Waarschuwing----------");
                 System.out.println();
-                System.out.println("Beste " + leden.get(arrayMetInfoOverBrief[0]) + ",");
+                System.out.println("Betreft: openstaande boetes");
                 System.out.println();
-                System.out.println("Betreft de openstaande boetes");
+                System.out.println("Beste " + leden.get(arrayMetInfoOverBrief[0]).getNaam() + ",");
                 System.out.println();
                 System.out.println("De boete is hoger dan 10 euro! Graag voldoen!");
                 System.out.println("--------------------");
@@ -88,9 +111,9 @@ public class BibliotheekCLI extends Bibliotheek
             {
                 System.out.println("----------Waarschuwing----------");
                 System.out.println();
-                System.out.println("Beste " + leden.get(arrayMetInfoOverBrief[0]) + ",");
+                System.out.println("Betreft: openstaande boetes");
                 System.out.println();
-                System.out.println("Betreft de openstaande boetes");
+                System.out.println("Beste " + leden.get(arrayMetInfoOverBrief[0]).getNaam() + ",");
                 System.out.println();
                 System.out.println("De boete is hoger dan 100 euro!");
                 System.out.println("Als u niet binnen " + MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF + " dagen alle geleende items inlevert en");

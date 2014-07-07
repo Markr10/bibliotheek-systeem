@@ -18,7 +18,7 @@ public class Bibliotheek
     private static final short MAX_AANTAL_ARTIKELEN = 6;
     public static final short MAX_AANTAL_DAGEN_RESERVERING_OPHALEN = 7;
     private static final short RESERVERINGSKOSTEN = 30; // in centen
-    private static final short RESERVERING_BOETE = 200; // in centen
+    protected static final short RESERVERING_BOETE = 200; // in centen
 
     protected ArrayList<Artikel> artikelen; // Artikelen
     private ArrayList<Boete> boetes; // Exemplaren
@@ -1642,21 +1642,44 @@ public class Bibliotheek
         {
             Reservering reservering = reserveringen.get(i);
             if(!isReserveringUitgeleend(reservering) && !SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) &&
-            !isBoeteReservering(reservering.getID()))
+                !isBoeteReservering(reservering.getID()))
             {
                 boetes.add(new Boete(boetes.size(), reservering.getID(), BoeteKlasseType.valueOf("RESERVERING"), false));
-                Reservering openReservering = getOpenReservering(reservering.getArtikelID());
-                if(openReservering != null)
-                {
-                    openReservering.setReserveringKlaar(reservering.getExemplaarID());
-                }
+                controleerAndSetReservering(reservering.getExemplaarID());
             }
         }
     }
-
+    
+    /**
+     * Bepaald welke leden nog reserveringsbrieven moeten krijgen en
+     * markeert deze als verstuurd.
+     * Elke rij in de ArrayList stelt een reserveringsbrief voor zodat
+     * het makkelijk is welke reserveringsbrieven verstuurd moeten worden.
+     * 
+     * @return Een ArrayList met de leden die een reserveringsbrief moeten krijgen.
+     */
+    public ArrayList<Integer> verwerkReserveringsbrieven()
+    {
+        // Opbouw rijen van de ArrayList: reserveringID.
+        ArrayList<Integer> brieven = new ArrayList<Integer>();
+        for(Reservering reservering : reserveringen)
+        {
+            // Controleer of lid de reserveringsbrief kan krijgen en probeer dan
+            // de reserveringsbrief naar lid te versturen.
+            if(!isReserveringUitgeleend(reservering) && SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) &&
+                !reservering.getBrief() && reservering.setBrief())
+            {
+                brieven.add(reservering.getID());
+            }
+        }
+        
+        return brieven;
+    }
+    
     /**
      * Berekend het verschuldigde bedrag van leden en
-     * bepaald of ze een of meerdere waarschuwingbrieven moeten krijgen.
+     * bepaald of ze een of meerdere waarschuwingbrieven moeten krijgen en
+     * markeert deze als verstuurd.
      * Elke rij in de ArrayList stelt een waarschuwingsbrief voor zodat
      * het makkelijk is welke waarschuwingsbrieven verstuurd moeten worden.
      * 

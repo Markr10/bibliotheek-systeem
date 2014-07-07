@@ -15,6 +15,7 @@ public class Reservering
     private boolean reserveringskostenBetaald;
     private String datumKlaargezet;
     private int exemplaarID;
+    private boolean brief;
     private String maxOphaaldatum; // ophaaldag is tot en met deze dag
 
     /**
@@ -34,6 +35,7 @@ public class Reservering
         reserveringsdatum = SpecialDate.getDateToday();
         reserveringskostenBetaald = false;
         exemplaarID = -1;
+        brief = false;
         datumKlaargezet = maxOphaaldatum = null;
     }
     
@@ -111,6 +113,16 @@ public class Reservering
     }
     
     /**
+     * Returned of er een brief verstuurd is met de mededeling dat de reservering klaargezet is.
+     * 
+     * @return true als er een brief verstuurd is, anders false
+     */
+    public boolean getBrief()
+    {
+        return brief;
+    }
+    
+    /**
      * Returned de maximale ophaaldatum van de reservering.
      * 
      * @return De maximale ophaaldatum van de reservering als
@@ -133,6 +145,25 @@ public class Reservering
         if(!reserveringskostenBetaald)
         {
             reserveringskostenBetaald = true;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    /**
+     * Geeft aan dat er een brief verstuurd is met de mededeling dat de reservering klaargezet is.
+     * 
+     * @return true als het instellen gelukt is, anders false
+     */
+    public boolean setBrief()
+    {
+        // Controleer of de brief nog niet verstuurd is en of er een reservering klaargezet is.
+        if(!brief && datumKlaargezet != null)
+        {
+            brief = true;
             return true;
         }
         else
