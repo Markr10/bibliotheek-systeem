@@ -124,7 +124,7 @@ public class Lid
      */
     public boolean resetBrieven()
     {
-        if(!geroyeerd && !setGeroyeerd())
+        if(!geroyeerd)
         {
             eersteBrief = false;
             tweedeBrief = null;
@@ -143,8 +143,7 @@ public class Lid
      */
     public boolean setGeroyeerd()
     {
-        if(!geroyeerd && eersteBrief && tweedeBrief != null &&
-            SpecialDate.daysDifference(tweedeBrief) > Bibliotheek.MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF)
+        if(!geroyeerd && eersteBrief && tweedeBrief != null)
         {
             geroyeerd = true;
             return true;

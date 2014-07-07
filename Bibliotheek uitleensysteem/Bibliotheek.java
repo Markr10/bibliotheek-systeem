@@ -18,7 +18,7 @@ public class Bibliotheek
     private static final short MAX_AANTAL_ARTIKELEN = 6;
     public static final short MAX_AANTAL_DAGEN_RESERVERING_OPHALEN = 7;
     private static final short RESERVERINGSKOSTEN = 30; // in centen
-    private static final short RESERVERING_BOETE = 200; // in centen
+    protected static final short RESERVERING_BOETE = 200; // in centen
 
     protected ArrayList<Artikel> artikelen; // Artikelen
     protected ArrayList<Boete> boetes; // Exemplaren
@@ -673,6 +673,30 @@ public class Bibliotheek
     }
 
     /**
+     * Returned of het lid exemplaren van artikelen te leen heeft.
+     *
+     * @param lidID Het ID van het lid.
+     * @return true als het lid exemplaren van artikelen te leen heeft, anders false
+     */
+    public boolean isExemplarenTeLeen(int lidID)
+    {        
+        // Controleert geldigheid parameter
+        if(checkLidID(lidID))
+        {
+            for(int i = (uitleningen.size() -1); i >= 0; i--)
+            {
+                // Controleert of het lid dat exemplaar te leen heeft.
+                if(uitleningen.get(i).getLidID() == lidID && uitleningen.get(i).getTerugbrengdatum() == null)
+                {
+                    return true;
+                }
+            }
+        }
+        // Het lid heeft geen exemplaren van artikelen te leen.
+        return false;
+    }
+    
+    /**
      * Returned of een exemplaar gereserveerd is.
      *     
      * @param exemplaarID Het ID van het exemplaar.
@@ -737,64 +761,6 @@ public class Bibliotheek
         }
         // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet (meer) gereserveerd of het exemplaar is gereserveerd het voor lid.
         return true;
-    }
-
-    /**
-     * Returned de uitleen status van een exemplaar.
-     *
-     * @param exemplaarID Het ID van het exemplaar.
-     * @return true als het exemplaar uitgeleend is, anders false
-     */
-    public boolean isUitgeleend(int exemplaarID)
-    {        
-        // Controleert geldigheid parameter
-        if(checkExemplaarID(exemplaarID))
-        {
-            // Controleert, indien beschikbaar, de laatste uitlening van het exemplaar.
-            for(int i = (uitleningen.size() - 1); i >= 0; i--)
-            {
-                if(uitleningen.get(i).getExemplaarID() == exemplaarID)
-                {
-                    // Dit is het geval wanneer een lid het exemplaar te leen heeft.
-                    if(uitleningen.get(i).getTerugbrengdatum() == null)
-                    {
-                        return true;
-                    }
-                    break;
-                }
-            }
-        }
-        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet uitgeleend.
-        return false;
-    }
-
-    /**
-     * Returned of de reservering opgehaald/uitgeleend is.
-     * 
-     * @param reservering De reservering die gecontroleerd moet worden.
-     * @return true als het reservering opgehaald/uitgeleend is, anders false
-     */
-    public boolean isReserveringUitgeleend(Reservering reservering)
-    {
-        // Controleert geldigheid parameter en of de reservering klaargezet is.
-        // Omdat Reservering.setReserveringKlaar het exemplaarID en de maximale ophaaldatum beheerd, hoeft hier niet op gecontroleerd te worden.
-        if(checkReserveringID(reservering.getID()) && reservering.getDatumKlaargezet() != null)
-        {
-            // Loopt van eerste naar laatste uitlening omdat eerste keer uitlenen tijdens ophaaltermijn de juiste is.
-            for(int i = 0, length = (uitleningen.size() - 1); i <= length; i++)
-            {
-                Uitlening uitlening = uitleningen.get(i);
-                // Controleert, indien beschikbaar, of het lid het exemplaar van de reservering binnen de datum van klaarzetten en de maximale ophaaldatum geleend heeft.
-                if(uitlening.getLidID() == reservering.getLidID() && uitlening.getExemplaarID() == reservering.getExemplaarID() &&
-                SpecialDate.daysDifference(uitlening.getUitleendatum(), reservering.getDatumKlaargezet()) >= 0 &&
-                SpecialDate.daysDifference(reservering.getMaxOphaaldatum(), uitlening.getUitleendatum()) >= 0)
-                {
-                    return true;
-                }
-            }
-        }
-        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet uitgeleend.
-        return false;
     }
 
     /**
@@ -869,6 +835,64 @@ public class Bibliotheek
         {
             return false;
         }
+    }
+
+    /**
+     * Returned of de reservering opgehaald/uitgeleend is.
+     * 
+     * @param reservering De reservering die gecontroleerd moet worden.
+     * @return true als het reservering opgehaald/uitgeleend is, anders false
+     */
+    public boolean isReserveringUitgeleend(Reservering reservering)
+    {
+        // Controleert geldigheid parameter en of de reservering klaargezet is.
+        // Omdat Reservering.setReserveringKlaar het exemplaarID en de maximale ophaaldatum beheerd, hoeft hier niet op gecontroleerd te worden.
+        if(checkReserveringID(reservering.getID()) && reservering.getDatumKlaargezet() != null)
+        {
+            // Loopt van eerste naar laatste uitlening omdat eerste keer uitlenen tijdens ophaaltermijn de juiste is.
+            for(int i = 0, length = (uitleningen.size() - 1); i <= length; i++)
+            {
+                Uitlening uitlening = uitleningen.get(i);
+                // Controleert, indien beschikbaar, of het lid het exemplaar van de reservering binnen de datum van klaarzetten en de maximale ophaaldatum geleend heeft.
+                if(uitlening.getLidID() == reservering.getLidID() && uitlening.getExemplaarID() == reservering.getExemplaarID() &&
+                SpecialDate.daysDifference(uitlening.getUitleendatum(), reservering.getDatumKlaargezet()) >= 0 &&
+                SpecialDate.daysDifference(reservering.getMaxOphaaldatum(), uitlening.getUitleendatum()) >= 0)
+                {
+                    return true;
+                }
+            }
+        }
+        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet uitgeleend.
+        return false;
+    }
+
+    /**
+     * Returned de uitleen status van een exemplaar.
+     *
+     * @param exemplaarID Het ID van het exemplaar.
+     * @return true als het exemplaar uitgeleend is, anders false
+     */
+    public boolean isUitgeleend(int exemplaarID)
+    {        
+        // Controleert geldigheid parameter
+        if(checkExemplaarID(exemplaarID))
+        {
+            // Controleert, indien beschikbaar, de laatste uitlening van het exemplaar.
+            for(int i = (uitleningen.size() - 1); i >= 0; i--)
+            {
+                if(uitleningen.get(i).getExemplaarID() == exemplaarID)
+                {
+                    // Dit is het geval wanneer een lid het exemplaar te leen heeft.
+                    if(uitleningen.get(i).getTerugbrengdatum() == null)
+                    {
+                        return true;
+                    }
+                    break;
+                }
+            }
+        }
+        // Wanneer bovenstaande testen niet slagen, dan is het exemplaar niet uitgeleend.
+        return false;
     }
 
 
@@ -1489,10 +1513,11 @@ public class Bibliotheek
 
 
     /**
-     * Betaalt de openstaande boetes van een lid.
+     * Betaalt de openstaande boetes van een lid en
+     * reset, indien deze geen uitleningen meer heeft, de waarschuwingsbrieven van dat lid.
      * 
      * @param lidID Het ID van het lid.
-     * @return true als het betalen gelukt is, anders false
+     * @return true als het betalen en (indien van toepassing) resetten gelukt is, anders false
      */
     public boolean betaalBoetesLid(int lidID)
     {
@@ -1543,6 +1568,12 @@ public class Bibliotheek
                 {
                     return false;
                 }
+            }
+
+            if(!isExemplarenTeLeen(lidID) && !leden.get(lidID).resetBrieven())
+            {
+                // Probleem met het resetten van de brieven
+                return false;
             }
 
             // Het betalen is gelukt.
@@ -1642,21 +1673,44 @@ public class Bibliotheek
         {
             Reservering reservering = reserveringen.get(i);
             if(!isReserveringUitgeleend(reservering) && !SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) &&
-            !isBoeteReservering(reservering.getID()))
+                !isBoeteReservering(reservering.getID()))
             {
                 boetes.add(new Boete(boetes.size(), reservering.getID(), BoeteKlasseType.valueOf("RESERVERING"), false));
-                Reservering openReservering = getOpenReservering(reservering.getArtikelID());
-                if(openReservering != null)
-                {
-                    openReservering.setReserveringKlaar(reservering.getExemplaarID());
-                }
+                controleerAndSetReservering(reservering.getExemplaarID());
             }
         }
     }
-
+    
+    /**
+     * Bepaald welke leden nog reserveringsbrieven moeten krijgen en
+     * markeert deze als verstuurd.
+     * Elke rij in de ArrayList stelt een reserveringsbrief voor zodat
+     * het makkelijk is welke reserveringsbrieven verstuurd moeten worden.
+     * 
+     * @return Een ArrayList met de leden die een reserveringsbrief moeten krijgen.
+     */
+    public ArrayList<Integer> verwerkReserveringsbrieven()
+    {
+        // Opbouw rijen van de ArrayList: reserveringID.
+        ArrayList<Integer> brieven = new ArrayList<Integer>();
+        for(Reservering reservering : reserveringen)
+        {
+            // Controleer of lid de reserveringsbrief kan krijgen en probeer dan
+            // de reserveringsbrief naar lid te versturen.
+            if(!isReserveringUitgeleend(reservering) && SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) &&
+                !reservering.getBrief() && reservering.setBrief())
+            {
+                brieven.add(reservering.getID());
+            }
+        }
+        
+        return brieven;
+    }
+    
     /**
      * Berekend het verschuldigde bedrag van leden en
-     * bepaald of ze een of meerdere waarschuwingbrieven moeten krijgen.
+     * bepaald of ze een of meerdere waarschuwingbrieven moeten krijgen,
+     * markeert deze als verstuurd en (indien van toepassing) royeerd de leden.
      * Elke rij in de ArrayList stelt een waarschuwingsbrief voor zodat
      * het makkelijk is welke waarschuwingsbrieven verstuurd moeten worden.
      * 
@@ -1675,12 +1729,20 @@ public class Bibliotheek
             {
                 waarschuwingsbrieven.add(new int[] {lid.getID(), DREMPEL_EERSTE_BRIEF});
             }
+
             // Controleer of lid tweede waarschuwingsbrief moet krijgen en probeer dan
             // tweede waarschuwingsbrief naar lid te versturen.
             if(!lid.isGeroyeerd() && getVerschuldigdBedragLid(lid.getID()) > DREMPEL_TWEEDE_BRIEF &&
             lid.getTweedeBrief() == null && lid.setTweedeBrief())
             {
                 waarschuwingsbrieven.add(new int[] {lid.getID(), DREMPEL_TWEEDE_BRIEF});
+            }
+
+            // Controleert of lid geroyeerd moet worden.
+            if(!lid.isGeroyeerd() && getVerschuldigdBedragLid(lid.getID()) > DREMPEL_TWEEDE_BRIEF &&
+                lid.getTweedeBrief() != null && SpecialDate.daysDifference(lid.getTweedeBrief()) > Bibliotheek.MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF)
+            {
+                lid.setGeroyeerd();
             }
         }
 
