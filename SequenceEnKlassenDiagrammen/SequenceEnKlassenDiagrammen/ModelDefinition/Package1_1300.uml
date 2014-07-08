@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="2d2af633-e2ca-402f-8f2c-d0c9c598586c"
   name="SimpleDateFormat"
@@ -24,49 +24,6 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Namespace%3Djava.text.SimpleDateFormat Type%3DSimpleDateFormat"
             tag="ViewCode" />
         </referencesInternal>
-        <appliedStereotypesInternal>
-          <stereotypeInstance
-            Id="d7175e88-146c-46cd-9d89-755dbef9bfb8"
-            name="class"
-            profile="CSharpProfile">
-            <propertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="a8523362-6d11-4ebe-a687-1688079cae80">
-                <propertyInstance
-                  Id="4029809c-e0a9-4bc9-9fc0-47a1b2e39995"
-                  name="ClrAttributes" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="80e69cec-a9d1-47ca-b03c-e9da0fe752d8">
-                <propertyInstance
-                  Id="f6bb3762-d038-41c8-bb25-7d0b361bed75"
-                  name="IsPartial"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="906d96dd-7ee8-4a1e-9f93-206f197a2866">
-                <propertyInstance
-                  Id="977d5846-9b55-4e61-95cf-3e085189e55c"
-                  name="IsStatic"
-                  value="False" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="5bb1abfc-2ead-4a0b-8f03-ea28af66b0de">
-                <propertyInstance
-                  Id="17fd1eed-7aa4-4198-bbe6-aa640f692ee8"
-                  name="IsUnsafe"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="8f444350-5dab-4402-ab6d-3045db663597">
-                <propertyInstance
-                  Id="0f9953a6-3e4b-4647-8c3c-17a15641e67f"
-                  name="PackageVisibility"
-                  value="internal" />
-              </stereotypeInstanceHasPropertyInstances>
-            </propertyInstances>
-          </stereotypeInstance>
-        </appliedStereotypesInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>

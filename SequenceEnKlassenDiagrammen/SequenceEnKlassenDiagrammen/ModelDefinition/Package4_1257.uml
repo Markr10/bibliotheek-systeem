@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="2bc8666f-27ae-4fff-b6ef-ff2f806082cc"
   name="LinkedHashMap"
@@ -18,49 +18,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <appliedStereotypesInternal>
-          <stereotypeInstance
-            Id="cfd79b70-8924-40b9-b556-1b676cdb40ac"
-            name="class"
-            profile="CSharpProfile">
-            <propertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="5573dbcd-e887-4ad5-8b4c-bb43077e1877">
-                <propertyInstance
-                  Id="f0a43360-afb8-48b1-8483-11dd5ff2f5d7"
-                  name="ClrAttributes" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="4548d6e7-f0b1-4e78-910e-db0561dc7f6d">
-                <propertyInstance
-                  Id="845b0510-1429-4040-8277-e7dad716eefc"
-                  name="IsPartial"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="8aba755c-4463-438c-8be8-f71432618a51">
-                <propertyInstance
-                  Id="8b48c28b-6cf8-4f22-8923-06cc205e3cde"
-                  name="IsStatic"
-                  value="False" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="498f5551-17f6-478d-b36d-44ce2a2f522c">
-                <propertyInstance
-                  Id="522479e9-46e8-494c-bf47-b9360ac56cdc"
-                  name="IsUnsafe"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="2cb41f3d-aa46-4695-8e07-def91a7b5151">
-                <propertyInstance
-                  Id="6719a842-98ee-4c76-ae88-49a38771cf9b"
-                  name="PackageVisibility"
-                  value="internal" />
-              </stereotypeInstanceHasPropertyInstances>
-            </propertyInstances>
-          </stereotypeInstance>
-        </appliedStereotypesInternal>
         <signatures>
           <templateBinding
             Id="ca740573-e0b2-4517-b414-d03f1bb6187b">
@@ -91,7 +48,7 @@
                     <primitiveTypeMoniker
                       Id="220a3521-e091-4221-bae9-3ef9018e845c"
                       LastKnownName="Integer"
-                      LastKnownLocation="Diagrams.uml" />
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </actuals>
                   <formal>
                     <classifierTemplateParameterMoniker
@@ -118,49 +75,6 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Namespace%3Djava.util.LinkedHashMap Type%3D(Name%3DLinkedHashMap GenericParameterCount%3D2)"
             tag="ViewCode" />
         </referencesInternal>
-        <appliedStereotypesInternal>
-          <stereotypeInstance
-            Id="f00db11d-058f-4849-a6ba-17b19ae4b04c"
-            name="class"
-            profile="CSharpProfile">
-            <propertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="eb8114b0-93d9-4a9a-93ad-bfe30b1861cd">
-                <propertyInstance
-                  Id="cc1b1593-028d-40a6-adfd-5bec30c98a39"
-                  name="ClrAttributes" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="22b97af6-2b54-432f-8753-f5ad5cc24fc3">
-                <propertyInstance
-                  Id="91485e4b-ebab-4e46-85bf-2c5ed7bb5f4e"
-                  name="IsPartial"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="2c3a1dfc-d703-4047-b779-18fac2a4656e">
-                <propertyInstance
-                  Id="f918e912-ff06-46e7-bf86-95c79c022283"
-                  name="IsStatic"
-                  value="False" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="63791782-7559-4ed6-a045-d78078f9752c">
-                <propertyInstance
-                  Id="8c4866a5-e5dc-423c-aaac-a6a72d86d600"
-                  name="IsUnsafe"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="9ff400b3-8168-42f3-a4d9-6b0ada5ba1c8">
-                <propertyInstance
-                  Id="20bc33d1-9178-4687-a823-30ec383559e4"
-                  name="PackageVisibility"
-                  value="internal" />
-              </stereotypeInstanceHasPropertyInstances>
-            </propertyInstances>
-          </stereotypeInstance>
-        </appliedStereotypesInternal>
         <ownedRedefinableTemplateSignatureInternal>
           <redefinableTemplateSignature
             Id="814895df-af76-4bc2-9dd5-bb60edc8b106"
