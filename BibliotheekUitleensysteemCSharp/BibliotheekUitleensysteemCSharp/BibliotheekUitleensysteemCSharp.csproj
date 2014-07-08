@@ -67,7 +67,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservering.cs" />
-    <Compile Include="Set.cs" />
+    <Compile Include="java\Set.cs" />
     <Compile Include="java\SimpleDateFormat.cs" />
     <Compile Include="SpecialDate.cs" />
     <Compile Include="system\Enum.cs" />
