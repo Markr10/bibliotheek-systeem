@@ -1627,27 +1627,10 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="f145d46e-9877-4221-8aa0-8f2af82fe5b6"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
-                      LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="df6ff5af-b7a1-45ec-8885-54a9e7d8f1c1"
+                  Id="cddee837-44ff-4c8d-a314-bdf0f17a26a5"
                   name="titel"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="528eb492-8acc-4a49-8840-f091d7d66010"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3D(Name%3DsetTitel OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3Dtitel"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -1725,27 +1708,10 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3915a30a-11d5-4056-879c-aae11abb9226"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="da058ca3-7afc-4b5b-be47-c95deb09ebb7"
-                      LastKnownName="Enum"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ee2a1a28-a260-4a31-a641-ad65c33f5f6d"
+                  Id="69fa9530-a2ea-4c43-8efd-5903c7c16848"
                   name="type"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="fab4549b-e3d4-466f-a571-1f96e88bba90"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3D(Name%3DsetType OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DEnum)]) ParameterIdentifier%3Dtype"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="da058ca3-7afc-4b5b-be47-c95deb09ebb7"
@@ -1824,166 +1790,6 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="82c11a8e-03ec-43f4-a808-f5b1faa66ff6"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
-                      LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="685a3079-bd84-4807-a0a4-c2a07ce2c9ba"
-            name="getClass"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="b6756a6e-23bb-4b39-9eb3-b007b94c4ca2"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3DgetClass"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="29735d67-849d-4023-908f-9e9b7b1e7f73"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="07c55128-4d02-4866-bbb1-2d0da7c5b165">
-                    <propertyInstance
-                      Id="a9f4ed11-a140-4a0d-ac34-5c53da901e5d"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="72c2ab3e-dddc-4b35-b51b-033b4a895fb2">
-                    <propertyInstance
-                      Id="1ef275a1-1eb3-4dca-9594-712b6b1da432"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="0259e46e-86a7-47fa-a3e0-c3e8ffa3bbe3">
-                    <propertyInstance
-                      Id="581ee209-061b-4e04-a2da-63722e2884db"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="cac42471-0254-45d1-abba-20a98d0b3999">
-                    <propertyInstance
-                      Id="b73ea7f4-0b59-4ac7-9f5c-bf46caed8e01"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="6ec980e3-1faa-49af-87a5-7f2ccf463254">
-                    <propertyInstance
-                      Id="7042527a-d527-4477-9a75-9c46d60eac05"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="8e787a28-eb2b-485c-8ad4-7fcf8dcfc2aa">
-                    <propertyInstance
-                      Id="980e9de9-e28a-4427-a618-99be29cc5fc4"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="2ea477cf-c8e8-4f2f-8654-a5b8aa083b20"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
-                      LastKnownName="Artikel"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="cc66d724-fe44-4b5b-83b6-f1f7eb3f573f"
-            name="getSimpleName"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="603710fe-7d6f-457d-8647-e8ce4c2072aa"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3DgetSimpleName"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="497a60db-0d48-48e3-8066-402ea0bbfa0d"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="aedc4fa0-3e0d-41fe-9f03-c75e5017a4cf">
-                    <propertyInstance
-                      Id="aa7a20ec-d942-4ba4-afaf-2efc74d590c3"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="ca2af25f-ffb2-4e29-ae85-fcc92b9ab5b1">
-                    <propertyInstance
-                      Id="55a74ebb-ece4-4a7c-a466-66917b9c2b24"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="445cdaec-b023-4757-b292-118c7fcf0a57">
-                    <propertyInstance
-                      Id="67df5ce7-c142-4ae7-b1b4-7a5aa73771ae"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="4c8f9512-d6e4-4269-b0b6-39c73f1e848b">
-                    <propertyInstance
-                      Id="32c377d6-0f85-495d-9098-f0b0f17d2c70"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d9d2d0f7-afff-4164-9a63-259a5dbb736a">
-                    <propertyInstance
-                      Id="694f9d2e-e2e4-43a3-95ce-dfa200a0d94a"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5a14b7e0-49bc-4535-9e0e-765ae3cf9696">
-                    <propertyInstance
-                      Id="e46c9ec6-b4f3-48d0-8641-88178f2afca3"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7d7a9a85-0e26-48f3-88ed-d18f533354cc"
                   direction="Return">
                   <type_NamedElement>
                     <classMoniker
@@ -13127,27 +12933,10 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="06c91874-6f3d-4c46-acd1-dc3c6f51daa8"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
-                      LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="eae6e4a8-0219-4755-9e76-6aa562c6beed"
+                  Id="05d51941-3e62-40b9-8c01-1397107b9708"
                   name="releasedatum"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="c10de769-4db5-497b-ba12-32b59ce7ae43"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DCd Member%3D(Name%3DsetReleasedatum OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3Dreleasedatum"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
