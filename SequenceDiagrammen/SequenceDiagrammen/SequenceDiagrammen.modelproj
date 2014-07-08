@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{a07f45bf-7a0b-40ce-90c1-75a74a0edc0a}</ProjectGuid>
+    <ProjectGuid>{7a42432a-2219-4144-9ed3-2338a949484c}</ProjectGuid>
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
     <Name>SequenceDiagrammen</Name>
     <RootNamespace>Diagrams</RootNamespace>
