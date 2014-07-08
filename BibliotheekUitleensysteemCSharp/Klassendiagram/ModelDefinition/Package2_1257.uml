@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="2f82ab44-1b11-4688-8f35-e81bdcc68a7e"
+  name="util"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c124fb7a-daef-4838-9fcb-4f5ac62ae1f7"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3Djava.util"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="4bb0237e-13c5-4db2-adb0-db7caf2172ae"
+        name="ArrayList&lt;Integer‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="f4e8bbd3-377e-4ee0-b2a8-8cbabb611cad">
+            <redefinableTemplateSignatureMoniker
+              Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="ca3543c1-d242-4f92-a224-258b4f2f9cdc">
+                  <actuals>
+                    <classMoniker
+                      Id="0ab693d5-9bd6-4fd1-95fb-ac620f80dcc5"
+                      LastKnownName="Integer"
+                      LastKnownLocation="Package3_1257.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1a862ed6-f040-455d-91f8-666b5a543451"
+                      LastKnownLocation="Package2_1257.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1afc0ca8-b7fc-4134-96df-47bcd02193bf"
+        name="ArrayList"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="6148d9d3-05e9-4355-a737-089026450cd3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Namespace%3Djava.util Type%3D(Name%3DArrayList GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="1a862ed6-f040-455d-91f8-666b5a543451">
+                <referencesInternal>
+                  <reference
+                    Id="a3813258-962a-4fd5-9dee-83ba85c0bf1f"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Namespace%3Djava.util Type%3D(Name%3DArrayList GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="55bd6367-0b74-4371-a00f-307b7c9a1005"
+                    name="E"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="07376806-000f-4482-b30a-a37ad31968d9"
+        name="ArrayList&lt;Int32‎[]‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="aa5ef33f-5cec-4699-8b44-e9486ea80444">
+            <redefinableTemplateSignatureMoniker
+              Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="a1bc165c-a8ae-4276-a219-c45ca0bcb837">
+                  <actuals>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1a862ed6-f040-455d-91f8-666b5a543451"
+                      LastKnownLocation="Package2_1257.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2bc8666f-27ae-4fff-b6ef-ff2f806082cc"
+        LastKnownName="LinkedHashMap"
+        LastKnownLocation="Package4_1257.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="22b04f1a-cc9c-4226-9acd-99bc138b72be"
+        name="ArrayList&lt;Artikel‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="2a9f302a-8c87-4631-9291-804ad4809550">
+            <redefinableTemplateSignatureMoniker
+              Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="2b9f0de0-afee-44ea-8bef-24018a1f87fd">
+                  <actuals>
+                    <classMoniker
+                      Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
+                      LastKnownName="Artikel"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1a862ed6-f040-455d-91f8-666b5a543451"
+                      LastKnownLocation="Package2_1257.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8561b74c-eb29-473c-94e1-896a3ebdf743"
+        name="ArrayList&lt;Boete‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="8453ec72-1fb3-43f4-800d-dd06d63834dd">
+            <redefinableTemplateSignatureMoniker
+              Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="163997b6-9e47-4190-af1b-3475a8a9b6f2">
+                  <actuals>
+                    <classMoniker
+                      Id="767cdf0b-b773-4e87-8d55-f8d4917aad0d"
+                      LastKnownName="Boete"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1a862ed6-f040-455d-91f8-666b5a543451"
+                      LastKnownLocation="Package2_1257.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c0215d5d-453d-4b9c-a087-3f5a1194ba2c"
+        name="ArrayList&lt;Exemplaar‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="466480f6-d333-49c3-ac04-b123c5f5dc43">
+            <redefinableTemplateSignatureMoniker
+              Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="71eb0839-f8d7-4ca2-b7d5-8fe8934b639a">
+                  <actuals>
+                    <classMoniker
+                      Id="c99a44d6-0f3e-491b-ae5b-61bb2fe2e6f3"
+                      LastKnownName="Exemplaar"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1a862ed6-f040-455d-91f8-666b5a543451"
+                      LastKnownLocation="Package2_1257.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="129fb16e-4d90-4054-b798-8bb5298c036a"
+        name="ArrayList&lt;Lid‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="e2e033fe-3cee-4aef-9776-6c7ea9cdca60">
+            <redefinableTemplateSignatureMoniker
+              Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="378e2a35-0f34-4f39-8299-f0b9ce7702cc">
+                  <actuals>
+                    <classMoniker
+                      Id="e4ce1f47-b825-47d3-a654-93232bb51671"
+                      LastKnownName="Lid"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1a862ed6-f040-455d-91f8-666b5a543451"
+                      LastKnownLocation="Package2_1257.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="37a54c34-c137-479d-ba29-6960a501cfcd"
+        name="ArrayList&lt;Reservering‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="b943d132-882c-4608-bffb-3247696b01e4">
+            <redefinableTemplateSignatureMoniker
+              Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="5e7011e6-5cda-4a84-b587-414f2d35a59f">
+                  <actuals>
+                    <classMoniker
+                      Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
+                      LastKnownName="Reservering"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1a862ed6-f040-455d-91f8-666b5a543451"
+                      LastKnownLocation="Package2_1257.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8f481537-d272-446d-8c83-0bd7b531e932"
+        name="ArrayList&lt;Uitlening‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="573b6104-a694-49f9-96fb-744c988f8e3f">
+            <redefinableTemplateSignatureMoniker
+              Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="585bc5f1-b4f2-4938-ad57-6d2f2acbecc7">
+                  <actuals>
+                    <classMoniker
+                      Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9"
+                      LastKnownName="Uitlening"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1a862ed6-f040-455d-91f8-666b5a543451"
+                      LastKnownLocation="Package2_1257.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c1141717-b65d-4c0e-81b5-d54b79e6c044"
+        name="ArrayList&lt;String‎[]‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <signatures>
+          <templateBinding
+            Id="02a2640f-0f92-4238-8fa4-276543803616">
+            <redefinableTemplateSignatureMoniker
+              Id="caa9023d-046f-4776-adb9-4c88f7d5ee82"
+              LastKnownLocation="Package2_1257.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="b781a657-9f4a-450f-99ae-a5c43b226551">
+                  <actuals>
+                    <classMoniker
+                      Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
+                      LastKnownName="String"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1a862ed6-f040-455d-91f8-666b5a543451"
+                      LastKnownLocation="Package2_1257.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

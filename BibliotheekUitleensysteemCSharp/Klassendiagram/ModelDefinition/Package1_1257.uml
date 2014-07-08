@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="560ad946-e781-4bc1-aa5c-3f07d7ed1b11"
+  name="java"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="3ba18bfd-a001-43be-bd14-f348ac65181b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3Djava"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2f82ab44-1b11-4688-8f35-e81bdcc68a7e"
+        LastKnownName="util"
+        LastKnownLocation="Package2_1257.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d7683c0e-d15f-4128-88a6-115d2ea6d8c4"
+        LastKnownName="lang"
+        LastKnownLocation="Package3_1257.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a30fe62b-59b0-47b0-8bdd-c18ebd70930a"
+        LastKnownName="text"
+        LastKnownLocation="Package_1300.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

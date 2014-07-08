@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotheekUitleensysteemCSharp", "BibliotheekUitleensysteemCSharp\BibliotheekUitleensysteemCSharp.csproj", "{36226AAB-BAAD-4082-BDFD-316CBF36FC06}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Klassendiagram", "Klassendiagram\Klassendiagram.modelproj", "{A07F45BF-7A0B-40CE-90C1-75A74A0EDC0A}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SequenceDiagrammen", "..\SequenceDiagrammen\SequenceDiagrammen\SequenceDiagrammen.modelproj", "{7A42432A-2219-4144-9ED3-2338A949484C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36226AAB-BAAD-4082-BDFD-316CBF36FC06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36226AAB-BAAD-4082-BDFD-316CBF36FC06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36226AAB-BAAD-4082-BDFD-316CBF36FC06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36226AAB-BAAD-4082-BDFD-316CBF36FC06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07F45BF-7A0B-40CE-90C1-75A74A0EDC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07F45BF-7A0B-40CE-90C1-75A74A0EDC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07F45BF-7A0B-40CE-90C1-75A74A0EDC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07F45BF-7A0B-40CE-90C1-75A74A0EDC0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A42432A-2219-4144-9ED3-2338A949484C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A42432A-2219-4144-9ED3-2338A949484C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A42432A-2219-4144-9ED3-2338A949484C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A42432A-2219-4144-9ED3-2338A949484C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

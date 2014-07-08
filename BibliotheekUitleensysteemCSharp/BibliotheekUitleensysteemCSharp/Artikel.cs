@@ -1,3 +1,4 @@
+using System;
 
 /**
  * Een abstracte klasse waarmee artikelen gemaakt kunnen worden.
@@ -11,7 +12,7 @@ public abstract class Artikel
     private int id;
     private String titel;
     protected Enum type;
-    private boolean nietMeerInGebruik;
+    private Boolean nietMeerInGebruik;
     
     /**
      * Constructor voor objecten van de klasse artikel.
@@ -64,7 +65,7 @@ public abstract class Artikel
      * 
      * @return De niet meer gebruikt status van het artikel.
      */
-    public boolean getNietMeerInGebruik() 
+    public Boolean getNietMeerInGebruik() 
     {
         return nietMeerInGebruik;
     }
@@ -74,7 +75,7 @@ public abstract class Artikel
      * 
      * @return true als het instellen gelukt is, anders false
      */
-    public boolean setNietMeerInGebruik()
+    public Boolean setNietMeerInGebruik()
     {
         if(!nietMeerInGebruik)
         {
@@ -86,11 +87,11 @@ public abstract class Artikel
             return false;
         }
     }
-    
+
     /**
      * Stelt de titel van het artikel in.
      */
-    public void setTitel(String titel) 
+    public void setTitel(String titel)
     {
         this.titel = titel;
     }
@@ -98,7 +99,7 @@ public abstract class Artikel
     /**
      * Stelt het type van het artikel in.
      */
-    public void setType(Enum type) 
+    public void setType(Enum type)
     {
         this.type = type;
     }
@@ -108,9 +109,18 @@ public abstract class Artikel
      *
      * @return naam van de klasse + het type
      */
-    @Override
     public String toString()
     {
         return (this.getClass().getSimpleName() + " " + type.toString());
+    }
+
+    private Artikel getClass()
+    {
+        return this;
+    }
+
+    private String getSimpleName()
+    {
+        return "";
     }
 }

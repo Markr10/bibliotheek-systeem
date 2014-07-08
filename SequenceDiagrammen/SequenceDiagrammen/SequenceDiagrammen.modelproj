@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7a42432a-2219-4144-9ed3-2338a949484c}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>SequenceDiagrammen</Name>
+    <RootNamespace>Diagrams</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addBoek.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addBoek.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\add methodes\Bibliotheek_addBoek.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addCd.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addCd.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\add methodes\Bibliotheek_addCd.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addExemplaar.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addExemplaar.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\add methodes\Bibliotheek_addExemplaar.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addLid.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addLid.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\add methodes\Bibliotheek_addLid.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addReservering.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addReservering.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\add methodes\Bibliotheek_addReservering.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addUitlening.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addUitlening.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\add methodes\Bibliotheek_addUitlening.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addVideoband.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addVideoband.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\add methodes\Bibliotheek_addVideoband.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\andere methodes\BibliotheekCLI_BibliotheekCLI.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\andere methodes\BibliotheekCLI_BibliotheekCLI.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\andere methodes\BibliotheekCLI_BibliotheekCLI.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\andere methodes\Bibliotheek_Bibliotheek.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\andere methodes\Bibliotheek_Bibliotheek.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\andere methodes\Bibliotheek_Bibliotheek.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\andere methodes\Bibliotheek_verwijderArtikel.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\andere methodes\Bibliotheek_verwijderArtikel.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\andere methodes\Bibliotheek_verwijderArtikel.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\andere\Bibliotheek_isAndGetUitgeleendEnAanLid.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\andere\Bibliotheek_isAndGetUitgeleendEnAanLid.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\get methodes\andere\Bibliotheek_isAndGetUitgeleendEnAanLid.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\Bibliotheek_getBoeteBedragUitlening.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\Bibliotheek_getBoeteBedragUitlening.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\get methodes\Bibliotheek_getBoeteBedragUitlening.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\Bibliotheek_getOpenReservering.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\Bibliotheek_getOpenReservering.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\get methodes\Bibliotheek_getOpenReservering.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\Bibliotheek_getVerschuldigdBedragLid.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\Bibliotheek_getVerschuldigdBedragLid.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\get methodes\Bibliotheek_getVerschuldigdBedragLid.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\Bibliotheek_getVerschuldigdBedragUitlening.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\Bibliotheek_getVerschuldigdBedragUitlening.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\get methodes\Bibliotheek_getVerschuldigdBedragUitlening.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInfoArtikelen.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInfoArtikelen.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInfoArtikelen.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInkomsten.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInkomsten.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInkomsten.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\importeer methodes\Bibliotheek_importeerBoekenAndExemplaren.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\importeer methodes\Bibliotheek_importeerBoekenAndExemplaren.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\importeer methodes\Bibliotheek_importeerBoekenAndExemplaren.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\importeer methodes\Bibliotheek_importeerCdsAndExemplaren.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\importeer methodes\Bibliotheek_importeerCdsAndExemplaren.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\importeer methodes\Bibliotheek_importeerCdsAndExemplaren.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\importeer methodes\Bibliotheek_importeerLeden.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\importeer methodes\Bibliotheek_importeerLeden.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\importeer methodes\Bibliotheek_importeerLeden.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\importeer methodes\Bibliotheek_importeerVideobandenAndExemplaren.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\importeer methodes\Bibliotheek_importeerVideobandenAndExemplaren.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\importeer methodes\Bibliotheek_importeerVideobandenAndExemplaren.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isArtikelExemplarenUigeleendOfGereserveerd.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isArtikelExemplarenUigeleendOfGereserveerd.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\is methodes\Bibliotheek_isArtikelExemplarenUigeleendOfGereserveerd.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isBoeteReservering.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isBoeteReservering.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\is methodes\Bibliotheek_isBoeteReservering.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isBoeteUitlening.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isBoeteUitlening.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\is methodes\Bibliotheek_isBoeteUitlening.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isExemplarenTeLeen.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isExemplarenTeLeen.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\is methodes\Bibliotheek_isExemplarenTeLeen.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isGereserveerdEnVoorLid.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isGereserveerdEnVoorLid.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\is methodes\Bibliotheek_isGereserveerdEnVoorLid.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isGereserveerdExemplaar.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isGereserveerdExemplaar.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\is methodes\Bibliotheek_isGereserveerdExemplaar.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isLidArtikelLenenOfReserveren.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isLidArtikelLenenOfReserveren.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\is methodes\Bibliotheek_isLidArtikelLenenOfReserveren.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isReserveringUitgeleend.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isReserveringUitgeleend.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\is methodes\Bibliotheek_isReserveringUitgeleend.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isUitgeleend.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\is methodes\Bibliotheek_isUitgeleend.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\is methodes\Bibliotheek_isUitgeleend.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\brieven\BibliotheekCLI_printReserveringsbrieven.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\brieven\BibliotheekCLI_printReserveringsbrieven.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\print methodes\brieven\BibliotheekCLI_printReserveringsbrieven.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\brieven\BibliotheekCLI_printWaarschuwingsbrieven.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\brieven\BibliotheekCLI_printWaarschuwingsbrieven.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\print methodes\brieven\BibliotheekCLI_printWaarschuwingsbrieven.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\informatie\BibliotheekCLI_printFinanciën.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\informatie\BibliotheekCLI_printFinanciën.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\print methodes\informatie\BibliotheekCLI_printFinanciën.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\informatie\BibliotheekCLI_printInfoArtikelen.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\informatie\BibliotheekCLI_printInfoArtikelen.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\print methodes\informatie\BibliotheekCLI_printInfoArtikelen.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\lijsten\BibliotheekCLI_printArtikelen.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\lijsten\BibliotheekCLI_printArtikelen.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\print methodes\lijsten\BibliotheekCLI_printArtikelen.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\lijsten\BibliotheekCLI_printLeden.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\lijsten\BibliotheekCLI_printLeden.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\print methodes\lijsten\BibliotheekCLI_printLeden.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\lijsten\BibliotheekCLI_printReserveringen.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\lijsten\BibliotheekCLI_printReserveringen.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\print methodes\lijsten\BibliotheekCLI_printReserveringen.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndAddUitlening.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndAddUitlening.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndAddUitlening.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndInleverenExemplaar.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndInleverenExemplaar.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndInleverenExemplaar.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\Bibliotheek_betaalBoetesLid.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\Bibliotheek_betaalBoetesLid.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\Bibliotheek_betaalBoetesLid.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\Bibliotheek_controleerAndSetBoeteUitlening.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\Bibliotheek_controleerAndSetBoeteUitlening.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\Bibliotheek_controleerAndSetBoeteUitlening.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\Bibliotheek_controleerAndSetReservering.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\Bibliotheek_controleerAndSetReservering.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\Bibliotheek_controleerAndSetReservering.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\Bibliotheek_inleverenExemplaar.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\Bibliotheek_inleverenExemplaar.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\Bibliotheek_inleverenExemplaar.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkNieuweBoetes.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkNieuweBoetes.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkNieuweBoetes.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkReserveringsbrieven.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkReserveringsbrieven.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkReserveringsbrieven.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerlopenReserveringen.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerlopenReserveringen.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerlopenReserveringen.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerschuldigdBedrag.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerschuldigdBedrag.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerschuldigdBedrag.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigBoek.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigBoek.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigBoek.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigCD.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigCD.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigCD.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigVideoband.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigVideoband.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigVideoband.sequencediagram</DependentUpon>
+    </Content>
+    <Folder Include="SequenceDiagrammen" />
+    <Folder Include="SequenceDiagrammen\add methodes" />
+    <Folder Include="SequenceDiagrammen\andere methodes" />
+    <Folder Include="SequenceDiagrammen\get methodes" />
+    <Folder Include="SequenceDiagrammen\get methodes\andere" />
+    <Folder Include="SequenceDiagrammen\get methodes\voor BibliotheekCLI" />
+    <Folder Include="SequenceDiagrammen\importeer methodes" />
+    <Folder Include="SequenceDiagrammen\is methodes" />
+    <Folder Include="SequenceDiagrammen\print methodes" />
+    <Folder Include="SequenceDiagrammen\print methodes\brieven" />
+    <Folder Include="SequenceDiagrammen\print methodes\informatie" />
+    <Folder Include="SequenceDiagrammen\print methodes\lijsten" />
+    <Folder Include="SequenceDiagrammen\print methodes\printAndAdd" />
+    <Folder Include="SequenceDiagrammen\set methodes" />
+    <Folder Include="SequenceDiagrammen\set methodes\verwerk methodes" />
+    <Folder Include="SequenceDiagrammen\set methodes\wijzig methodes" />
+  </ItemGroup>
+</Project>
