@@ -80,6 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Klassendiagram.cd" />
     <None Include="Sequence Diagrammen\andere methodes\BibliotheekCLI_BibliotheekCLI.sequencediagram" />
     <None Include="Sequence Diagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndInleverenExemplaar.sequencediagram" />
     <None Include="Sequence Diagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndAddUitlening.sequencediagram" />
