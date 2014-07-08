@@ -88,25 +88,19 @@ public abstract class Artikel
     }
     
     /**
-     * Returned de titel van het artikel.
-     * 
-     * @return De titel van het artikel.
+     * Stelt de titel van het artikel in.
      */
-    public String setTitel(String titel) 
+    public void setTitel(String titel) 
     {
         this.titel = titel;
-        return titel;
     }
 
     /**
-     * Returned het type van het artikel.
-     * 
-     * @return Het type van het artikel.
+     * Stelt het type van het artikel in.
      */
-    public Enum setType(Enum type) 
+    public void setType(Enum type) 
     {
         this.type = type;
-        return type;
     }
     
     /**

@@ -36,13 +36,10 @@ public class Cd extends Artikel
     }
     
     /**
-     * Set en returned de releasedatum van de cd.
-     * 
-     * @return De nieuwe releasedatum van de cd.
+     * Stelt de releasedatum van de cd in.
      */
-    public String setReleasedatum(String releasedatum) 
+    public void setReleasedatum(String releasedatum) 
     {
         this.releasedatum = releasedatum;
-        return releasedatum;
     }
 }
