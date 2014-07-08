@@ -77,6 +77,9 @@ Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 
+# Log from the reverse engineering operation of the Architecture Explorer
+ReverseEngineering.Log.xml
+
 # =========================
 # Windows detritus
 # =========================
