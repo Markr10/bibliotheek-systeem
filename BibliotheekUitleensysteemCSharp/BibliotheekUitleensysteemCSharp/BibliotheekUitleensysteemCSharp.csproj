@@ -80,7 +80,210 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Sequence Diagrammen\andere methodes\BibliotheekCLI_BibliotheekCLI.sequencediagram" />
+    <None Include="Sequence Diagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndInleverenExemplaar.sequencediagram" />
+    <None Include="Sequence Diagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndAddUitlening.sequencediagram" />
+    <None Include="Sequence Diagrammen\print methodes\lijsten\BibliotheekCLI_printArtikelen.sequencediagram" />
+    <None Include="Sequence Diagrammen\print methodes\informatie\BibliotheekCLI_printFinanciën.sequencediagram" />
+    <None Include="Sequence Diagrammen\print methodes\informatie\BibliotheekCLI_printInfoArtikelen.sequencediagram" />
+    <None Include="Sequence Diagrammen\print methodes\lijsten\BibliotheekCLI_printLeden.sequencediagram" />
+    <None Include="Sequence Diagrammen\print methodes\lijsten\BibliotheekCLI_printReserveringen.sequencediagram" />
+    <None Include="Sequence Diagrammen\print methodes\brieven\BibliotheekCLI_printReserveringsbrieven.sequencediagram" />
+    <None Include="Sequence Diagrammen\print methodes\brieven\BibliotheekCLI_printWaarschuwingsbrieven.sequencediagram" />
+    <None Include="Sequence Diagrammen\add methodes\Bibliotheek_addBoek.sequencediagram" />
+    <None Include="Sequence Diagrammen\add methodes\Bibliotheek_addCd.sequencediagram" />
+    <None Include="Sequence Diagrammen\add methodes\Bibliotheek_addExemplaar.sequencediagram" />
+    <None Include="Sequence Diagrammen\add methodes\Bibliotheek_addLid.sequencediagram" />
+    <None Include="Sequence Diagrammen\add methodes\Bibliotheek_addReservering.sequencediagram" />
+    <None Include="Sequence Diagrammen\add methodes\Bibliotheek_addUitlening.sequencediagram" />
+    <None Include="Sequence Diagrammen\add methodes\Bibliotheek_addVideoband.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\Bibliotheek_betaalBoetesLid.sequencediagram" />
+    <None Include="Sequence Diagrammen\andere methodes\Bibliotheek_Bibliotheek.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\Bibliotheek_controleerAndSetBoeteUitlening.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\Bibliotheek_controleerAndSetReservering.sequencediagram" />
+    <None Include="Sequence Diagrammen\get methodes\Bibliotheek_getBoeteBedragUitlening.sequencediagram" />
+    <None Include="Sequence Diagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInfoArtikelen.sequencediagram" />
+    <None Include="Sequence Diagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInkomsten.sequencediagram" />
+    <None Include="Sequence Diagrammen\get methodes\Bibliotheek_getOpenReservering.sequencediagram" />
+    <None Include="Sequence Diagrammen\get methodes\Bibliotheek_getVerschuldigdBedragLid.sequencediagram" />
+    <None Include="Sequence Diagrammen\get methodes\Bibliotheek_getVerschuldigdBedragUitlening.sequencediagram" />
+    <None Include="Sequence Diagrammen\importeer methodes\Bibliotheek_importeerBoekenAndExemplaren.sequencediagram" />
+    <None Include="Sequence Diagrammen\importeer methodes\Bibliotheek_importeerCdsAndExemplaren.sequencediagram" />
+    <None Include="Sequence Diagrammen\importeer methodes\Bibliotheek_importeerLeden.sequencediagram" />
+    <None Include="Sequence Diagrammen\importeer methodes\Bibliotheek_importeerVideobandenAndExemplaren.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\Bibliotheek_inleverenExemplaar.sequencediagram" />
+    <None Include="Sequence Diagrammen\get methodes\andere\Bibliotheek_isAndGetUitgeleendEnAanLid.sequencediagram" />
+    <None Include="Sequence Diagrammen\is methodes\Bibliotheek_isArtikelExemplarenUigeleendOfGereserveerd.sequencediagram" />
+    <None Include="Sequence Diagrammen\is methodes\Bibliotheek_isBoeteReservering.sequencediagram" />
+    <None Include="Sequence Diagrammen\is methodes\Bibliotheek_isBoeteUitlening.sequencediagram" />
+    <None Include="Sequence Diagrammen\is methodes\Bibliotheek_isExemplarenTeLeen.sequencediagram" />
+    <None Include="Sequence Diagrammen\is methodes\Bibliotheek_isGereserveerdEnVoorLid.sequencediagram" />
+    <None Include="Sequence Diagrammen\is methodes\Bibliotheek_isGereserveerdExemplaar.sequencediagram" />
+    <None Include="Sequence Diagrammen\is methodes\Bibliotheek_isLidArtikelLenenOfReserveren.sequencediagram" />
+    <None Include="Sequence Diagrammen\is methodes\Bibliotheek_isReserveringUitgeleend.sequencediagram" />
+    <None Include="Sequence Diagrammen\is methodes\Bibliotheek_isUitgeleend.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkNieuweBoetes.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkReserveringsbrieven.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerlopenReserveringen.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerschuldigdBedrag.sequencediagram" />
+    <None Include="Sequence Diagrammen\andere methodes\Bibliotheek_verwijderArtikel.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigBoek.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigCD.sequencediagram" />
+    <None Include="Sequence Diagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigVideoband.sequencediagram" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Sequence Diagrammen\andere methodes\BibliotheekCLI_BibliotheekCLI.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_BibliotheekCLI.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndInleverenExemplaar.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_printAndInleverenExemplaar.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\print methodes\printAndAdd\BibliotheekCLI_printAndAddUitlening.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_printAndAddUitlening.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\print methodes\lijsten\BibliotheekCLI_printArtikelen.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_printArtikelen.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\print methodes\informatie\BibliotheekCLI_printFinanciën.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_printFinanciën.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\print methodes\informatie\BibliotheekCLI_printInfoArtikelen.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_printInfoArtikelen.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\print methodes\lijsten\BibliotheekCLI_printLeden.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_printLeden.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\print methodes\lijsten\BibliotheekCLI_printReserveringen.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_printReserveringen.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\print methodes\brieven\BibliotheekCLI_printReserveringsbrieven.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_printReserveringsbrieven.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\print methodes\brieven\BibliotheekCLI_printWaarschuwingsbrieven.sequencediagram.layout">
+      <DependentUpon>BibliotheekCLI_printWaarschuwingsbrieven.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\add methodes\Bibliotheek_addBoek.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_addBoek.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\add methodes\Bibliotheek_addCd.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_addCd.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\add methodes\Bibliotheek_addExemplaar.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_addExemplaar.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\add methodes\Bibliotheek_addLid.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_addLid.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\add methodes\Bibliotheek_addReservering.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_addReservering.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\add methodes\Bibliotheek_addUitlening.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_addUitlening.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\add methodes\Bibliotheek_addVideoband.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_addVideoband.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\Bibliotheek_betaalBoetesLid.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_betaalBoetesLid.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\andere methodes\Bibliotheek_Bibliotheek.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_Bibliotheek.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\Bibliotheek_controleerAndSetBoeteUitlening.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_controleerAndSetBoeteUitlening.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\Bibliotheek_controleerAndSetReservering.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_controleerAndSetReservering.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\get methodes\Bibliotheek_getBoeteBedragUitlening.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_getBoeteBedragUitlening.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInfoArtikelen.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_getInfoArtikelen.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\get methodes\voor BibliotheekCLI\Bibliotheek_getInkomsten.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_getInkomsten.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\get methodes\Bibliotheek_getOpenReservering.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_getOpenReservering.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\get methodes\Bibliotheek_getVerschuldigdBedragLid.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_getVerschuldigdBedragLid.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\get methodes\Bibliotheek_getVerschuldigdBedragUitlening.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_getVerschuldigdBedragUitlening.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\importeer methodes\Bibliotheek_importeerBoekenAndExemplaren.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_importeerBoekenAndExemplaren.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\importeer methodes\Bibliotheek_importeerCdsAndExemplaren.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_importeerCdsAndExemplaren.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\importeer methodes\Bibliotheek_importeerLeden.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_importeerLeden.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\importeer methodes\Bibliotheek_importeerVideobandenAndExemplaren.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_importeerVideobandenAndExemplaren.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\Bibliotheek_inleverenExemplaar.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_inleverenExemplaar.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\get methodes\andere\Bibliotheek_isAndGetUitgeleendEnAanLid.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isAndGetUitgeleendEnAanLid.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\is methodes\Bibliotheek_isArtikelExemplarenUigeleendOfGereserveerd.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isArtikelExemplarenUigeleendOfGereserveerd.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\is methodes\Bibliotheek_isBoeteReservering.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isBoeteReservering.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\is methodes\Bibliotheek_isBoeteUitlening.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isBoeteUitlening.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\is methodes\Bibliotheek_isExemplarenTeLeen.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isExemplarenTeLeen.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\is methodes\Bibliotheek_isGereserveerdEnVoorLid.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isGereserveerdEnVoorLid.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\is methodes\Bibliotheek_isGereserveerdExemplaar.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isGereserveerdExemplaar.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\is methodes\Bibliotheek_isLidArtikelLenenOfReserveren.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isLidArtikelLenenOfReserveren.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\is methodes\Bibliotheek_isReserveringUitgeleend.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isReserveringUitgeleend.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\is methodes\Bibliotheek_isUitgeleend.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_isUitgeleend.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkNieuweBoetes.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_verwerkNieuweBoetes.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkReserveringsbrieven.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_verwerkReserveringsbrieven.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerlopenReserveringen.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_verwerkVerlopenReserveringen.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerschuldigdBedrag.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_verwerkVerschuldigdBedrag.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\andere methodes\Bibliotheek_verwijderArtikel.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_verwijderArtikel.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigBoek.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_wijzigBoek.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigCD.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_wijzigCD.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence Diagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigVideoband.sequencediagram.layout">
+      <DependentUpon>Bibliotheek_wijzigVideoband.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
