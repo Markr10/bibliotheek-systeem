@@ -37,6 +37,36 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DBibliotheekCLI"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="29451816-2968-4cba-85c8-a83a457693fd">
+            <classMoniker
+              Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
+              LastKnownName="Reservering"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="e2516bff-16b2-43b9-b70c-31979dadd2fe">
+            <classMoniker
+              Id="e4ce1f47-b825-47d3-a654-93232bb51671"
+              LastKnownName="Lid"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="0f513fe3-d228-4142-99dc-3f7f8dacbbaf">
+            <classMoniker
+              Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
+              LastKnownName="Artikel"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="06e049e5-fb12-42fd-8a58-3315fadb140d">
+            <classMoniker
+              Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149"
+              LastKnownName="Cd"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="e8a1b665-a446-45b2-9816-a7df80380823"
@@ -715,6 +745,113 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DBibliotheek"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="33c4e7f9-a45a-4422-826c-3ab1434ccda4">
+            <classMoniker
+              Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
+              LastKnownName="SpecialDate"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="85de79df-e587-4304-8920-78d2ae95307c">
+            <classMoniker
+              Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9"
+              LastKnownName="Uitlening"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="d3490fc3-7838-4742-b9b2-541de35b26bd">
+            <classMoniker
+              Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
+              LastKnownName="Reservering"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="789516f3-e2ed-40ed-ade6-6fd853583e02">
+            <classMoniker
+              Id="767cdf0b-b773-4e87-8d55-f8d4917aad0d"
+              LastKnownName="Boete"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="4c623810-e692-473b-b736-75888afd88c3">
+            <enumerationMoniker
+              Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
+              LastKnownName="BoeteKlasseType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="efdbde29-9b55-4f06-91c8-dc971c8201a9">
+            <classMoniker
+              Id="c99a44d6-0f3e-491b-ae5b-61bb2fe2e6f3"
+              LastKnownName="Exemplaar"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="2e81b23e-5c94-4182-af3e-99954eb03ef9">
+            <classMoniker
+              Id="e4ce1f47-b825-47d3-a654-93232bb51671"
+              LastKnownName="Lid"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="0a0a88e5-411e-4390-9803-ffd79484fd5a">
+            <classMoniker
+              Id="43a54b59-d8ae-4742-9edf-bbca51394221"
+              LastKnownName="ImportData"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="8ceca7b3-8b9f-4895-a30b-884bb9db7cdb">
+            <classMoniker
+              Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
+              LastKnownName="Artikel"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="c5ceea6b-6763-4123-923b-6b3d68c7c90f">
+            <classMoniker
+              Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149"
+              LastKnownName="Cd"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="2dab3dde-9bba-4f0a-960e-c17de74ac76e">
+            <enumerationMoniker
+              Id="09827b4c-5bfa-41e7-83a4-b933e1cfa9af"
+              LastKnownName="BoekType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="7ba79131-c7ac-406f-9ff0-4c58a58e1d1d">
+            <classMoniker
+              Id="ce7cec1d-0a7b-4ea1-9e64-f942472d0fc9"
+              LastKnownName="Boek"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="03b349cd-efdf-42fb-8c92-ec9f357b8197">
+            <enumerationMoniker
+              Id="e89c8c70-54ff-4bf0-a001-0ef8c01152c2"
+              LastKnownName="CdType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="901c49a5-ecda-4589-a881-f85f035f8476">
+            <classMoniker
+              Id="db7a6cdd-53b4-4afb-a271-f62aad409a4e"
+              LastKnownName="Videoband"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="4e7d1518-57be-4513-b4a9-7410bdc3fdab">
+            <enumerationMoniker
+              Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
+              LastKnownName="VideobandType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="cec57d55-aa9a-4adf-9b9c-7a0e486f675a"
@@ -3236,6 +3373,22 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DReservering"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="9a78a22b-64e2-4e9a-9b28-4283c57277c3">
+            <classMoniker
+              Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
+              LastKnownName="SpecialDate"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="3e116ea2-2e31-44c3-8c44-f1c0ae69c791">
+            <classMoniker
+              Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d"
+              LastKnownName="Bibliotheek"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="77c80c78-7498-4d3f-bfb2-e0724453016e"
@@ -3907,6 +4060,15 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DUitlening"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="aaffc939-abdc-457c-ab09-aa61ee7a31f0">
+            <classMoniker
+              Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
+              LastKnownName="SpecialDate"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="839a9b45-7b68-492e-9f5d-7b69aa36c37e"
@@ -4292,6 +4454,15 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DBoete"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="81bdff4c-eaf1-47d8-9762-1d73735e3ce2">
+            <enumerationMoniker
+              Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
+              LastKnownName="BoeteKlasseType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="f8acb5ad-77a2-4a4e-ac1d-65ddf5d99b54"
@@ -4806,6 +4977,22 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DLid"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="8fae09ca-b0f4-4019-a2fb-1a47ad738eed">
+            <classMoniker
+              Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
+              LastKnownName="SpecialDate"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="df662677-6ed8-4f06-9992-719ff7b6472c">
+            <classMoniker
+              Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d"
+              LastKnownName="Bibliotheek"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property
             Id="e8f478ce-b5eb-4eaf-a6e6-4a8e9aa938c1"
@@ -5271,6 +5458,15 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DBoek"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="6345743d-f70a-459e-8299-0867bf5df184">
+            <enumerationMoniker
+              Id="09827b4c-5bfa-41e7-83a4-b933e1cfa9af"
+              LastKnownName="BoekType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="2dc9e359-c74c-4f72-926a-14029309b28b"
@@ -5386,6 +5582,15 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DCd"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="3239c2aa-9fdf-4711-b4e2-ec34a6b8afba">
+            <enumerationMoniker
+              Id="e89c8c70-54ff-4bf0-a001-0ef8c01152c2"
+              LastKnownName="CdType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="2177412a-f842-473d-8dcc-888170a10d24"
@@ -6077,6 +6282,15 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DImportData"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="234d562d-5f60-4ca1-a878-3539cfef1b18">
+            <classMoniker
+              Id="c02ab8fa-5eb4-4fc1-b29c-008790b15eda"
+              LastKnownName="IncorrectStartCsvFileException"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="e16de206-1c5c-4098-b2b2-c06286ef1638"
@@ -6324,6 +6538,15 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DVideoband"
             tag="ViewCode" />
         </referencesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="8c658e1f-3982-43b5-a366-57dc3408073b">
+            <enumerationMoniker
+              Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
+              LastKnownName="VideobandType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="c8383cc6-b931-4dbc-9c4e-c998f9b89503"
