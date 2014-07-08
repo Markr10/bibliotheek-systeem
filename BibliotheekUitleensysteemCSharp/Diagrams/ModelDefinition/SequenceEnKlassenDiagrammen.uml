@@ -43,49 +43,6 @@
             handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DBibliotheekCLI"
             tag="ViewCode" />
         </referencesInternal>
-        <appliedStereotypesInternal>
-          <stereotypeInstance
-            Id="295a83fa-898e-421d-8a53-06e4af68345e"
-            name="class"
-            profile="CSharpProfile">
-            <propertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="37018037-bbbe-4bd1-92fa-63ca764747aa">
-                <propertyInstance
-                  Id="4296a9d7-cc7d-473c-963b-0c8a4c629d31"
-                  name="ClrAttributes" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="2205f90b-4719-4fa9-a6c6-3b2789dfc87d">
-                <propertyInstance
-                  Id="6d8a34bc-c600-46e0-b5b8-2f254560eb79"
-                  name="IsPartial"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="ccaa8a60-af27-4edb-9b8c-a5cb093c4b24">
-                <propertyInstance
-                  Id="0c512a62-34e2-4130-8d5e-9716f59a50ce"
-                  name="IsStatic"
-                  value="False" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="704be92f-e3b4-49c2-bfc8-f6104748a04b">
-                <propertyInstance
-                  Id="cd55d5b5-b481-4462-aabf-fd6371f8f11a"
-                  name="IsUnsafe"
-                  value="false" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="af874097-516a-4f28-a5fe-3777bf61e631">
-                <propertyInstance
-                  Id="4d5c08f5-3293-4cc7-8899-13d70cc22a31"
-                  name="PackageVisibility"
-                  value="internal" />
-              </stereotypeInstanceHasPropertyInstances>
-            </propertyInstances>
-          </stereotypeInstance>
-        </appliedStereotypesInternal>
         <generalsInternal>
           <generalization
             Id="e8a1b665-a446-45b2-9816-a7df80380823"

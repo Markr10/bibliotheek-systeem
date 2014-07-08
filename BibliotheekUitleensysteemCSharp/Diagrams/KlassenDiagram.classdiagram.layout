@@ -16,14 +16,14 @@
         <OperationElementListCompartment Id="0a62c370-b2a6-4bd8-9d79-fcabd2a7c312" absoluteBounds="8.14, 3.1832030529777207, 5.0950000000000006, 7.5683591390649472" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="dde6488b-edac-4583-be33-0638cbeb4149" absoluteBounds="4.5, 0.5, 1.5, 2.6292418247461318" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+    <classShape Id="dde6488b-edac-4583-be33-0638cbeb4149" absoluteBounds="4.5, 0.5, 2.75, 2.5039061854283013" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
       <classMoniker Id="8bf048f4-37aa-4371-a8f9-c8ef95367e35" LastKnownName="BibliotheekCLI" />
       <nestedChildShapes>
-        <AttributeElementListCompartment Id="8104236c-4efe-44b6-8a3c-158affec7066" absoluteBounds="4.515, 1.0153356393178306, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-        <OperationElementListCompartment Id="3903c830-1c09-47b8-ba11-1cc3253f900a" absoluteBounds="4.515, 1.2265075068672497, 1.4700000000000002, 1.8027343178788819" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <AttributeElementListCompartment Id="8104236c-4efe-44b6-8a3c-158affec7066" absoluteBounds="4.515, 0.89, 2.7199999999999998, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="3903c830-1c09-47b8-ba11-1cc3253f900a" absoluteBounds="4.515, 1.1011718675494193, 2.7199999999999998, 1.8027343178788819" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <generalizationConnector edgePoints="[(6 : 1.81462091237307); (8.125 : 1.81462091237307)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110">
+    <generalizationConnector edgePoints="[(7.25 : 1.75598800527132); (8.125 : 1.75598800527132)]" fixedFrom="Caller" fixedTo="Algorithm" customColor="113, 111, 110">
       <generalizationMoniker Id="73a763fb-5394-400a-8157-90f13cdd4e51" />
       <relativeChildShapes />
       <nodes>
