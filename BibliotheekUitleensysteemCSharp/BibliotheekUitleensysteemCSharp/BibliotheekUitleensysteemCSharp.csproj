@@ -41,56 +41,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayList.cs" />
+    <Compile Include="java\ArrayList.cs" />
     <Compile Include="Artikel.cs" />
-    <Compile Include="Arrays.cs" />
+    <Compile Include="java\Arrays.cs" />
     <Compile Include="Bibliotheek.cs" />
     <Compile Include="BibliotheekCLI.cs" />
     <Compile Include="Boek.cs" />
     <Compile Include="BoekType.cs" />
     <Compile Include="Boete.cs" />
     <Compile Include="BoeteKlasseType.cs" />
-    <Compile Include="BufferedReader.cs" />
-    <Compile Include="Calendar.cs" />
+    <Compile Include="java\BufferedReader.cs" />
+    <Compile Include="java\Calendar.cs" />
     <Compile Include="Cd.cs" />
     <Compile Include="CdType.cs" />
-    <Compile Include="Date.cs" />
+    <Compile Include="java\Date.cs" />
     <Compile Include="Exemplaar.cs" />
-    <Compile Include="FileReader.cs" />
+    <Compile Include="java\FileReader.cs" />
     <Compile Include="ImportData.cs" />
     <Compile Include="IncorrectStartCsvFileException.cs" />
-    <Compile Include="Integer.cs" />
+    <Compile Include="java\Integer.cs" />
     <Compile Include="Lid.cs" />
-    <Compile Include="LinkedHashMap.cs" />
-    <Compile Include="Math.cs" />
-    <Compile Include="ParseException.cs" />
+    <Compile Include="java\LinkedHashMap.cs" />
+    <Compile Include="system\Math.cs" />
+    <Compile Include="java\ParseException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservering.cs" />
     <Compile Include="Set.cs" />
-    <Compile Include="SimpleDateFormat.cs" />
+    <Compile Include="java\SimpleDateFormat.cs" />
     <Compile Include="SpecialDate.cs" />
-    <Compile Include="Enum.cs" />
-    <Compile Include="String.cs" />
-    <Compile Include="Throwable.cs" />
-    <Compile Include="TimeZone.cs" />
+    <Compile Include="system\Enum.cs" />
+    <Compile Include="system\String.cs" />
+    <Compile Include="java\Throwable.cs" />
+    <Compile Include="java\TimeZone.cs" />
     <Compile Include="Uitlening.cs" />
     <Compile Include="Videoband.cs" />
     <Compile Include="VideobandType.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="test\empty.csv" />
-    <None Include="test\multiLine.csv" />
-    <None Include="test\multiLineMissingRowColumn.csv" />
-    <None Include="test\multiLinePlusBlancoLine.csv" />
-    <None Include="test\multiLineRowValuesEmpty.csv" />
-    <None Include="test\oneBlancoLine.csv" />
-    <None Include="test\oneLineBase.csv" />
-    <None Include="test\oneLineNoDataFirst.csv" />
-    <None Include="test\oneLineNoDataSecond.csv" />
-    <None Include="test\oneLineNoDataThird.csv" />
-    <None Include="test\oneLineOne.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
