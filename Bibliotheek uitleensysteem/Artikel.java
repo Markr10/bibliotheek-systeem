@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+
 /**
  * Een abstracte klasse waarmee artikelen gemaakt kunnen worden.
  * 
