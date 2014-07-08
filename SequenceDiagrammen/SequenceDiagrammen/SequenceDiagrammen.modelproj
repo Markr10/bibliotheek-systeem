@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{a07f45bf-7a0b-40ce-90c1-75a74a0edc0a}</ProjectGuid>
     <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
-    <Name>SequenceEnKlassenDiagrammen</Name>
+    <Name>SequenceDiagrammen</Name>
     <RootNamespace>Diagrams</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -22,30 +22,6 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="ModelDefinition\Package1_1257.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package1_1300.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package2_1257.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package2_1300.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package3_1257.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package4_1257.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package_1257.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package_1300.uml">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="SequenceDiagrammen\add methodes\Bibliotheek_addBoek.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -375,13 +351,6 @@
       <SubType>Content</SubType>
       <DependentUpon>SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerschuldigdBedrag.sequencediagram</DependentUpon>
     </Content>
-    <Content Include="Klassendiagram.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Klassendiagram.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Klassendiagram.classdiagram</DependentUpon>
-    </Content>
     <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigBoek.sequencediagram">
       <SubType>Content</SubType>
     </Content>
@@ -402,10 +371,6 @@
     <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigVideoband.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigVideoband.sequencediagram</DependentUpon>
-    </Content>
-    <Folder Include="ModelDefinition\" />
-    <Content Include="ModelDefinition\Package_Diagrams.uml">
-      <SubType>Content</SubType>
     </Content>
     <Folder Include="SequenceDiagrammen" />
     <Folder Include="SequenceDiagrammen\add methodes" />

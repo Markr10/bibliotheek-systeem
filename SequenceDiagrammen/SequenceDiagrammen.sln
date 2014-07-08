@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SequenceEnKlassenDiagrammen", "SequenceEnKlassenDiagrammen\SequenceEnKlassenDiagrammen.modelproj", "{A07F45BF-7A0B-40CE-90C1-75A74A0EDC0A}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SequenceDiagrammen", "SequenceDiagrammen\SequenceDiagrammen.modelproj", "{A07F45BF-7A0B-40CE-90C1-75A74A0EDC0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
