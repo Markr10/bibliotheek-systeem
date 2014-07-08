@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliotheekUitleensysteemCSharp", "BibliotheekUitleensysteemCSharp\BibliotheekUitleensysteemCSharp.csproj", "{36226AAB-BAAD-4082-BDFD-316CBF36FC06}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SequenceEnKlassenDiagrammen", "Diagrams\SequenceEnKlassenDiagrammen.modelproj", "{A07F45BF-7A0B-40CE-90C1-75A74A0EDC0A}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "SequenceEnKlassenDiagrammen", "SequenceEnKlassenDiagrammen\SequenceEnKlassenDiagrammen.modelproj", "{A07F45BF-7A0B-40CE-90C1-75A74A0EDC0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
