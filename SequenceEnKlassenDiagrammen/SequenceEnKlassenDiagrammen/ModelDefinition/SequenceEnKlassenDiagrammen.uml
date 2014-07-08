@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="e4f32cfe-422a-4004-beb0-30ea5f0bb2cf"
   name="Diagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -341,6 +341,12 @@
                 handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3Dtype"
                 tag="ViewCode" />
             </referencesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="4599ca94-bc55-40d7-b502-9ef1376f4ef9"
+                LastKnownName="Enum"
+                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+            </type_NamedElement>
           </property>
           <property
             Id="1b61e511-b421-4b9c-be8f-cea66864c7a3"
@@ -369,58 +375,6 @@
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
-          <operation
-            Id="9c0c2057-4c10-4899-b237-b88755c3aa08"
-            name="Artikel"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="90ea3eb3-2eb7-4bbe-a11f-8060d2fc8a0d"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DEnum)])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="99ff282a-4d5f-4479-b78c-9920f457a1d5"
-                  name="id"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
-                      LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="77864046-8a19-4f49-bab7-30207227c83b"
-                  name="titel"
-                  direction="In"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
-                      LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="0b83553d-d376-42f2-86c8-6c49f87dd768"
-                  name="type"
-                  direction="In"
-                  isUnique="false" />
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
           <operation
             Id="086b3648-5bfb-437e-948f-683b8982efa5"
             name="getID"
@@ -498,7 +452,14 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="3880ffa5-6de6-48be-ad3e-ef16122a8889"
-                  direction="Return" />
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4599ca94-bc55-40d7-b502-9ef1376f4ef9"
+                      LastKnownName="Enum"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </type_NamedElement>
+                </parameter>
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -583,6 +544,12 @@
                   name="titel"
                   direction="In"
                   isUnique="false">
+                  <referencesInternal>
+                    <reference
+                      Id="5d9ede32-807f-4b46-9761-868ad1b505ad"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3D(Name%3DsetTitel OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3Dtitel"
+                      tag="ViewCode" />
+                  </referencesInternal>
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -590,30 +557,6 @@
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="8a569ae2-c175-4d18-a381-cacaf57c9ab6"
-            name="setType"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="ccad0175-7a7c-4514-ba02-aefada9e052d"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3D(Name%3DsetType OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DEnum)])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="69fa9530-a2ea-4c43-8efd-5903c7c16848"
-                  name="type"
-                  direction="In"
-                  isUnique="false" />
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
@@ -640,6 +583,101 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="14ec65fd-77be-455c-ade0-cd735529f94b"
+            name="Artikel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="95c419ec-bc7a-404d-9d33-e750802488f8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DEnum)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="55577c4d-503b-4281-a3dc-47848bd86bad"
+                  name="id"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="885251af-ee71-4f9e-b265-6be0a7223aa3"
+                  name="titel"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
+                      LastKnownName="String"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1fd94426-a92b-405a-aa9d-c4419f15ff8f"
+                  name="type"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4599ca94-bc55-40d7-b502-9ef1376f4ef9"
+                      LastKnownName="Enum"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ef784ec9-9b63-49be-9e8d-1b26a8611592"
+            name="setType"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6f6d9634-0183-4b18-bb19-c4b215827f64"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3D(Name%3DsetType OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DEnum)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="93eba7fe-7f2c-43da-a96d-aa958914fab1"
+                  name="type"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="57947ddf-8989-4559-a75b-2523808cc6bc"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DArtikel Member%3D(Name%3DsetType OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DEnum)]) ParameterIdentifier%3Dtype"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="4599ca94-bc55-40d7-b502-9ef1376f4ef9"
+                      LastKnownName="Enum"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -6469,6 +6507,21 @@
       <undefinedType
         Id="7c11b624-9cc1-40c5-88fe-439440a0a7db"
         name="long" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4599ca94-bc55-40d7-b502-9ef1376f4ef9"
+        name="Enum"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f48b0e6b-1193-4dff-a04f-69784233e604"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DEnum"
+            tag="ViewCode" />
+        </referencesInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
