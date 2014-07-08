@@ -375,12 +375,12 @@
       <SubType>Content</SubType>
       <DependentUpon>SequenceDiagrammen\set methodes\verwerk methodes\Bibliotheek_verwerkVerschuldigdBedrag.sequencediagram</DependentUpon>
     </Content>
-    <Content Include="KlassenDiagram.classdiagram">
+    <Content Include="Klassendiagram.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="KlassenDiagram.classdiagram.layout">
+    <Content Include="Klassendiagram.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>KlassenDiagram.classdiagram</DependentUpon>
+      <DependentUpon>Klassendiagram.classdiagram</DependentUpon>
     </Content>
     <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigBoek.sequencediagram">
       <SubType>Content</SubType>
@@ -404,7 +404,7 @@
       <DependentUpon>SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigVideoband.sequencediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
-    <Content Include="ModelDefinition\SequenceEnKlassenDiagrammen.uml">
+    <Content Include="ModelDefinition\Package_Diagrams.uml">
       <SubType>Content</SubType>
     </Content>
     <Folder Include="SequenceDiagrammen" />

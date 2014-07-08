@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="e4f32cfe-422a-4004-beb0-30ea5f0bb2cf"
   name="Diagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -43,56 +43,56 @@
             <classMoniker
               Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
               LastKnownName="Reservering"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="e2516bff-16b2-43b9-b70c-31979dadd2fe">
             <classMoniker
               Id="e4ce1f47-b825-47d3-a654-93232bb51671"
               LastKnownName="Lid"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="0f513fe3-d228-4142-99dc-3f7f8dacbbaf">
             <classMoniker
               Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
               LastKnownName="Artikel"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="06e049e5-fb12-42fd-8a58-3315fadb140d">
             <classMoniker
               Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149"
               LastKnownName="Cd"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="00ff8033-bd1c-4d71-99f5-8dd57a2828b6">
             <classMoniker
               Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
               LastKnownName="Artikel"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="a2199939-9242-4e0e-ba45-a26ad1f74f58">
             <classMoniker
               Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149"
               LastKnownName="Cd"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="2fd962c3-c26c-4e4a-b936-79f1b42ce9f3">
             <classMoniker
               Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
               LastKnownName="Reservering"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="317e520a-ef74-494d-a47c-a6d2ce444d07">
             <classMoniker
               Id="e4ce1f47-b825-47d3-a654-93232bb51671"
               LastKnownName="Lid"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <generalsInternal>
@@ -102,7 +102,7 @@
             <classMoniker
               Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d"
               LastKnownName="Bibliotheek"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </generalization>
         </generalsInternal>
         <ownedOperationsInternal>
@@ -131,7 +131,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -145,7 +145,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -176,7 +176,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -190,7 +190,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -355,7 +355,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -379,7 +379,7 @@
               <classMoniker
                 Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                 LastKnownName="String"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -403,7 +403,7 @@
               <classMoniker
                 Id="4599ca94-bc55-40d7-b502-9ef1376f4ef9"
                 LastKnownName="Enum"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -428,7 +428,7 @@
               <undefinedTypeMoniker
                 Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                 LastKnownName="boolean"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -457,7 +457,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -486,7 +486,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -515,7 +515,7 @@
                     <classMoniker
                       Id="4599ca94-bc55-40d7-b502-9ef1376f4ef9"
                       LastKnownName="Enum"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -545,7 +545,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -575,7 +575,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -612,7 +612,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -641,7 +641,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -672,7 +672,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -686,7 +686,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -700,7 +700,7 @@
                     <classMoniker
                       Id="4599ca94-bc55-40d7-b502-9ef1376f4ef9"
                       LastKnownName="Enum"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -736,7 +736,7 @@
                     <classMoniker
                       Id="4599ca94-bc55-40d7-b502-9ef1376f4ef9"
                       LastKnownName="Enum"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -779,210 +779,210 @@
             <classMoniker
               Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
               LastKnownName="SpecialDate"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="85de79df-e587-4304-8920-78d2ae95307c">
             <classMoniker
               Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9"
               LastKnownName="Uitlening"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="d3490fc3-7838-4742-b9b2-541de35b26bd">
             <classMoniker
               Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
               LastKnownName="Reservering"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="789516f3-e2ed-40ed-ade6-6fd853583e02">
             <classMoniker
               Id="767cdf0b-b773-4e87-8d55-f8d4917aad0d"
               LastKnownName="Boete"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="4c623810-e692-473b-b736-75888afd88c3">
             <enumerationMoniker
               Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
               LastKnownName="BoeteKlasseType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="efdbde29-9b55-4f06-91c8-dc971c8201a9">
             <classMoniker
               Id="c99a44d6-0f3e-491b-ae5b-61bb2fe2e6f3"
               LastKnownName="Exemplaar"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="2e81b23e-5c94-4182-af3e-99954eb03ef9">
             <classMoniker
               Id="e4ce1f47-b825-47d3-a654-93232bb51671"
               LastKnownName="Lid"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="0a0a88e5-411e-4390-9803-ffd79484fd5a">
             <classMoniker
               Id="43a54b59-d8ae-4742-9edf-bbca51394221"
               LastKnownName="ImportData"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="8ceca7b3-8b9f-4895-a30b-884bb9db7cdb">
             <classMoniker
               Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
               LastKnownName="Artikel"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="c5ceea6b-6763-4123-923b-6b3d68c7c90f">
             <classMoniker
               Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149"
               LastKnownName="Cd"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="2dab3dde-9bba-4f0a-960e-c17de74ac76e">
             <enumerationMoniker
               Id="09827b4c-5bfa-41e7-83a4-b933e1cfa9af"
               LastKnownName="BoekType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="7ba79131-c7ac-406f-9ff0-4c58a58e1d1d">
             <classMoniker
               Id="ce7cec1d-0a7b-4ea1-9e64-f942472d0fc9"
               LastKnownName="Boek"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="03b349cd-efdf-42fb-8c92-ec9f357b8197">
             <enumerationMoniker
               Id="e89c8c70-54ff-4bf0-a001-0ef8c01152c2"
               LastKnownName="CdType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="901c49a5-ecda-4589-a881-f85f035f8476">
             <classMoniker
               Id="db7a6cdd-53b4-4afb-a271-f62aad409a4e"
               LastKnownName="Videoband"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="4e7d1518-57be-4513-b4a9-7410bdc3fdab">
             <enumerationMoniker
               Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
               LastKnownName="VideobandType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="838ab24e-118e-44c3-945a-80a307c72a1f">
             <classMoniker
               Id="43a54b59-d8ae-4742-9edf-bbca51394221"
               LastKnownName="ImportData"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="92398f16-2acf-46ca-a7fc-df45c721e0b8">
             <classMoniker
               Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
               LastKnownName="Artikel"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="5fc4dbf8-8e31-4099-b7d9-cba4364b6764">
             <classMoniker
               Id="ce7cec1d-0a7b-4ea1-9e64-f942472d0fc9"
               LastKnownName="Boek"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="b990298d-2c8e-474a-841c-636d9dec572a">
             <classMoniker
               Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149"
               LastKnownName="Cd"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="700970f6-0175-45cf-b10d-9a4e23e8c001">
             <classMoniker
               Id="db7a6cdd-53b4-4afb-a271-f62aad409a4e"
               LastKnownName="Videoband"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="3947fa8f-22d8-4166-96f0-8ce76bd4fd31">
             <enumerationMoniker
               Id="09827b4c-5bfa-41e7-83a4-b933e1cfa9af"
               LastKnownName="BoekType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="23bac30a-183f-4e2f-ba92-0829070ccae5">
             <enumerationMoniker
               Id="e89c8c70-54ff-4bf0-a001-0ef8c01152c2"
               LastKnownName="CdType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="ac324528-3d35-4e8e-bbfe-0eee2a47936d">
             <enumerationMoniker
               Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
               LastKnownName="VideobandType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="47ea3c93-0b2b-483a-a8be-c865766d365d">
             <classMoniker
               Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
               LastKnownName="SpecialDate"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="7ecbebc4-8a62-4da9-9942-8400163ef0f4">
             <classMoniker
               Id="767cdf0b-b773-4e87-8d55-f8d4917aad0d"
               LastKnownName="Boete"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="8929e534-2e95-46f4-9962-0c7b847c2676">
             <enumerationMoniker
               Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
               LastKnownName="BoeteKlasseType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="88b5f83f-7fc5-44b3-98e1-dfb4d6f5f7ce">
             <classMoniker
               Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
               LastKnownName="Reservering"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="5078fbd3-5ee9-4d6f-b225-71f6f3922393">
             <classMoniker
               Id="e4ce1f47-b825-47d3-a654-93232bb51671"
               LastKnownName="Lid"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="63ff0df6-551c-413e-a690-ca44a2b13bf3">
             <classMoniker
               Id="c99a44d6-0f3e-491b-ae5b-61bb2fe2e6f3"
               LastKnownName="Exemplaar"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="b687ef6a-8555-4974-98f8-691d34e5795a">
             <classMoniker
               Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9"
               LastKnownName="Uitlening"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
@@ -1007,7 +1007,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1031,7 +1031,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1055,7 +1055,7 @@
               <undefinedTypeMoniker
                 Id="11a60b4c-7795-4cc6-a11d-3143c3f050e4"
                 LastKnownName="short"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1079,7 +1079,7 @@
               <undefinedTypeMoniker
                 Id="11a60b4c-7795-4cc6-a11d-3143c3f050e4"
                 LastKnownName="short"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1102,7 +1102,7 @@
               <undefinedTypeMoniker
                 Id="11a60b4c-7795-4cc6-a11d-3143c3f050e4"
                 LastKnownName="short"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1126,7 +1126,7 @@
               <undefinedTypeMoniker
                 Id="11a60b4c-7795-4cc6-a11d-3143c3f050e4"
                 LastKnownName="short"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1150,7 +1150,7 @@
               <undefinedTypeMoniker
                 Id="11a60b4c-7795-4cc6-a11d-3143c3f050e4"
                 LastKnownName="short"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -1339,7 +1339,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1353,7 +1353,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1384,7 +1384,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1398,7 +1398,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1429,7 +1429,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1443,7 +1443,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1474,7 +1474,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1488,7 +1488,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1519,7 +1519,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1533,7 +1533,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1564,7 +1564,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1578,7 +1578,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1607,7 +1607,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1626,7 +1626,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1645,7 +1645,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1674,7 +1674,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1693,7 +1693,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1712,7 +1712,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1731,7 +1731,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1761,7 +1761,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1775,7 +1775,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1789,7 +1789,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1818,7 +1818,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1838,7 +1838,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1867,7 +1867,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1886,7 +1886,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1916,7 +1916,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1930,7 +1930,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1944,7 +1944,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1974,7 +1974,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1988,7 +1988,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2002,7 +2002,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2050,7 +2050,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2098,7 +2098,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2146,7 +2146,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2194,7 +2194,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2224,7 +2224,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2238,7 +2238,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2252,7 +2252,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2266,7 +2266,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2296,7 +2296,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2310,7 +2310,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2324,7 +2324,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2338,7 +2338,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2352,7 +2352,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2382,7 +2382,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2396,7 +2396,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2410,7 +2410,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2424,7 +2424,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2454,7 +2454,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2468,7 +2468,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2498,7 +2498,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2512,7 +2512,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2542,7 +2542,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2556,7 +2556,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2586,7 +2586,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2600,7 +2600,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2630,7 +2630,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2644,7 +2644,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2674,7 +2674,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2688,7 +2688,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2718,7 +2718,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2732,7 +2732,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2746,7 +2746,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2776,7 +2776,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2790,7 +2790,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2804,7 +2804,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2834,7 +2834,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2848,7 +2848,7 @@
                     <classMoniker
                       Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
                       LastKnownName="Reservering"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2878,7 +2878,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2892,7 +2892,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2922,7 +2922,7 @@
                     <classMoniker
                       Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9"
                       LastKnownName="Uitlening"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2936,7 +2936,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2950,7 +2950,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2980,7 +2980,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2994,7 +2994,7 @@
                     <classMoniker
                       Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9"
                       LastKnownName="Uitlening"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3024,7 +3024,7 @@
                     <classMoniker
                       Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
                       LastKnownName="Reservering"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3038,7 +3038,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3068,7 +3068,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3082,7 +3082,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3112,7 +3112,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3126,7 +3126,7 @@
                     <classMoniker
                       Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9"
                       LastKnownName="Uitlening"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3156,7 +3156,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3170,7 +3170,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3201,7 +3201,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3215,7 +3215,7 @@
                     <classMoniker
                       Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9"
                       LastKnownName="Uitlening"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3245,7 +3245,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3259,7 +3259,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3289,7 +3289,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3303,7 +3303,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3317,7 +3317,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3406,7 +3406,7 @@
                     <undefinedTypeMoniker
                       Id="d6460adf-efec-44b0-a6b9-bb0b252a1430"
                       LastKnownName="ArrayList&lt;int[]&gt;"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3436,7 +3436,7 @@
                     <undefinedTypeMoniker
                       Id="340120d7-91fb-435a-8b3a-38d60c5aef51"
                       LastKnownName="LinkedHashMap&lt;Integer, int[]&gt;"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3478,7 +3478,7 @@
                     <undefinedTypeMoniker
                       Id="56695c31-573d-42d9-b65c-c19432de4a79"
                       LastKnownName="int[]"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3512,28 +3512,28 @@
             <classMoniker
               Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
               LastKnownName="SpecialDate"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="3e116ea2-2e31-44c3-8c44-f1c0ae69c791">
             <classMoniker
               Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d"
               LastKnownName="Bibliotheek"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="e1eacd97-bd27-4403-b9ae-b1030eb2f874">
             <classMoniker
               Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
               LastKnownName="SpecialDate"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="014b3d43-aa40-433b-96ae-ac9236896543">
             <classMoniker
               Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d"
               LastKnownName="Bibliotheek"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
@@ -3559,7 +3559,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3584,7 +3584,7 @@
               <undefinedTypeMoniker
                 Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                 LastKnownName="boolean"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3608,7 +3608,7 @@
               <classMoniker
                 Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                 LastKnownName="String"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3633,7 +3633,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3658,7 +3658,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3683,7 +3683,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3707,7 +3707,7 @@
               <classMoniker
                 Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                 LastKnownName="String"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3731,7 +3731,7 @@
               <classMoniker
                 Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                 LastKnownName="String"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3756,7 +3756,7 @@
               <undefinedTypeMoniker
                 Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                 LastKnownName="boolean"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -3786,7 +3786,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3800,7 +3800,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3814,7 +3814,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3844,7 +3844,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3858,7 +3858,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3888,7 +3888,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3918,7 +3918,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3947,7 +3947,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3977,7 +3977,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4007,7 +4007,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4037,7 +4037,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4066,7 +4066,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4095,7 +4095,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4125,7 +4125,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4155,7 +4155,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4185,7 +4185,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4213,14 +4213,14 @@
             <classMoniker
               Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
               LastKnownName="SpecialDate"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="eb3f8ec2-2ecd-422c-a68a-cc6b3f00f81d">
             <classMoniker
               Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
               LastKnownName="SpecialDate"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
@@ -4246,7 +4246,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4271,7 +4271,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4296,7 +4296,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4320,7 +4320,7 @@
               <classMoniker
                 Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                 LastKnownName="String"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4344,7 +4344,7 @@
               <classMoniker
                 Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                 LastKnownName="String"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -4374,7 +4374,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4388,7 +4388,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4402,7 +4402,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4432,7 +4432,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4462,7 +4462,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4492,7 +4492,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4521,7 +4521,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4550,7 +4550,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4580,7 +4580,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4614,14 +4614,14 @@
             <enumerationMoniker
               Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
               LastKnownName="BoeteKlasseType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="20f79f42-b768-4fe1-bafe-05012d4dd9c1">
             <enumerationMoniker
               Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
               LastKnownName="BoeteKlasseType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
@@ -4647,7 +4647,7 @@
               <undefinedTypeMoniker
                 Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                 LastKnownName="boolean"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4671,7 +4671,7 @@
               <enumerationMoniker
                 Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
                 LastKnownName="BoeteKlasseType"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4696,7 +4696,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -4721,7 +4721,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -4751,7 +4751,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4765,7 +4765,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4779,7 +4779,7 @@
                     <enumerationMoniker
                       Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
                       LastKnownName="BoeteKlasseType"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4793,7 +4793,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4823,7 +4823,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4852,7 +4852,7 @@
                     <enumerationMoniker
                       Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
                       LastKnownName="BoeteKlasseType"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4882,7 +4882,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4912,7 +4912,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4942,7 +4942,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -4987,7 +4987,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -5012,7 +5012,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -5042,7 +5042,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5056,7 +5056,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5086,7 +5086,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5116,7 +5116,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5144,28 +5144,28 @@
             <classMoniker
               Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
               LastKnownName="SpecialDate"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="df662677-6ed8-4f06-9992-719ff7b6472c">
             <classMoniker
               Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d"
               LastKnownName="Bibliotheek"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="a3e912a5-6a32-4f3b-8424-d9ed968f2b67">
             <classMoniker
               Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
               LastKnownName="SpecialDate"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="be333c38-686f-43dc-9da2-72ec2f540196">
             <classMoniker
               Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d"
               LastKnownName="Bibliotheek"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
@@ -5191,7 +5191,7 @@
               <undefinedTypeMoniker
                 Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                 LastKnownName="boolean"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -5216,7 +5216,7 @@
               <undefinedTypeMoniker
                 Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                 LastKnownName="boolean"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -5241,7 +5241,7 @@
               <undefinedTypeMoniker
                 Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                 LastKnownName="int"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -5265,7 +5265,7 @@
               <classMoniker
                 Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                 LastKnownName="String"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -5289,7 +5289,7 @@
               <classMoniker
                 Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                 LastKnownName="String"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -5324,7 +5324,7 @@
                     <primitiveTypeMoniker
                       Id="220a3521-e091-4221-bae9-3ef9018e845c"
                       LastKnownName="Integer"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5343,7 +5343,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5373,7 +5373,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5403,7 +5403,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5432,7 +5432,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5461,7 +5461,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5491,7 +5491,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5521,7 +5521,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5551,7 +5551,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5581,7 +5581,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5611,7 +5611,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5639,14 +5639,14 @@
             <enumerationMoniker
               Id="09827b4c-5bfa-41e7-83a4-b933e1cfa9af"
               LastKnownName="BoekType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="d6c52f87-3d72-4d40-a878-16aa0c668d58">
             <enumerationMoniker
               Id="09827b4c-5bfa-41e7-83a4-b933e1cfa9af"
               LastKnownName="BoekType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <generalsInternal>
@@ -5656,7 +5656,7 @@
             <classMoniker
               Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
               LastKnownName="Artikel"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </generalization>
         </generalsInternal>
         <ownedOperationsInternal>
@@ -5685,7 +5685,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5699,7 +5699,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5770,14 +5770,14 @@
             <enumerationMoniker
               Id="e89c8c70-54ff-4bf0-a001-0ef8c01152c2"
               LastKnownName="CdType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="77ade9bd-1ece-41e1-b8a7-26d63fbd7f1a">
             <enumerationMoniker
               Id="e89c8c70-54ff-4bf0-a001-0ef8c01152c2"
               LastKnownName="CdType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <generalsInternal>
@@ -5787,7 +5787,7 @@
             <classMoniker
               Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
               LastKnownName="Artikel"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </generalization>
         </generalsInternal>
         <ownedAttributesInternal>
@@ -5812,7 +5812,7 @@
               <classMoniker
                 Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                 LastKnownName="String"
-                LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                LastKnownLocation="Package_Diagrams.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -5842,7 +5842,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5856,7 +5856,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5877,7 +5877,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5908,7 +5908,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -5937,7 +5937,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6010,7 +6010,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6024,7 +6024,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6038,7 +6038,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6068,7 +6068,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6082,7 +6082,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6112,7 +6112,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6126,7 +6126,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6156,7 +6156,7 @@
                     <undefinedTypeMoniker
                       Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
                       LastKnownName="boolean"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6170,7 +6170,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6200,7 +6200,7 @@
                     <undefinedTypeMoniker
                       Id="7c11b624-9cc1-40c5-88fe-439440a0a7db"
                       LastKnownName="long"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6214,7 +6214,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6244,7 +6244,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6258,7 +6258,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6288,7 +6288,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6302,7 +6302,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6316,7 +6316,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6346,7 +6346,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6360,7 +6360,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6390,7 +6390,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6404,7 +6404,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6449,7 +6449,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6477,14 +6477,14 @@
             <classMoniker
               Id="c02ab8fa-5eb4-4fc1-b29c-008790b15eda"
               LastKnownName="IncorrectStartCsvFileException"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="53bf7f99-f3fa-4cf3-a3fa-4dee38fdc3ae">
             <classMoniker
               Id="c02ab8fa-5eb4-4fc1-b29c-008790b15eda"
               LastKnownName="IncorrectStartCsvFileException"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <ownedOperationsInternal>
@@ -6513,7 +6513,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6527,7 +6527,7 @@
                     <undefinedTypeMoniker
                       Id="bc99692a-759e-4530-a30f-4e9543b1d04b"
                       LastKnownName="ArrayList&lt;String[]&gt;("
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6606,7 +6606,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6678,7 +6678,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6740,14 +6740,14 @@
             <enumerationMoniker
               Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
               LastKnownName="VideobandType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
           <dependency
             Id="e04ff242-bfd0-4278-a7c8-037a981f7487">
             <enumerationMoniker
               Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
               LastKnownName="VideobandType"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </dependency>
         </suppliersInternal>
         <generalsInternal>
@@ -6757,7 +6757,7 @@
             <classMoniker
               Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
               LastKnownName="Artikel"
-              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+              LastKnownLocation="Package_Diagrams.uml" />
           </generalization>
         </generalsInternal>
         <ownedOperationsInternal>
@@ -6786,7 +6786,7 @@
                     <undefinedTypeMoniker
                       Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
                       LastKnownName="int"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -6800,7 +6800,7 @@
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
                       LastKnownName="String"
-                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+                      LastKnownLocation="Package_Diagrams.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
