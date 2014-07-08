@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="67d867b5-2b51-457b-af18-b454415d7b41" name="UMLClassDiagram" linkedPackageId="f92be381-f736-4595-9dac-fea189b7379d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="67d867b5-2b51-457b-af18-b454415d7b41" name="UMLClassDiagram" linkedPackageId="f92be381-f736-4595-9dac-fea189b7379d" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="0019def9-3df7-4a8a-9661-aa6ddee627f5" name="Artikel" isAbstract="true" isLeaf="false" isActiveClass="false">
@@ -265,6 +265,68 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d" />
+        <suppliersInternal>
+          <dependency Id="3c5ebf98-9c0b-4ffc-9d48-be5e1d4f6aed">
+            <classMoniker Id="902e5ab8-e6e6-4277-8df6-9559fec2688e" LastKnownName="ImportData" />
+            <elementDefinition Id="838ab24e-118e-44c3-945a-80a307c72a1f" />
+          </dependency>
+          <dependency Id="54f35677-0854-4cf3-b109-343fed7df8f5">
+            <classMoniker Id="0019def9-3df7-4a8a-9661-aa6ddee627f5" LastKnownName="Artikel" />
+            <elementDefinition Id="92398f16-2acf-46ca-a7fc-df45c721e0b8" />
+          </dependency>
+          <dependency Id="ec72cc9d-1265-42de-aa85-385b7d06849d">
+            <classMoniker Id="ffb0af2c-b561-4d9c-a8c1-52c30b33d74d" LastKnownName="Boek" />
+            <elementDefinition Id="5fc4dbf8-8e31-4099-b7d9-cba4364b6764" />
+          </dependency>
+          <dependency Id="a12f8d26-edfb-417a-a5f0-c818182ae5dc">
+            <classMoniker Id="1842c696-dbbe-475b-a8ff-02fa2a66ef9a" LastKnownName="Cd" />
+            <elementDefinition Id="b990298d-2c8e-474a-841c-636d9dec572a" />
+          </dependency>
+          <dependency Id="b5be3492-dc95-4e4a-abb6-f7e69c7f93a9">
+            <classMoniker Id="8dcd4b15-8179-40c4-8f05-de73a6e35df4" LastKnownName="Videoband" />
+            <elementDefinition Id="700970f6-0175-45cf-b10d-9a4e23e8c001" />
+          </dependency>
+          <dependency Id="1b6f78fc-d69a-4f19-915a-df4868dce11d">
+            <enumerationMoniker Id="ee174c1a-6ccc-4e55-b344-dbc21e73406c" LastKnownName="BoekType" />
+            <elementDefinition Id="3947fa8f-22d8-4166-96f0-8ce76bd4fd31" />
+          </dependency>
+          <dependency Id="7c44bdb7-880a-4e96-a07f-d3605640a32e">
+            <enumerationMoniker Id="8987fc3f-b555-416f-89eb-76d35acd4e30" LastKnownName="CdType" />
+            <elementDefinition Id="23bac30a-183f-4e2f-ba92-0829070ccae5" />
+          </dependency>
+          <dependency Id="90f4021e-a48e-4cb0-95a2-a5b39aaaf200">
+            <enumerationMoniker Id="08ba96b7-2562-4189-b12a-7db5c25ca8da" LastKnownName="VideobandType" />
+            <elementDefinition Id="ac324528-3d35-4e8e-bbfe-0eee2a47936d" />
+          </dependency>
+          <dependency Id="cb0085e4-634c-4f7c-a0d0-2fd319771990">
+            <classMoniker Id="703595aa-f24e-47a1-b386-68c6f4463ea7" LastKnownName="SpecialDate" />
+            <elementDefinition Id="47ea3c93-0b2b-483a-a8be-c865766d365d" />
+          </dependency>
+          <dependency Id="a0041109-9d0f-4338-9330-a682d841122a">
+            <classMoniker Id="def716f5-bea6-457e-994f-96136efff00a" LastKnownName="Boete" />
+            <elementDefinition Id="7ecbebc4-8a62-4da9-9942-8400163ef0f4" />
+          </dependency>
+          <dependency Id="7202bada-f6b1-499e-a0df-aabc742d35c1">
+            <enumerationMoniker Id="f7a34870-43d4-4153-a9c4-d3a554bcbe87" LastKnownName="BoeteKlasseType" />
+            <elementDefinition Id="8929e534-2e95-46f4-9962-0c7b847c2676" />
+          </dependency>
+          <dependency Id="62fd87c6-d6a9-4f99-b4cd-0aa7b9e9e9df">
+            <classMoniker Id="fbb6132e-3ce7-4a5f-850e-689c24f453b2" LastKnownName="Reservering" />
+            <elementDefinition Id="88b5f83f-7fc5-44b3-98e1-dfb4d6f5f7ce" />
+          </dependency>
+          <dependency Id="5ca13ca3-eb00-4814-97cc-807e184fba8e">
+            <classMoniker Id="0065ad9c-661a-41e2-8ca9-83e6e8dbd4e0" LastKnownName="Lid" />
+            <elementDefinition Id="5078fbd3-5ee9-4d6f-b225-71f6f3922393" />
+          </dependency>
+          <dependency Id="29a03e3e-5101-4221-816f-110b3bbc6493">
+            <classMoniker Id="528e5f57-73f2-4394-bf68-87d11ee4f680" LastKnownName="Exemplaar" />
+            <elementDefinition Id="63ff0df6-551c-413e-a690-ca44a2b13bf3" />
+          </dependency>
+          <dependency Id="ddd874b8-fb94-4912-9935-416c28ab3dd4">
+            <classMoniker Id="3d5f8733-7164-49c4-b69d-d4d02b943c81" LastKnownName="Uitlening" />
+            <elementDefinition Id="b687ef6a-8555-4974-98f8-691d34e5795a" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="c22ae914-f07e-46ff-90a1-541f86836961" name="DREMPEL_EERSTE_BRIEF" visibility="Protected" isLeaf="false" isStatic="true" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -1783,6 +1845,24 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="331318ed-2d92-4267-a6e1-2b72848f73c2" />
+        <suppliersInternal>
+          <dependency Id="9ff9cef8-5399-4d59-8cb3-ee612a5f369f">
+            <classMoniker Id="0019def9-3df7-4a8a-9661-aa6ddee627f5" LastKnownName="Artikel" />
+            <elementDefinition Id="00ff8033-bd1c-4d71-99f5-8dd57a2828b6" />
+          </dependency>
+          <dependency Id="c0e71ed4-ff35-4da6-9b40-6d1f9c9a4d7d">
+            <classMoniker Id="1842c696-dbbe-475b-a8ff-02fa2a66ef9a" LastKnownName="Cd" />
+            <elementDefinition Id="a2199939-9242-4e0e-ba45-a26ad1f74f58" />
+          </dependency>
+          <dependency Id="b429aa96-0b5e-4a62-8257-fbe8160828bc">
+            <classMoniker Id="fbb6132e-3ce7-4a5f-850e-689c24f453b2" LastKnownName="Reservering" />
+            <elementDefinition Id="2fd962c3-c26c-4e4a-b936-79f1b42ce9f3" />
+          </dependency>
+          <dependency Id="c9264e9a-d7cf-4d35-8965-08ef1684a929">
+            <classMoniker Id="0065ad9c-661a-41e2-8ca9-83e6e8dbd4e0" LastKnownName="Lid" />
+            <elementDefinition Id="317e520a-ef74-494d-a47c-a6d2ce444d07" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization Id="73a763fb-5394-400a-8157-90f13cdd4e51" isSubstitutable="false">
             <classMoniker Id="f087eb4f-7fa8-4319-9151-d7eafada14ad" LastKnownName="Bibliotheek" />
@@ -1917,6 +1997,12 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="ce7cec1d-0a7b-4ea1-9e64-f942472d0fc9" />
+        <suppliersInternal>
+          <dependency Id="d301f2e6-2525-47db-9a3c-bf36b2e0c5c6">
+            <enumerationMoniker Id="ee174c1a-6ccc-4e55-b344-dbc21e73406c" LastKnownName="BoekType" />
+            <elementDefinition Id="d6c52f87-3d72-4d40-a878-16aa0c668d58" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization Id="5ca80271-69b8-4dec-b914-63c5d2e495bf" isSubstitutable="false">
             <classMoniker Id="0019def9-3df7-4a8a-9661-aa6ddee627f5" LastKnownName="Artikel" />
@@ -1966,6 +2052,12 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="767cdf0b-b773-4e87-8d55-f8d4917aad0d" />
+        <suppliersInternal>
+          <dependency Id="2059c4ed-cdbc-4965-9746-95e910e20c67">
+            <enumerationMoniker Id="f7a34870-43d4-4153-a9c4-d3a554bcbe87" LastKnownName="BoeteKlasseType" />
+            <elementDefinition Id="20f79f42-b768-4fe1-bafe-05012d4dd9c1" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="f00881d1-2431-4c68-b276-83793d83604e" name="betaald" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -2189,6 +2281,12 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149" />
+        <suppliersInternal>
+          <dependency Id="bba8342f-adc8-4144-91cf-c8c341e2016a">
+            <enumerationMoniker Id="8987fc3f-b555-416f-89eb-76d35acd4e30" LastKnownName="CdType" />
+            <elementDefinition Id="77ade9bd-1ece-41e1-b8a7-26d63fbd7f1a" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization Id="67167da7-4c18-4196-a27d-e02692fcee99" isSubstitutable="false">
             <classMoniker Id="0019def9-3df7-4a8a-9661-aa6ddee627f5" LastKnownName="Artikel" />
@@ -2699,6 +2797,12 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="43a54b59-d8ae-4742-9edf-bbca51394221" />
+        <suppliersInternal>
+          <dependency Id="917fae05-10d7-4ef5-b61b-9ab73abb809b">
+            <classMoniker Id="31559be2-501e-499a-abd2-ba1c24f7cd20" LastKnownName="IncorrectStartCsvFileException" />
+            <elementDefinition Id="53bf7f99-f3fa-4cf3-a3fa-4dee38fdc3ae" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation Id="ab3232ce-7e42-4f42-ac06-b604393cec3e" name="run" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
             <referencesInternal>
@@ -2852,6 +2956,16 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="e4ce1f47-b825-47d3-a654-93232bb51671" />
+        <suppliersInternal>
+          <dependency Id="9c121861-b89d-4f6b-9736-90d025836c99">
+            <classMoniker Id="703595aa-f24e-47a1-b386-68c6f4463ea7" LastKnownName="SpecialDate" />
+            <elementDefinition Id="a3e912a5-6a32-4f3b-8424-d9ed968f2b67" />
+          </dependency>
+          <dependency Id="4a8e61a2-99b6-427b-9480-2bfeca081fb4">
+            <classMoniker Id="f087eb4f-7fa8-4319-9151-d7eafada14ad" LastKnownName="Bibliotheek" />
+            <elementDefinition Id="be333c38-686f-43dc-9da2-72ec2f540196" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="f1cc2108-2abf-42b0-b08d-c5cfa82ff4a8" name="eersteBrief" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -3119,6 +3233,16 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52" />
+        <suppliersInternal>
+          <dependency Id="7ac0f4bb-6be7-4909-8923-2c4da8e80cd8">
+            <classMoniker Id="703595aa-f24e-47a1-b386-68c6f4463ea7" LastKnownName="SpecialDate" />
+            <elementDefinition Id="e1eacd97-bd27-4403-b9ae-b1030eb2f874" />
+          </dependency>
+          <dependency Id="31cb93c2-0450-4b74-b9f5-0d5934482be6">
+            <classMoniker Id="f087eb4f-7fa8-4319-9151-d7eafada14ad" LastKnownName="Bibliotheek" />
+            <elementDefinition Id="014b3d43-aa40-433b-96ae-ac9236896543" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="81312cc4-e4be-4227-945b-b573d5d1c28e" name="artikelID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -3490,6 +3614,12 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9" />
+        <suppliersInternal>
+          <dependency Id="2ce9134a-0ec9-4bbb-9637-ec12b547be30">
+            <classMoniker Id="703595aa-f24e-47a1-b386-68c6f4463ea7" LastKnownName="SpecialDate" />
+            <elementDefinition Id="eb3f8ec2-2ecd-422c-a68a-cc6b3f00f81d" />
+          </dependency>
+        </suppliersInternal>
         <ownedAttributesInternal>
           <property Id="1731ed8a-92ad-47f0-86c9-a682dd917633" name="exemplaarID" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -3701,6 +3831,12 @@
           </reference>
         </referencesInternal>
         <elementDefinition Id="db7a6cdd-53b4-4afb-a271-f62aad409a4e" />
+        <suppliersInternal>
+          <dependency Id="a1d5d3f5-ec54-4dee-b955-6198ba548eda">
+            <enumerationMoniker Id="08ba96b7-2562-4189-b12a-7db5c25ca8da" LastKnownName="VideobandType" />
+            <elementDefinition Id="e04ff242-bfd0-4278-a7c8-037a981f7487" />
+          </dependency>
+        </suppliersInternal>
         <generalsInternal>
           <generalization Id="eb25eb4d-f203-4c41-92af-a44f29e3039e" isSubstitutable="false">
             <classMoniker Id="0019def9-3df7-4a8a-9661-aa6ddee627f5" LastKnownName="Artikel" />

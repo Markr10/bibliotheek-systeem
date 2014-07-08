@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="e4f32cfe-422a-4004-beb0-30ea5f0bb2cf"
   name="Diagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -64,6 +64,34 @@
             <classMoniker
               Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149"
               LastKnownName="Cd"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="00ff8033-bd1c-4d71-99f5-8dd57a2828b6">
+            <classMoniker
+              Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
+              LastKnownName="Artikel"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="a2199939-9242-4e0e-ba45-a26ad1f74f58">
+            <classMoniker
+              Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149"
+              LastKnownName="Cd"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="2fd962c3-c26c-4e4a-b936-79f1b42ce9f3">
+            <classMoniker
+              Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
+              LastKnownName="Reservering"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="317e520a-ef74-494d-a47c-a6d2ce444d07">
+            <classMoniker
+              Id="e4ce1f47-b825-47d3-a654-93232bb51671"
+              LastKnownName="Lid"
               LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
           </dependency>
         </suppliersInternal>
@@ -849,6 +877,111 @@
             <enumerationMoniker
               Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
               LastKnownName="VideobandType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="838ab24e-118e-44c3-945a-80a307c72a1f">
+            <classMoniker
+              Id="43a54b59-d8ae-4742-9edf-bbca51394221"
+              LastKnownName="ImportData"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="92398f16-2acf-46ca-a7fc-df45c721e0b8">
+            <classMoniker
+              Id="425ec4e8-4310-4a16-8949-6fbd4b80850a"
+              LastKnownName="Artikel"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="5fc4dbf8-8e31-4099-b7d9-cba4364b6764">
+            <classMoniker
+              Id="ce7cec1d-0a7b-4ea1-9e64-f942472d0fc9"
+              LastKnownName="Boek"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="b990298d-2c8e-474a-841c-636d9dec572a">
+            <classMoniker
+              Id="51a9b968-3296-4e9b-9fe2-d2ba5f8a7149"
+              LastKnownName="Cd"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="700970f6-0175-45cf-b10d-9a4e23e8c001">
+            <classMoniker
+              Id="db7a6cdd-53b4-4afb-a271-f62aad409a4e"
+              LastKnownName="Videoband"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="3947fa8f-22d8-4166-96f0-8ce76bd4fd31">
+            <enumerationMoniker
+              Id="09827b4c-5bfa-41e7-83a4-b933e1cfa9af"
+              LastKnownName="BoekType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="23bac30a-183f-4e2f-ba92-0829070ccae5">
+            <enumerationMoniker
+              Id="e89c8c70-54ff-4bf0-a001-0ef8c01152c2"
+              LastKnownName="CdType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="ac324528-3d35-4e8e-bbfe-0eee2a47936d">
+            <enumerationMoniker
+              Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
+              LastKnownName="VideobandType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="47ea3c93-0b2b-483a-a8be-c865766d365d">
+            <classMoniker
+              Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
+              LastKnownName="SpecialDate"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="7ecbebc4-8a62-4da9-9942-8400163ef0f4">
+            <classMoniker
+              Id="767cdf0b-b773-4e87-8d55-f8d4917aad0d"
+              LastKnownName="Boete"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="8929e534-2e95-46f4-9962-0c7b847c2676">
+            <enumerationMoniker
+              Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
+              LastKnownName="BoeteKlasseType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="88b5f83f-7fc5-44b3-98e1-dfb4d6f5f7ce">
+            <classMoniker
+              Id="1e1f0a7f-058d-4e57-8ff4-e6d333909d52"
+              LastKnownName="Reservering"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="5078fbd3-5ee9-4d6f-b225-71f6f3922393">
+            <classMoniker
+              Id="e4ce1f47-b825-47d3-a654-93232bb51671"
+              LastKnownName="Lid"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="63ff0df6-551c-413e-a690-ca44a2b13bf3">
+            <classMoniker
+              Id="c99a44d6-0f3e-491b-ae5b-61bb2fe2e6f3"
+              LastKnownName="Exemplaar"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="b687ef6a-8555-4974-98f8-691d34e5795a">
+            <classMoniker
+              Id="7f72a2cc-409d-485a-9f7e-d81eeb447ff9"
+              LastKnownName="Uitlening"
               LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
           </dependency>
         </suppliersInternal>
@@ -3388,6 +3521,20 @@
               LastKnownName="Bibliotheek"
               LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
           </dependency>
+          <dependency
+            Id="e1eacd97-bd27-4403-b9ae-b1030eb2f874">
+            <classMoniker
+              Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
+              LastKnownName="SpecialDate"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="014b3d43-aa40-433b-96ae-ac9236896543">
+            <classMoniker
+              Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d"
+              LastKnownName="Bibliotheek"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property
@@ -4068,6 +4215,13 @@
               LastKnownName="SpecialDate"
               LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
           </dependency>
+          <dependency
+            Id="eb3f8ec2-2ecd-422c-a68a-cc6b3f00f81d">
+            <classMoniker
+              Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
+              LastKnownName="SpecialDate"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property
@@ -4457,6 +4611,13 @@
         <suppliersInternal>
           <dependency
             Id="81bdff4c-eaf1-47d8-9762-1d73735e3ce2">
+            <enumerationMoniker
+              Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
+              LastKnownName="BoeteKlasseType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="20f79f42-b768-4fe1-bafe-05012d4dd9c1">
             <enumerationMoniker
               Id="6d8eb67b-a8a7-4ad6-aa75-c329a0ce8fab"
               LastKnownName="BoeteKlasseType"
@@ -4992,6 +5153,20 @@
               LastKnownName="Bibliotheek"
               LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
           </dependency>
+          <dependency
+            Id="a3e912a5-6a32-4f3b-8424-d9ed968f2b67">
+            <classMoniker
+              Id="7a30f3bf-08d7-44f4-abed-1ff8bd96b64e"
+              LastKnownName="SpecialDate"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="be333c38-686f-43dc-9da2-72ec2f540196">
+            <classMoniker
+              Id="7da61c55-21a8-45db-b0bd-4b2d63e9845d"
+              LastKnownName="Bibliotheek"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property
@@ -5466,6 +5641,13 @@
               LastKnownName="BoekType"
               LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
           </dependency>
+          <dependency
+            Id="d6c52f87-3d72-4d40-a878-16aa0c668d58">
+            <enumerationMoniker
+              Id="09827b4c-5bfa-41e7-83a4-b933e1cfa9af"
+              LastKnownName="BoekType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
         </suppliersInternal>
         <generalsInternal>
           <generalization
@@ -5585,6 +5767,13 @@
         <suppliersInternal>
           <dependency
             Id="3239c2aa-9fdf-4711-b4e2-ec34a6b8afba">
+            <enumerationMoniker
+              Id="e89c8c70-54ff-4bf0-a001-0ef8c01152c2"
+              LastKnownName="CdType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="77ade9bd-1ece-41e1-b8a7-26d63fbd7f1a">
             <enumerationMoniker
               Id="e89c8c70-54ff-4bf0-a001-0ef8c01152c2"
               LastKnownName="CdType"
@@ -6290,6 +6479,13 @@
               LastKnownName="IncorrectStartCsvFileException"
               LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
           </dependency>
+          <dependency
+            Id="53bf7f99-f3fa-4cf3-a3fa-4dee38fdc3ae">
+            <classMoniker
+              Id="c02ab8fa-5eb4-4fc1-b29c-008790b15eda"
+              LastKnownName="IncorrectStartCsvFileException"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedOperationsInternal>
           <operation
@@ -6541,6 +6737,13 @@
         <suppliersInternal>
           <dependency
             Id="8c658e1f-3982-43b5-a366-57dc3408073b">
+            <enumerationMoniker
+              Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
+              LastKnownName="VideobandType"
+              LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
+          </dependency>
+          <dependency
+            Id="e04ff242-bfd0-4278-a7c8-037a981f7487">
             <enumerationMoniker
               Id="af35c2a3-cfd7-4d32-aead-42e0d191564a"
               LastKnownName="VideobandType"
