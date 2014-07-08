@@ -3206,6 +3206,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3217,9 +3218,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+              <undefinedTypeMoniker
+                Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                LastKnownName="int"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -3230,6 +3231,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3241,9 +3243,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                LastKnownName="Boolean"
+              <undefinedTypeMoniker
+                Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                LastKnownName="boolean"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -3278,6 +3280,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3289,9 +3292,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+              <undefinedTypeMoniker
+                Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                LastKnownName="int"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -3302,6 +3305,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3313,9 +3317,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+              <undefinedTypeMoniker
+                Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                LastKnownName="int"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -3326,6 +3330,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3337,9 +3342,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+              <undefinedTypeMoniker
+                Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                LastKnownName="int"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -3398,6 +3403,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3409,9 +3415,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                LastKnownName="Boolean"
+              <undefinedTypeMoniker
+                Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                LastKnownName="boolean"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -3434,57 +3440,42 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e3a0ce02-6378-4c97-9fe7-e537d4aadb6c"
+                  Id="d9b40241-5bdc-409f-a1af-45b14d64edbd"
                   name="id"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="cc28916f-0661-4c54-953d-b889c8f2f588"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DReservering Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="3809cb7f-09d2-410b-af48-4938650dc91a"
+                  Id="81982696-6420-48ee-9876-a21192e898f7"
                   name="lidID"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="9ba58304-0982-4d1a-a909-6cd4ee2999cf"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DReservering Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DlidID"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a17da224-a969-4588-94f7-7dcc52020834"
+                  Id="b9d66589-3bdf-4ac3-b380-4e089bb46745"
                   name="artikelID"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="8df04a28-e8c4-4f89-9b39-30a2796c70ff"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DReservering Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DartikelID"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3509,30 +3500,26 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="f9d4df59-861d-4789-9a57-2bfb8ab8dea6"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b223ad96-024a-4f54-8eb6-9b90c5ebdcad"
+                  Id="aed91b47-fc3d-45f7-9d06-6022dd492dda"
                   name="exemplaarID"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="532f4750-16c9-4e23-b21f-3acf4ed2992d"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DReservering Member%3D(Name%3DsetReserveringKlaar OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DexemplaarID"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3557,11 +3544,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="7ebd0607-f9f1-48b7-9134-f507ee820628"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3586,11 +3574,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="74cfdf28-9160-400c-a7cd-18daece53b60"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3644,11 +3633,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="17354557-0f0d-4352-ac50-2ce1378c8696"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3673,11 +3663,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="4d21931b-7d86-451e-bdae-fc219d133e8a"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3702,11 +3693,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="b3ce9555-1293-458d-a2c4-94d636517d2b"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3789,11 +3781,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="0c4f158a-dcc6-4234-83d5-44618d9d062a"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3818,11 +3811,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="5e41d029-99d0-471e-9d12-41126af706e5"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3847,11 +3841,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="9d8ca39c-324b-4ac5-b0a5-2f34481d5894"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -3882,6 +3877,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3893,9 +3889,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+              <undefinedTypeMoniker
+                Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                LastKnownName="int"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -3906,6 +3902,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3917,9 +3914,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+              <undefinedTypeMoniker
+                Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                LastKnownName="int"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -3930,6 +3927,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -3941,9 +3939,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+              <undefinedTypeMoniker
+                Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                LastKnownName="int"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -4014,57 +4012,42 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="744d3d16-0556-4320-a1c8-b6fcc5442c6b"
+                  Id="f8b7052c-3ff6-4fa5-96d9-7af2527f33a9"
                   name="id"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="5b9da4f7-ba5c-4dc0-8063-29b5841f6842"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DUitlening Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Did"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="9ef0e230-3405-401f-a2e7-9bf088e80b00"
+                  Id="88c8de34-3d98-45a4-b7a3-2fe3da94bb1b"
                   name="lidID"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="0dcf0850-d913-4aa6-8dca-c68bb98b79a2"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DUitlening Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DlidID"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d4c865df-1a63-4608-a909-2f2e8878e8ca"
+                  Id="96795fb3-e363-4919-af03-2178d0b21a74"
                   name="exemplaarID"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="714b33f6-84d3-4237-bb30-cb186f670b58"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DUitlening Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DexemplaarID"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -4089,11 +4072,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="29608538-44e1-4193-8155-4b8c282a9295"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -4118,11 +4102,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="2185a951-f615-453e-bc92-266dade7de3a"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -4147,11 +4132,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="451bb0fb-15b3-4b5e-95aa-82cd4f23e4a2"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -4234,11 +4220,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="71afdf2b-fc9c-40e4-be01-3a862f443487"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -4789,6 +4776,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -4800,9 +4788,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                LastKnownName="Boolean"
+              <undefinedTypeMoniker
+                Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                LastKnownName="boolean"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -4813,6 +4801,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -4824,9 +4813,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                LastKnownName="Boolean"
+              <undefinedTypeMoniker
+                Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                LastKnownName="boolean"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -4837,6 +4826,7 @@
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
+            isUnique="false"
             isDerived="false"
             isDerivedUnion="false"
             aggregation="None"
@@ -4848,9 +4838,9 @@
                 tag="ViewCode" />
             </referencesInternal>
             <type_NamedElement>
-              <primitiveTypeMoniker
-                Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                LastKnownName="Integer"
+              <undefinedTypeMoniker
+                Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                LastKnownName="int"
                 LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
             </type_NamedElement>
           </property>
@@ -4977,11 +4967,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="9035ddb2-7f5c-4a69-9be3-e7bcaf81752c"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5006,11 +4997,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="26a149d1-8b55-473d-8602-d2647082da5f"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5093,11 +5085,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="6cc4e947-99d9-4440-9b31-17a41f8c1f45"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5122,11 +5115,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="93868ec3-fcba-46a6-a496-a3806ce6d262"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5151,11 +5145,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="848cce41-edbb-446f-b8f1-6bcdb04f4d55"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5180,11 +5175,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="56034d7b-2223-4e1c-98a6-c3dcd654d8c4"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5209,11 +5205,12 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="620fa43d-7d4c-47f9-a984-75a28f65eec6"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5575,7 +5572,8 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="45ec2f28-6b1a-431a-a0e0-fc7617fbd101"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5586,15 +5584,10 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="144ebc1a-7023-4566-8dd2-eae9c9f701a0"
+                  Id="bbdeeeed-ceee-431b-b59d-93f1f0d6f085"
                   name="date"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="794aa840-fcc6-4a54-9475-6e69fe51dedc"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DaddDays OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Ddate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5605,19 +5598,14 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="04f2f4d1-1baa-4545-bc97-e95463593f74"
+                  Id="fdf3bfc6-bc9f-4353-8e7f-85da351cd9f7"
                   name="days"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="ff633eee-d4ae-4a4d-bf2e-599ebd4fa29e"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DaddDays OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Ddays"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -5642,26 +5630,22 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="7ebb040a-609e-4148-b925-7cf310edcd8f"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c2c2f59b-52a3-4c0e-a8ab-fc7102a74aeb"
+                  Id="d6a75a33-6ac2-4c13-82e8-eb8cdbf5d30f"
                   name="date"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="db75bb8d-0680-4f01-b74e-7aae34846b0e"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DcheckDate OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3Ddate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5690,26 +5674,22 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="1b260427-0a4b-49f6-9ec1-97409296cd53"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="5df70681-36c2-4be4-9f42-c7e765744815"
+                  Id="f8c56aba-5121-4816-9882-fb6049c2533f"
                   name="date"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="73d811af-cb89-4008-bb7c-a444d9b78518"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DcheckDateNowAndFuture OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3Ddate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5738,26 +5718,22 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="89d57a00-e23b-4e87-af7a-2a443720bbca"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
+                    <undefinedTypeMoniker
+                      Id="9c6490d5-3a52-4db9-8353-08e2dd0957b2"
+                      LastKnownName="boolean"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="9e4df78a-aabe-4b83-9f8a-4c258dc946bb"
+                  Id="4aca8cb0-9d4b-4c47-843f-54cabfa66304"
                   name="date"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="f1b75250-7e35-471a-9649-14d5bbde36c4"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DcheckFormatDate OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3Ddate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5786,26 +5762,22 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="2eef7cd5-708e-4d7d-8b78-dae8189e7e4e"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <classMoniker
-                      Id="48438c12-5e5d-46ae-9b60-07e01f04ba6d"
-                      LastKnownName="Int64"
-                      LastKnownLocation="Package_1257.uml" />
+                    <undefinedTypeMoniker
+                      Id="7c11b624-9cc1-40c5-88fe-439440a0a7db"
+                      LastKnownName="long"
+                      LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="84e81612-2e4b-4675-ba7b-632baf7b3828"
+                  Id="ac558707-a3a5-4127-9b3b-5e0a9f2445d1"
                   name="date"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="ea8f39a6-269b-43a6-8e61-fad9be766d2a"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DdateToMilliseconds OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3Ddate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5834,26 +5806,22 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="49fde827-7000-45ce-bfe1-fb12fb3d8283"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c43ead7e-8b0a-45ca-a73d-52a041e12f75"
+                  Id="58cc0bf2-04de-48d1-ae6a-f2f2416ed234"
                   name="startDate"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="68b8a6f9-098f-40a7-b3c6-dc6181bba155"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DdaysDifference OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3DstartDate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5882,26 +5850,22 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="84069429-db52-4c94-a41e-82b655fc02ab"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ff51664a-7b06-46b0-8d9e-a48cfa953f1a"
+                  Id="a328b22e-0adf-4258-8abb-c53e99c83610"
                   name="startDate"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="eed5662f-66d1-409a-9392-5ae3e5cd8be3"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DdaysDifference OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3DstartDate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5912,15 +5876,10 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="af27b0c6-7a44-4f7a-ab2a-d5a9ca6796ac"
+                  Id="6b2bec33-b2e9-4fe3-ae01-c239d8a44291"
                   name="endDate"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="5c296abd-d5fe-4695-8ff2-e65c025454e2"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DdaysDifference OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3DendDate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5949,26 +5908,22 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="726dc0a1-37a8-40b1-877e-03ee293ee123"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a765be83-9d2c-47d7-b9e3-4cb9128a61d2"
+                  Id="b75234b6-5086-45df-8c21-0270fe8c96a0"
                   name="startDate"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="59023287-8d72-4504-a897-3341ceddad31"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DroundedYearsDifference OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3DstartDate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -5997,26 +5952,22 @@
               <operationHasOwnedParameters>
                 <parameter
                   Id="3cfb6a1c-dd90-45db-b3bf-956a943d70bb"
-                  direction="Return">
+                  direction="Return"
+                  isUnique="false">
                   <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
-                      LastKnownName="Integer"
+                    <undefinedTypeMoniker
+                      Id="c849d3a4-d33c-4c89-b5e7-97fbf3ff4bd8"
+                      LastKnownName="int"
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="ec5b31a5-0634-4dcb-8aea-9e86d119b8be"
+                  Id="74f84f38-4631-4d56-87dd-f51a75b1276d"
                   name="startDate"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="66c6ab7f-ca34-4a6c-bfa9-bcdec25ceeca"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D(Name%3DyearsDifference OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)]) ParameterIdentifier%3DstartDate"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -6028,24 +5979,9 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="7fc9b19b-cd62-4c82-949e-a2429d474b76"
-            name="static SpecialDate"
-            visibility="Private"
-            isLeaf="false"
-            isStatic="true"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="dffc4298-6ad7-496c-86ca-6714fa92ed34"
-                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DSpecialDate Member%3D.cctor"
-                tag="ViewCode" />
-            </referencesInternal>
-          </operation>
-          <operation
             Id="c25ee5cb-5ee9-4b40-a247-4527b572320b"
             name="SpecialDate"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -6121,27 +6057,10 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a237456a-0fc6-4851-9b55-8daea60750d3"
-                  direction="Return">
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="c1141717-b65d-4c0e-81b5-d54b79e6c044"
-                      LastKnownName="ArrayList&lt;String‎[]‎&gt;"
-                      LastKnownLocation="Package2_1257.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="347ac1a4-c9ff-4ddc-b7aa-29bc302060e3"
+                  Id="a6cf4f73-f6d4-439d-9bfa-996a6cab48fb"
                   name="csvFilePath"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="a9c32670-003c-4934-8c31-81764ea5b25a"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DImportData Member%3D(Name%3Drun OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3DcsvFilePath"
-                      tag="ViewCode" />
-                  </referencesInternal>
+                  direction="In"
+                  isUnique="false">
                   <type_NamedElement>
                     <classMoniker
                       Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
@@ -6152,32 +6071,14 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="8914344d-2f36-4518-8e58-1e7e47deb13c"
-                  name="columnNames"
+                  Id="e64cdef4-f9e2-436a-bb20-fb2b9431a356"
+                  name="columnNames : String[]"
                   direction="In"
-                  isOrdered="true">
-                  <referencesInternal>
-                    <reference
-                      Id="e935b1d3-9063-4d87-bb8d-921356ff46f8"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DImportData Member%3D(Name%3Drun OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FE:%2FVnBUsTest%2FBibliotheekUitleensysteemCSharp%2FBibliotheekUitleensysteemCSharp%2Fbin%2FDebug%2FBibliotheekUitleensysteemCSharp.exe Type%3D(Name%3DString ArrayRank%3D1 ParentType%3DString))]) ParameterIdentifier%3DcolumnNames"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <lowerValueInternal>
-                    <literalString
-                      Id="57f01ac4-9a9f-4565-841c-4f8fa9ac660f"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="37ab9f7a-0cf6-48dd-ba06-5cd7daed1b63"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
+                  isUnique="false">
                   <type_NamedElement>
-                    <classMoniker
-                      Id="92e3b145-8e80-4227-a9c6-bfe765d12715"
-                      LastKnownName="String"
+                    <undefinedTypeMoniker
+                      Id="bc99692a-759e-4530-a30f-4e9543b1d04b"
+                      LastKnownName="ArrayList&lt;String[]&gt;("
                       LastKnownLocation="SequenceEnKlassenDiagrammen.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -6543,6 +6444,31 @@
             name="B" />
         </ownedLiterals>
       </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6ecc5f12-ef50-45ae-b925-93cbbcc9cf8f"
+        name="Diagrams::String[]{ordered" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4ec2b67e-00ae-46d3-b4fc-9d14f737ee55"
+        name="Diagrams::java::util::ArrayList&lt;String[]&gt;" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="e47ca5da-5633-439a-a202-a26ac737d177"
+        name="Diagrams::java::util::ArrayList&lt;String[]&gt;(" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="bc99692a-759e-4530-a30f-4e9543b1d04b"
+        name="ArrayList&lt;String[]&gt;(" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7c11b624-9cc1-40c5-88fe-439440a0a7db"
+        name="long" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
