@@ -1,6 +1,7 @@
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Set;
+using java.lang;
+using java.util;
+using java.util.LinkedHashMap;
+using System;
 
 /**
  * Een klasse die de uitvoer van een bibliotheek object toont in de command-line.
@@ -8,14 +9,14 @@ import java.util.Set;
  * @author  Wybren, Danny en Mark
  * @version 7 April 2014
  */
-public class BibliotheekCLI extends Bibliotheek
+public class BibliotheekCLI : Bibliotheek
 {
     /**
      * Constructor voor objecten van de klasse BibliotheekCLI.
      */
-    public BibliotheekCLI()
+    public BibliotheekCLI() : base()
     {
-        super();
+        //super();
     }
 
     /**
@@ -26,13 +27,13 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printAndAddUitlening(int lidID, int exemplaarID)
     {
-        if(super.addUitlening(lidID, exemplaarID))
+        if(addUitlening(lidID, exemplaarID))
         {
-            System.out.println("Exemplaar " + exemplaarID + " uitgeleend aan lid " + lidID + ".");
+            Console.WriteLine("Exemplaar " + exemplaarID + " uitgeleend aan lid " + lidID + ".");
         }
         else
         {
-            System.out.println("Exemplaar " + exemplaarID + " kon niet worden uitgeleend aan lid " + lidID + ".");
+            Console.WriteLine("Exemplaar " + exemplaarID + " kon niet worden uitgeleend aan lid " + lidID + ".");
         }
     }
 
@@ -44,13 +45,13 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printAndInleverenExemplaar(int lidID, int exemplaarID)
     {
-        if(super.inleverenExemplaar(lidID, exemplaarID))
+        if(inleverenExemplaar(lidID, exemplaarID))
         {
-            System.out.println("Exemplaar " + exemplaarID + " ingeleverd.");
+            Console.WriteLine("Exemplaar " + exemplaarID + " ingeleverd.");
         }
         else
         {
-            System.out.println("Exemplaar " + exemplaarID + " kon niet worden ingeleverd.");
+            Console.WriteLine("Exemplaar " + exemplaarID + " kon niet worden ingeleverd.");
         }
     }
 
@@ -60,20 +61,20 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printReserveringsbrieven()
     {
-        ArrayList<Integer> lijstMetInfoOverBrieven = super.verwerkReserveringsbrieven();
-        for(Integer reserveringID : lijstMetInfoOverBrieven)
+        ArrayList<Integer> lijstMetInfoOverBrieven = verwerkReserveringsbrieven();
+        foreach(Integer reserveringID in lijstMetInfoOverBrieven)
         {
-            System.out.println("----------Reservering----------");
-            System.out.println();
-            System.out.println("Betreft: klaargezette reservering");
-            System.out.println();
-            System.out.println("Beste " + leden.get(reserveringen.get(reserveringID).getLidID()) + ",");
-            System.out.println();
-            System.out.println("Het artikel " + artikelen.get(reserveringen.get(reserveringID).getArtikelID()).getTitel() +
+            Console.WriteLine("----------Reservering----------");
+            Console.WriteLine();
+            Console.WriteLine("Betreft: klaargezette reservering");
+            Console.WriteLine();
+            Console.WriteLine("Beste " + leden.get(reserveringen.get(reserveringID).getLidID()) + ",");
+            Console.WriteLine();
+            Console.WriteLine("Het artikel " + artikelen.get(reserveringen.get(reserveringID).getArtikelID()).getTitel() +
                 " die u gereserveerd heeft, is voor u klaargezet.");
-            System.out.println("Als u niet binnen " + MAX_AANTAL_DAGEN_RESERVERING_OPHALEN + " dagen deze reservering ophaalt, " +
+            Console.WriteLine("Als u niet binnen " + MAX_AANTAL_DAGEN_RESERVERING_OPHALEN + " dagen deze reservering ophaalt, " +
                 "zal deze reservering vervallen. Bovendien wordt dan een boete in rekening gebracht van € " + (((float)RESERVERING_BOETE) / 100) + ".");
-            System.out.println("--------------------");
+            Console.WriteLine("--------------------");
         }
     }
 
@@ -83,38 +84,38 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printWaarschuwingsbrieven()
     {
-        ArrayList<int[]> lijstMetInfoOverBrieven = super.verwerkVerschuldigdBedrag();
-        for(int[] arrayMetInfoOverBrief : lijstMetInfoOverBrieven)
+        ArrayList<int[]> lijstMetInfoOverBrieven = verwerkVerschuldigdBedrag();
+        foreach(int[] arrayMetInfoOverBrief in lijstMetInfoOverBrieven)
         {
-            if(arrayMetInfoOverBrief.length != 2)
+            if(arrayMetInfoOverBrief.Length != 2)
             {
-                System.out.println("Methode printWaarschuwingsbrieven kan niet (verder) uitgevoerd worden vanwege interne conflicten.");
+                Console.WriteLine("Methode printWaarschuwingsbrieven kan niet (verder) uitgevoerd worden vanwege interne conflicten.");
                 return;
             }
 
             if(arrayMetInfoOverBrief[1] == DREMPEL_EERSTE_BRIEF) 
             {
-                System.out.println("----------Waarschuwing----------");
-                System.out.println();
-                System.out.println("Betreft: openstaande boetes");
-                System.out.println();
-                System.out.println("Beste " + leden.get(arrayMetInfoOverBrief[0]).getNaam() + ",");
-                System.out.println();
-                System.out.println("De boete is hoger dan 10 euro! Graag voldoen!");
-                System.out.println("--------------------");
+                Console.WriteLine("----------Waarschuwing----------");
+                Console.WriteLine();
+                Console.WriteLine("Betreft: openstaande boetes");
+                Console.WriteLine();
+                Console.WriteLine("Beste " + leden.get(arrayMetInfoOverBrief[0]).getNaam() + ",");
+                Console.WriteLine();
+                Console.WriteLine("De boete is hoger dan 10 euro! Graag voldoen!");
+                Console.WriteLine("--------------------");
             }
             else if(arrayMetInfoOverBrief[1] == DREMPEL_TWEEDE_BRIEF) 
             {
-                System.out.println("----------Waarschuwing----------");
-                System.out.println();
-                System.out.println("Betreft: openstaande boetes");
-                System.out.println();
-                System.out.println("Beste " + leden.get(arrayMetInfoOverBrief[0]).getNaam() + ",");
-                System.out.println();
-                System.out.println("De boete is hoger dan 100 euro!");
-                System.out.println("Als u niet binnen " + MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF + " dagen alle geleende items inlevert en");
-                System.out.println("de boete betaald dan wordt deze zaak overgedragen aan een deurwaarder.");
-                System.out.println("--------------------");
+                Console.WriteLine("----------Waarschuwing----------");
+                Console.WriteLine();
+                Console.WriteLine("Betreft: openstaande boetes");
+                Console.WriteLine();
+                Console.WriteLine("Beste " + leden.get(arrayMetInfoOverBrief[0]).getNaam() + ",");
+                Console.WriteLine();
+                Console.WriteLine("De boete is hoger dan 100 euro!");
+                Console.WriteLine("Als u niet binnen " + MAX_AANTAL_DAGEN_NA_TWEEDE_BRIEF + " dagen alle geleende items inlevert en");
+                Console.WriteLine("de boete betaald dan wordt deze zaak overgedragen aan een deurwaarder.");
+                Console.WriteLine("--------------------");
             }
         }
     }
@@ -125,17 +126,17 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printArtikelen()
     {
-        System.out.println("------------Artikelen-------------");
-        for(Artikel artikel : artikelen)
+        Console.WriteLine("------------Artikelen-------------");
+        foreach(Artikel artikel in artikelen)
         {
-            System.out.print("# " + artikel.getID() + " Type: " + artikel.toString() + " Titel: " + artikel.getTitel());
-            if(artikel instanceof Cd)
+            Console.Write("# " + artikel.getID() + " Type: " + artikel.toString() + " Titel: " + artikel.getTitel());
+            if(artikel is Cd)
             {
-                System.out.print(" Releasedatum: " + ((Cd)artikel).getReleasedatum());
+                Console.Write(" Releasedatum: " + ((Cd)artikel).getReleasedatum());
             }
-            System.out.println();
+            Console.WriteLine();
         }
-        System.out.println("----------------------------------");
+        Console.WriteLine("----------------------------------");
     }
 
     /**
@@ -143,12 +144,12 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printLeden()
     {
-        System.out.println("-------------Leden----------------");
-        for(Lid lid : leden)
+        Console.WriteLine("-------------Leden----------------");
+        foreach(Lid lid in leden)
         {
-            System.out.println(lid.getNaam());
+            Console.WriteLine(lid.getNaam());
         }
-        System.out.println("----------------------------------");
+        Console.WriteLine("----------------------------------");
     }
 
     /**
@@ -156,13 +157,13 @@ public class BibliotheekCLI extends Bibliotheek
      */
     public void printReserveringen() 
     {
-        System.out.println("---------Reserveringen------------");
-        for(Reservering reservering : reserveringen)
+        Console.WriteLine("---------Reserveringen------------");
+        foreach(Reservering reservering in reserveringen)
         {
-            System.out.println("# " + reservering.getID() + " Titel: " + artikelen.get(reservering.getArtikelID()).getTitel() +
+            Console.WriteLine("# " + reservering.getID() + " Titel: " + artikelen.get(reservering.getArtikelID()).getTitel() +
                 " Datum gereserveerd: " + reservering.getReserveringsdatum() + " Door lid: " + leden.get(reservering.getLidID()).getNaam());
         }
-        System.out.println("----------------------------------");
+        Console.WriteLine("----------------------------------");
     }
 
 
@@ -172,10 +173,10 @@ public class BibliotheekCLI extends Bibliotheek
     public void printFinanciën()
     {
         int[] berekendeInkomsten = getInkomsten();
-        System.out.println("------------Financiën-------------");
-        System.out.println("Totale inkomsten: " + berekendeInkomsten[0] + ".");
-        System.out.println("Totaal bedrag boetes: " + berekendeInkomsten[1] + ".");
-        System.out.println("----------------------------------");
+        Console.WriteLine("------------Financiën-------------");
+        Console.WriteLine("Totale inkomsten: " + berekendeInkomsten[0] + ".");
+        Console.WriteLine("Totaal bedrag boetes: " + berekendeInkomsten[1] + ".");
+        Console.WriteLine("----------------------------------");
     }
 
     /**
@@ -184,16 +185,16 @@ public class BibliotheekCLI extends Bibliotheek
     public void printInfoArtikelen()
     {
         LinkedHashMap<Integer, int[]> infoLijst = getInfoArtikelen();
-        System.out.println("--------Artikel informatie--------");
+        Console.WriteLine("--------Artikel informatie--------");
 
         Set<Integer> keys = infoLijst.keySet();
-        for (Integer key : keys) 
+        foreach(Integer key in keys) 
         {
             int[] infoRij = infoLijst.get(key);
-            System.out.println("# " + key + "  Aantal keer uitgeleend: " + infoRij[0] +
+            Console.WriteLine("# " + key + "  Aantal keer uitgeleend: " + infoRij[0] +
                 "  Gemiddelde uitleentermijn: " + (infoRij[1]/infoRij[0]) + " dagen");
         }
 
-        System.out.println("----------------------------------");
+        Console.WriteLine("----------------------------------");
     }
 }

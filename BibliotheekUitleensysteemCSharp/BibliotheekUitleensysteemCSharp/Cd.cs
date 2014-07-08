@@ -9,7 +9,6 @@ using System;
 public class Cd : Artikel
 {
     private String releasedatum;
-    private int kostenNaKorting;
 
     /**
      * Constructor voor objecten van de klasse Cd.

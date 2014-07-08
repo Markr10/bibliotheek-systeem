@@ -8,7 +8,12 @@ using System;
  * @author  Wybren, Danny en Mark
  * @version 7 April 2014
  */
-public enum CdType
+public class CdType : Enum
 {
-    KLASSIEK, POPULAIR
+    public CdType KLASSIEK, POPULAIR = new CdType();
+
+    public static CdType valueOf(Object o)
+    {
+        return new CdType();
+    }
 }

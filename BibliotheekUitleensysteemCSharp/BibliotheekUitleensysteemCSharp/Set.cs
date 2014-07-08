@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace java.util
 {
-    public class Date
+    public class Set<T> : System.Collections.ArrayList
     {
     }
 }

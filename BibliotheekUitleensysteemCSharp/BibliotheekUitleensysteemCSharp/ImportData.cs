@@ -1,5 +1,5 @@
 using System;
-using java.util.ArrayList;
+using java.util;
 using java.io.BufferedReader;
 using java.io;
 
@@ -9,7 +9,6 @@ using java.io;
  * @author  Wybren, Danny en Mark
  * @version 7 April 2014
  */
-
 public class ImportData 
 {
     /**
@@ -40,11 +39,11 @@ public class ImportData
         // check correct start of the CSV file
         String line = br.readLine(); // throws exception when there is no line
         String[] firstSplittedLine = line.split(csvSplitBy, -1);
-        if(columnNames.length != firstSplittedLine.length)
+        if(columnNames.Length != firstSplittedLine.Length)
         {
                 throw new IncorrectStartCsvFileException("The number of the columns names of the CSV file is not correct!");
         }
-        for(int i = 0; i < columnNames.length; i++)
+        for(int i = 0; i < columnNames.Length; i++)
         {
             if(columnNames[i].isEmpty())
             {
@@ -66,7 +65,7 @@ public class ImportData
             // split the line into the different columns
             String[] splittedLine = line.split(csvSplitBy, -1);
             // check the number of columns
-            if(splittedLine.length != columnNames.length)
+            if(splittedLine.Length != columnNames.Length)
             {
                 throw new Exception("The number of the columns is not correct! " +
                     "Corresponding line in CSV file: \"" + line + "\"");

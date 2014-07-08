@@ -8,11 +8,16 @@ public class Enum
 {
     public String toString()
     {
-        return "";
+        return new String("test");
     }
 
     public String toUpperCase()
     {
-        return "";
+        return new String("test");
+    }
+
+    public Boolean equals(Object o)
+    {
+        return true;
     }
 }

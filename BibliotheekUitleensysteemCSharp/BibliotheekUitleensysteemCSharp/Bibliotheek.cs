@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 using System.Linq;
-using java.util.ArrayList;
+using java.util;
 using java.util.Arrays;
 using java.util.LinkedHashMap;
 using java.lang;
@@ -430,7 +430,7 @@ public class Bibliotheek
         // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
         try
         {
-            for(String[] splittedLine : ImportData.run(bestandspadCsvBestand, new String[] {"titel", "type", "exemplaren"}))
+            foreach(String[] splittedLine in ImportData.run(bestandspadCsvBestand, new String[] {"titel", "type", "exemplaren"}))
             {
                 int artikelID = addVideoband(splittedLine[0], splittedLine[1]);
                 if(artikelID == -1)
@@ -478,7 +478,7 @@ public class Bibliotheek
         // Wanneer de gegevens niet correct zijn, wordt een exception gethrowed.
         try
         {
-            for(String[] splittedLine : ImportData.run(bestandspadCsvBestand, new String[] {"naam"}))
+            foreach(String[] splittedLine in ImportData.run(bestandspadCsvBestand, new String[] {"naam"}))
             {
                 if(addLid(splittedLine[0]) == -1)
                 {
@@ -649,7 +649,7 @@ public class Bibliotheek
         for(int i = (boetes.size() - 1); i >= 0; i--)
         {
             Boete boete = boetes.get(i);
-            if(boete.getItemID() == reserveringID && boete.getBoeteKlasseType().equals(BoeteKlasseType.valueOf("RESERVERING")))
+            if(boete.getItemID() == reserveringID && boete.getBoeteKlasseType().Equals(BoeteKlasseType.RESERVERING))
             {
                 return true;
             }
@@ -668,7 +668,7 @@ public class Bibliotheek
         for(int i = (boetes.size() - 1); i >= 0; i--)
         {
             Boete boete = boetes.get(i);
-            if(boete.getItemID() == uitleningID && boete.getBoeteKlasseType().equals(BoeteKlasseType.valueOf("UITLENING")))
+            if(boete.getItemID() == uitleningID && boete.getBoeteKlasseType().Equals(BoeteKlasseType.UITLENING))
             {
                 return true;
             }
@@ -1227,7 +1227,7 @@ public class Bibliotheek
                 // Controleert de boete in de juiste ArrayList.
                 switch(boetes.get(i).getBoeteKlasseType())
                 {
-                    case RESERVERING:
+                    case BoeteKlasseType.RESERVERING:
                     {
                         Reservering reservering = reserveringen.get(boetes.get(i).getItemID());
                         // Controleert of een boete van het lid is en openstaat.
@@ -1237,7 +1237,7 @@ public class Bibliotheek
                         }
                         break;
                     }
-                    case UITLENING:
+                    case BoeteKlasseType.UITLENING:
                     {
                         Uitlening uitlening = uitleningen.get(boetes.get(i).getItemID());
                         // Controleert of een boete van het lid is en openstaat.
@@ -1534,7 +1534,7 @@ public class Bibliotheek
                 // Controleert de boete in de juiste ArrayList.
                 switch(boetes.get(i).getBoeteKlasseType())
                 {
-                    case RESERVERING:
+                    case BoeteKlasseType.RESERVERING:
                     {
                         Reservering reservering = reserveringen.get(boetes.get(i).getItemID());
                         // Controleert of een boete van het lid is en openstaat en
@@ -1546,7 +1546,7 @@ public class Bibliotheek
                         }
                         break;
                     }
-                    case UITLENING:
+                    case BoeteKlasseType.UITLENING:
                     {
                         Uitlening uitlening = uitleningen.get(boetes.get(i).getItemID());
                         // Controleert of een boete van het lid is en openstaat en
@@ -1598,7 +1598,7 @@ public class Bibliotheek
     {
         if(checkUitleningID(uitlening.getID()) && getVerschuldigdBedragUitlening(uitlening) > 0 && !isBoeteUitlening(uitlening.getID()))
         {
-            boetes.add(new Boete(boetes.size(), uitlening.getID(), BoeteKlasseType.valueOf("UITLENING"), false));
+            boetes.add(new Boete(boetes.size(), uitlening.getID(), BoeteKlasseType.UITLENING, false));
             return true;
         }
         return false;
@@ -1679,7 +1679,7 @@ public class Bibliotheek
             if(!isReserveringUitgeleend(reservering) && !SpecialDate.checkDateNowAndFuture(reservering.getMaxOphaaldatum()) &&
                 !isBoeteReservering(reservering.getID()))
             {
-                boetes.add(new Boete(boetes.size(), reservering.getID(), BoeteKlasseType.valueOf("RESERVERING"), false));
+                boetes.add(new Boete(boetes.size(), reservering.getID(), BoeteKlasseType.RESERVERING, false));
                 controleerAndSetReservering(reservering.getExemplaarID());
             }
         }
@@ -1697,7 +1697,7 @@ public class Bibliotheek
     {
         // Opbouw rijen van de ArrayList: reserveringID.
         ArrayList<Integer> brieven = new ArrayList<Integer>();
-        for(Reservering reservering : reserveringen)
+        foreach(Reservering reservering in reserveringen)
         {
             // Controleer of lid de reserveringsbrief kan krijgen en probeer dan
             // de reserveringsbrief naar lid te versturen.
@@ -1724,7 +1724,7 @@ public class Bibliotheek
     {
         // Opbouw rijen van de ArrayList: lidID en de drempel waarde van de waarschuwingsbrief.
         ArrayList<int[]> waarschuwingsbrieven = new ArrayList<int[]>();
-        for(Lid lid : leden)
+        foreach(Lid lid in leden)
         {
             // Controleer of lid eerste waarschuwingsbrief moet krijgen en probeer dan
             // eerste waarschuwingsbrief naar lid te versturen.
@@ -1771,7 +1771,7 @@ public class Bibliotheek
         LinkedHashMap<Integer, int[]> infoOverArtikelen = new LinkedHashMap<Integer, int[]>();
 
         // Vul de LinkedHashMap met geldige artikelen
-        for(Artikel artikel : artikelen)
+        foreach(Artikel artikel in artikelen)
         {
             if(checkArtikelID(artikel.getID()))
             {
@@ -1780,7 +1780,7 @@ public class Bibliotheek
         }
 
         // Vul de LinkedHashMap met de informatie over de artikelen
-        for(Uitlening uitlening : uitleningen)
+        foreach(Uitlening uitlening in uitleningen)
         {
             int[] artikelRij = infoOverArtikelen.get(exemplaren.get(uitlening.getExemplaarID()).getArtikelID());
             // Ga voor elke uitlening na of deze teruggebracht is en of het bijbehorende artikel nog geldig is
@@ -1813,13 +1813,13 @@ public class Bibliotheek
             // Controleert de boete in de juiste ArrayList.
             switch(boetes.get(i).getBoeteKlasseType())
             {
-                case RESERVERING:
+                case BoeteKlasseType.RESERVERING:
                 {
                     Reservering reservering = reserveringen.get(boetes.get(i).getItemID());
                     totaal += RESERVERING_BOETE;
                 }
                 break;
-                case UITLENING:
+                case BoeteKlasseType.UITLENING:
                 {
                     Uitlening uitlening = uitleningen.get(boetes.get(i).getItemID());
                     totaal += getVerschuldigdBedragUitlening(uitlening);

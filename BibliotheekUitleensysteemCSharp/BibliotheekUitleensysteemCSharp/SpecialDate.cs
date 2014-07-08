@@ -19,7 +19,7 @@ public class SpecialDate
      * SpecialDate constructor.
      * The constructor is private because this is a static class.
      */
-    private static SpecialDate()
+    static SpecialDate()
     {
         SDF = new SimpleDateFormat("ddMMyyyy");
         SDF.setTimeZone(java.util.TimeZone.getTimeZone("UTC"));

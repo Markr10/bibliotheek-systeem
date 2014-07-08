@@ -13,6 +13,13 @@ namespace java.io.BufferedReader
         {
         }
 
-        public String readLine();
+        public String readLine()
+        {
+            return new String("test");
+        }
+
+        public void close()
+        {
+        }
     }
 }

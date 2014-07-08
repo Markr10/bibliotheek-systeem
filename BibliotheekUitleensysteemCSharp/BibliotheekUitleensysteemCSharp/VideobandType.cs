@@ -5,7 +5,13 @@
  * @author  Wybren, Danny en Mark
  * @version 7 April 2014
  */
-public enum VideobandType
+using System;
+public class VideobandType : Enum
 {
-    A, B
+    public VideobandType A, B = new VideobandType();
+
+    public static VideobandType valueOf(Object o)
+    {
+        return new VideobandType();
+    }
 }

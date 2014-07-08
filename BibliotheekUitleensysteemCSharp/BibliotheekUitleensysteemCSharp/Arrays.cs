@@ -8,6 +8,9 @@ namespace java.util.Arrays
 {
     public class Arrays
     {
-        public String toString(String[] a);
+        public static String toString(String[] a)
+        {
+            return new String("test");
+        }
     }
 }
