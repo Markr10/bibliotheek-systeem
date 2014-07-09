@@ -365,6 +365,13 @@
       <SubType>Content</SubType>
       <DependentUpon>SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigCD.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigLid.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigLid.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigLid.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="SequenceDiagrammen\set methodes\wijzig methodes\Bibliotheek_wijzigVideoband.sequencediagram">
       <SubType>Content</SubType>
     </Content>

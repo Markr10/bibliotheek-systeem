@@ -143,7 +143,7 @@ public class Lid
      */
     public boolean setGeroyeerd()
     {
-        if(!geroyeerd && eersteBrief && tweedeBrief != null)
+        if(!geroyeerd)
         {
             geroyeerd = true;
             return true;
@@ -152,5 +152,13 @@ public class Lid
         {
             return false;
         }
+    }
+    
+    /**
+     * Stelt de naam van het lid in.
+     */
+    public void setNaam(String naam)
+    {
+        this.naam = naam;
     }
 }

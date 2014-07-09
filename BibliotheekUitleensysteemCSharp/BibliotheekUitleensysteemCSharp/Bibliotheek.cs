@@ -499,9 +499,9 @@ public class Bibliotheek
      * Wijzigt een boek artikel.
      * 
      * @param artikelID Het ID van het artikel.
-     * @param titel        De titel van de boek.
-     * @param type         Het type van de boek. Het type is niet hoofdletter gevoelig.
-     * @return true als het toevoegen gelukt is, anders false
+     * @param titel     De titel van de boek.
+     * @param type      Het type van de boek. Het type is niet hoofdletter gevoelig.
+     * @return true als het wijzigen gelukt is, anders false
      */
     public Boolean wijzigBoek(int artikelID, String titel, String type)
     {
@@ -529,11 +529,11 @@ public class Bibliotheek
     /**
      * Wijzigt een CD artikel.
      * 
-     * @param artikelID Het ID van het artikel.
+     * @param artikelID    Het ID van het artikel.
      * @param titel        De titel van de cd.
      * @param type         Het type van de cd. Het type is niet hoofdletter gevoelig.
      * @param releasedatum De releasedatum van de cd.
-     * @return true als het toevoegen gelukt is, anders false
+     * @return true als het wijzigen gelukt is, anders false
      */
     public Boolean wijzigCD(int artikelID, String titel, String type, String releasedatum)
     {
@@ -563,9 +563,9 @@ public class Bibliotheek
      * Wijzigt een videoband artikel.
      * 
      * @param artikelID Het ID van het artikel.
-     * @param titel        De titel van de boek.
-     * @param type         Het type van de boek. Het type is niet hoofdletter gevoelig.
-     * @return true als het toevoegen gelukt is, anders false
+     * @param titel     De titel van de boek.
+     * @param type      Het type van de boek. Het type is niet hoofdletter gevoelig.
+     * @return true als het wijzigen gelukt is, anders false
      */
     public Boolean wijzigVideoband(int artikelID, String titel, String type)
     {
@@ -583,6 +583,27 @@ public class Bibliotheek
             {
                 return false;
             }
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /**
+     * Wijzigt een lid.
+     * 
+     * @param lidID Het ID van het lid.
+     * @param naam  De naam van het lid.
+     * @return true als het wijzigen gelukt is, anders false
+     */
+    public Boolean wijzigLid(int lidID, String naam)
+    {
+        // Controleert geldigheid lidID parameter
+        if (checkLidID(lidID))
+        {
+            leden.get(lidID).setNaam(naam);
+            return true;
         }
         else
         {
