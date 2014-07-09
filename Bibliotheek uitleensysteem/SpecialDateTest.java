@@ -114,7 +114,7 @@ public class SpecialDateTest
     @Test
     public void testGetDateToday()
     {
-        assertEquals("08072014", SpecialDate.getDateToday());
+        assertEquals("09072014", SpecialDate.getDateToday());
     }
     
     /**
@@ -126,9 +126,9 @@ public class SpecialDateTest
     @Test
     public void testDaysDifference()
     {
-        assertEquals(0, SpecialDate.daysDifference("08072014"));
-        assertEquals(607, SpecialDate.daysDifference("08112012"));
-        assertEquals(1148, SpecialDate.daysDifference("17052011"));
+        assertEquals(0, SpecialDate.daysDifference("09072014"));
+        assertEquals(608, SpecialDate.daysDifference("08112012"));
+        assertEquals(1149, SpecialDate.daysDifference("17052011"));
         assertEquals(1, SpecialDate.daysDifference(SpecialDate.addDays(SpecialDate.getDateToday(), -1)));
         assertEquals(0, SpecialDate.daysDifference(SpecialDate.getDateToday()));
     }
