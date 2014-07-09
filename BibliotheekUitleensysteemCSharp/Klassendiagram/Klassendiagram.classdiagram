@@ -1784,6 +1784,35 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="df433069-781e-41e7-b926-83f5c6fb23a5" name="wijzigLid" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="8b60c0c9-f6a8-4b7d-a44b-b7076c897a05" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d8c624d9-397b-47b7-82dd-9e7cd5629e2d" direction="Return" isUnique="false">
+                  <elementDefinition Id="f5e15d94-51e6-4e88-b225-e0cd546a309c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="4a8fde92-bcb4-4476-98d6-bcacca71c6d4" LastKnownName="boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e50ffab5-0d57-4f5c-ab16-700b5e3279c1" name="lidID" direction="In" isUnique="false">
+                  <elementDefinition Id="eb3c56ea-0519-4f2b-9ac2-e7d37e644438" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c9262b44-c025-4ff7-b6cf-3f8f726093a7" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="899684f7-c911-4c0c-b2eb-87c9a135ca96" name="naam" direction="In" isUnique="false">
+                  <elementDefinition Id="7ecbac2b-94f0-44cf-a7e9-e31f927754ec" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8e0b3941-e902-4533-aa11-47d11b7481a4" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -3217,6 +3246,19 @@
                   <elementDefinition Id="620fa43d-7d4c-47f9-a984-75a28f65eec6" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="4a8fde92-bcb4-4476-98d6-bcacca71c6d4" LastKnownName="boolean" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1a93c32c-26f7-4a8e-9e0a-0890afb35e64" name="setNaam" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bca22716-9359-4ffd-a931-a7f122a31bce" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="80d92e75-35a3-440b-a742-91e6e889dcdc" name="naam" direction="In" isUnique="false">
+                  <elementDefinition Id="a9b1e04b-f756-44fe-91df-f256a5eafb25" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="8e0b3941-e902-4533-aa11-47d11b7481a4" LastKnownName="String" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

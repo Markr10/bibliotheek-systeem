@@ -154,4 +154,12 @@ public class Lid
             return false;
         }
     }
+
+    /**
+     * Stelt de naam van het lid in.
+     */
+    public void setNaam(String naam)
+    {
+        this.naam = naam;
+    }
 }
