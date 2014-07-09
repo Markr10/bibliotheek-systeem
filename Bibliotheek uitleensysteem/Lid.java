@@ -143,7 +143,7 @@ public class Lid
      */
     public boolean setGeroyeerd()
     {
-        if(!geroyeerd && eersteBrief && tweedeBrief != null)
+        if(!geroyeerd)
         {
             geroyeerd = true;
             return true;
